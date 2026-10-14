@@ -5,7 +5,7 @@ import { formatDate } from "@/lib/format";
 export function SourcesFooter({ ids, title = "المصادر والمراجع — آخر تحديث" }: { ids: string[]; title?: string }) {
   return (
     <section aria-labelledby="sources-h" className="mt-16 border-t border-line pt-8">
-      <h2 id="sources-h" className="font-display text-lg font-bold text-green-deep">{title}</h2>
+      <h2 id="sources-h" className="font-display text-2xl text-green-deep">{title}</h2>
       <ol className="mt-4 grid gap-3 text-sm">
         {ids.map((id) => {
           const s = getSource(id);

@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource/alexandria/500.css";
-import "@fontsource/alexandria/700.css";
-import "@fontsource/alexandria/800.css";
-import "@fontsource/ibm-plex-sans-arabic/400.css";
-import "@fontsource/ibm-plex-sans-arabic/500.css";
-import "@fontsource/ibm-plex-sans-arabic/600.css";
+import "@fontsource/amiri/400.css";
+import "@fontsource/amiri/700.css";
+import "@fontsource/almarai/300.css";
+import "@fontsource/almarai/400.css";
+import "@fontsource/almarai/700.css";
+import "@fontsource/almarai/800.css";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ar" dir="rtl">
-      <body className="flex min-h-dvh flex-col">
+      <body className="paper flex min-h-dvh flex-col">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:right-3 focus:z-50 focus:rounded-md focus:bg-paper focus:px-4 focus:py-2"

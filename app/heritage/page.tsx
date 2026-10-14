@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SourcesFooter } from "@/components/SourcesFooter";
+import { PageHero } from "@/components/PageHero";
 import { intangible, intangibleNotes, regions, worldHeritage } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -19,18 +20,16 @@ export default function HeritagePage() {
   const ichSorted = [...intangible].sort((a, b) => a.year - b.year);
   const years = [...new Set(ichSorted.map((e) => e.year))];
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6">
-      <h1 className="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-extrabold text-green-deep">ذاكرة وطن في قوائم اليونسكو</h1>
-      <p className="mt-3 max-w-2xl text-lg leading-8 text-ink-muted">
-        هذه الصفحة تعرض ما سُجّل رسميًا فقط، ولا تخلط بين نوعين مختلفين: مواقع التراث العالمي (أماكن)، والتراث الثقافي غير المادي (ممارسات ومعارف).
-      </p>
+    <>
+    <PageHero kicker="ذاكرة وطن" title="تراثنا في قوائم اليونسكو" lead="هذه الصفحة تعرض ما سُجّل رسميًا فقط، ولا تخلط بين نوعين مختلفين: مواقع التراث العالمي (أماكن)، والتراث الثقافي غير المادي (ممارسات ومعارف)." />
+    <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
 
-      <section aria-labelledby="levels-h" className="mt-10">
+      <section aria-labelledby="levels-h" className="mt-12">
         <h2 id="levels-h" className="sr-only">مستويات التوثيق</h2>
         <ol className="grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-4">
           {LEVELS.map((l, i) => (
-            <li key={l.name} className={`p-5 ${i === 2 ? "bg-green-deep text-ivory" : "bg-paper"}`}>
-              <p className={`font-display font-bold ${i === 2 ? "text-sand" : "text-green-deep"}`}>{l.name}</p>
+            <li key={l.name} className={`p-6 ${i === 2 ? "bg-green-deep text-ivory" : "bg-[#FFFDF8]"}`}>
+              <p className={`font-display text-xl ${i === 2 ? "text-sand" : "text-green-deep"}`}>{l.name}</p>
               <p className={`mt-1 text-sm leading-7 ${i === 2 ? "text-ivory/80" : "text-ink-muted"}`}>{l.text}</p>
             </li>
           ))}
@@ -38,18 +37,18 @@ export default function HeritagePage() {
       </section>
 
       <section id="world" aria-labelledby="world-h" className="mt-16 scroll-mt-24">
-        <h2 id="world-h" className="font-display text-3xl font-bold text-green-deep">مواقع التراث العالمي</h2>
+        <h2 id="world-h" className="font-display text-[2.4rem] text-green-deep">مواقع التراث العالمي</h2>
         <p className="mt-2 text-ink-muted"><span className="num">{worldHeritage.length}</span> مواقع: <span className="num">{worldHeritage.filter((s) => s.category === "ثقافي").length}</span> ثقافية و<span className="num">{worldHeritage.filter((s) => s.category === "طبيعي").length}</span> طبيعي.</p>
         <ul className="mt-6 grid gap-4 md:grid-cols-2">
           {worldHeritage.map((s) => {
             const region = regions.find((r) => r.id === s.region);
             return (
-              <li key={s.id} id={s.id} className="scroll-mt-24 rounded-2xl border border-line bg-paper p-5">
+              <li key={s.id} id={s.id} className="museum scroll-mt-24 p-6">
                 <div className="flex items-baseline justify-between gap-3">
-                  <span className="num font-display text-2xl font-bold text-sand">{s.year}</span>
+                  <span className="num text-2xl font-extrabold text-sand">{s.year}</span>
                   <span className={`rounded-full px-2.5 py-0.5 text-xs ${s.category === "طبيعي" ? "bg-[#E4EEDF] text-[#335A2A]" : "bg-ivory text-green-deep"}`}>{s.category}</span>
                 </div>
-                <h3 className="mt-2 font-display text-lg font-bold leading-8">{s.nameAr}</h3>
+                <h3 className="mt-2 font-display text-[1.6rem] leading-[1.6] text-green-deep">{s.nameAr}</h3>
                 <p className="text-sm text-ink-muted" lang="en" dir="ltr">{s.nameEn}</p>
                 <p className="mt-3 text-sm">
                   {region ? (
@@ -69,7 +68,7 @@ export default function HeritagePage() {
       </section>
 
       <section id="intangible" aria-labelledby="ich-h" className="mt-20 scroll-mt-24">
-        <h2 id="ich-h" className="font-display text-3xl font-bold text-green-deep">التراث الثقافي غير المادي</h2>
+        <h2 id="ich-h" className="font-display text-[2.4rem] text-green-deep">التراث الثقافي غير المادي</h2>
         <p className="mt-2 text-ink-muted"><span className="num">{intangible.length}</span> عنصرًا في القائمة التمثيلية، مرتبة حسب سنة الإدراج.</p>
         <ul className="mt-4 grid max-w-3xl gap-1.5 text-sm text-ink-muted">
           {intangibleNotes.map((n) => <li key={n} className="ps-4 -indent-4">— {n}</li>)}
@@ -78,11 +77,11 @@ export default function HeritagePage() {
         <div className="mt-8 grid gap-8">
           {years.map((y) => (
             <div key={y} className="grid gap-4 border-t border-line pt-5 md:grid-cols-[7rem_1fr]">
-              <p className="num font-display text-3xl font-bold text-sand">{y}</p>
+              <p className="num text-3xl font-extrabold text-sand">{y}</p>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {ichSorted.filter((e) => e.year === y).map((e) => (
-                  <li key={e.id} id={e.id} className="scroll-mt-24 rounded-xl border border-line bg-paper p-4">
-                    <h3 className="font-display font-bold leading-7">{e.nameAr}</h3>
+                  <li key={e.id} id={e.id} className="museum scroll-mt-24 p-5">
+                    <h3 className="font-display text-[1.3rem] leading-[1.6] text-green-deep">{e.nameAr}</h3>
                     <p className="mt-1 text-xs text-ink-muted" lang="en" dir="ltr">{e.nameEn}</p>
                     {e.areaNote && (
                       <p className="mt-2 text-sm">
@@ -105,5 +104,6 @@ export default function HeritagePage() {
 
       <SourcesFooter ids={["unesco-whc-sa", "unesco-ich-sa"]} />
     </div>
+    </>
   );
 }

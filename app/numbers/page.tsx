@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { RegionCompare } from "@/components/RegionCompare";
 import { SourcesFooter } from "@/components/SourcesFooter";
+import { PageHero } from "@/components/PageHero";
 import { NATIONAL_POPULATION_2022, regions } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 
@@ -16,12 +17,10 @@ export default function NumbersPage() {
   }));
   const sum = regions.reduce((s, r) => s + r.population.value, 0);
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6">
-      <h1 className="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-extrabold text-green-deep">وطن في أرقام</h1>
-      <p className="mt-3 max-w-2xl text-lg leading-8 text-ink-muted">
-        المرحلة الحالية تعرض مؤشرات السكان والمساحة على مستوى المناطق. لا تُقارن هنا أرقام من سنوات أو تعريفات مختلفة، وكل قيمة مشتقة موسومة بأنها تقريبية.
-      </p>
-      <p className="mt-4 text-sm text-ink-muted">
+    <>
+    <PageHero kicker="المملكة بالأرقام" title="وطن في أرقام" lead="مؤشرات السكان والمساحة على مستوى المناطق. لا تُقارن هنا أرقام من سنوات أو تعريفات مختلفة، وكل قيمة مشتقة موسومة بأنها تقريبية." />
+    <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
+      <p className="mt-10 text-sm text-ink-muted">
         فحص اتساق: مجموع سكان المناطق <span className="num">{formatNumber(sum)}</span>
         {sum === NATIONAL_POPULATION_2022 ? " يطابق " : " لا يطابق "}
         إجمالي التعداد <span className="num">{formatNumber(NATIONAL_POPULATION_2022)}</span>.
@@ -31,5 +30,6 @@ export default function NumbersPage() {
       </div>
       <SourcesFooter ids={["gastat-census-2022", "saudipedia-provinces"]} />
     </div>
+    </>
   );
 }

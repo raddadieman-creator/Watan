@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SourcesFooter } from "@/components/SourcesFooter";
+import { PageHero } from "@/components/PageHero";
 import { regions } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 
@@ -12,13 +13,11 @@ export const metadata: Metadata = {
 export default function RegionsIndex() {
   const sorted = [...regions].sort((a, b) => a.shortAr.localeCompare(b.shortAr, "ar"));
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6">
-      <h1 className="font-display text-[clamp(2.2rem,5vw,3.6rem)] font-extrabold text-green-deep">مناطقنا</h1>
-      <p className="mt-3 max-w-2xl text-lg leading-8 text-ink-muted">
-        تنقسم المملكة إداريًا إلى ثلاث عشرة منطقة، لكل منها إمارة ومقر إداري ومحافظات تتبعه. الجدول مرتب أبجديًا، ويمكن فتح أي منطقة من اسمها.
-      </p>
+    <>
+    <PageHero kicker="التقسيم الإداري" title="مناطقنا" lead="تنقسم المملكة إداريًا إلى ثلاث عشرة منطقة، لكل منها إمارة ومقر إداري ومحافظات تتبعه. الجدول مرتب أبجديًا، ويمكن فتح أي منطقة من اسمها." />
+    <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
 
-      <div className="mt-10 overflow-x-auto rounded-2xl border border-line bg-paper">
+      <div className="museum mt-12 overflow-x-auto">
         <table className="w-full min-w-[40rem] text-start text-[0.95rem]">
           <caption className="sr-only">المناطق الإدارية وبياناتها الأساسية</caption>
           <thead>
@@ -35,7 +34,7 @@ export default function RegionsIndex() {
               <tr key={r.id} className="border-b border-line/70 last:border-0 hover:bg-ivory/60">
                 <th scope="row" className="px-4 py-3 text-start font-medium">
                   <span className="me-2 inline-block size-2.5 rounded-full align-middle" style={{ background: r.accent }} aria-hidden />
-                  <Link href={`/regions/${r.id}`} className="font-display text-green-deep underline decoration-line underline-offset-4 hover:decoration-sand">
+                  <Link href={`/regions/${r.id}`} className="font-display text-xl text-green-deep underline decoration-line underline-offset-4 hover:decoration-sand">
                     {r.nameAr}
                   </Link>
                   {r.detailLevel === "full" && <span className="ms-2 text-xs font-normal text-emerald">مفصلة</span>}
@@ -55,5 +54,6 @@ export default function RegionsIndex() {
 
       <SourcesFooter ids={["gastat-census-2022", "saudipedia-provinces"]} />
     </div>
+    </>
   );
 }

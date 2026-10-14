@@ -15,8 +15,8 @@ export function SiteHeader() {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line/70 bg-ivory/92 backdrop-blur supports-[backdrop-filter]:bg-ivory/80">
-      <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6">
+    <header className="sticky top-0 z-40 border-b border-sand/25 bg-[#F8F5ED]/90 backdrop-blur-md">
+      <div className="mx-auto flex h-[72px] max-w-[1500px] items-center gap-6 px-5 sm:px-8">
         <Link href="/" aria-label="وطن — الصفحة الرئيسية" className="shrink-0 rounded">
           <Logo />
         </Link>
@@ -28,9 +28,9 @@ export function SiteHeader() {
                 <Link
                   href={item.href}
                   aria-current={isActive(item.href) ? "page" : undefined}
-                  className={`rounded-md px-3 py-2 text-[0.95rem] transition-colors ${
+                  className={`relative rounded-md px-3 py-2 text-[0.95rem] transition-colors ${
                     isActive(item.href)
-                      ? "font-semibold text-green-deep underline decoration-sand decoration-2 underline-offset-[10px]"
+                      ? "font-bold text-green-deep after:absolute after:inset-x-3 after:-bottom-[15px] after:h-[3px] after:rounded-full after:bg-sand"
                       : "text-ink-muted hover:text-green-deep"
                   }`}
                 >

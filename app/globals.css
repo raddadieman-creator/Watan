@@ -2,17 +2,20 @@
 
 @theme {
   --color-green-deep: #103B32;
+  --color-green-night: #0A2B24;
   --color-emerald: #16745D;
   --color-sand: #C5A46D;
   --color-sand-soft: #E7D9BC;
+  --color-parchment: #EFE5CC;
   --color-ivory: #F8F5ED;
   --color-paper: #FFFFFF;
   --color-charcoal: #182522;
-  --color-ink-muted: #4A5A56;
-  --color-line: #DDD5C3;
+  --color-ink-muted: #56655F;
+  --color-line: #DDD2BA;
+  --color-umber: #6B4F2A;
 
-  --font-display: "Alexandria", "IBM Plex Sans Arabic", system-ui, sans-serif;
-  --font-sans: "IBM Plex Sans Arabic", "Alexandria", system-ui, sans-serif;
+  --font-display: "Amiri", "Almarai", serif;
+  --font-sans: "Almarai", system-ui, sans-serif;
 
   --ease-atlas: cubic-bezier(0.22, 0.8, 0.24, 1);
 }
@@ -32,15 +35,17 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: 1.0625rem;
-  line-height: 1.75;
+  line-height: 1.85;
   background: var(--color-ivory);
   min-height: 100dvh;
   text-rendering: optimizeLegibility;
 }
 
+/* أميري خط نسخ طويل الصواعد والنوازل؛ يحتاج تباعد أسطر أوسع */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 1.45;
   text-wrap: balance;
 }
 
@@ -52,13 +57,72 @@ p { text-wrap: pretty; }
   border-radius: 4px;
 }
 
-/* خلفية خطوط الكنتور — توقيع بصري مستمد من خرائط التضاريس */
+.num { font-variant-numeric: tabular-nums; font-family: var(--font-sans); }
+
+/* لوحة الأطلس: بحر عميق مع خطوط كنتور خفيفة */
+.atlas-plate {
+  background-color: var(--color-green-night);
+  background-image:
+    radial-gradient(90% 70% at 30% 45%, rgba(22, 116, 93, 0.35), transparent 70%),
+    radial-gradient(60% 50% at 90% 10%, rgba(197, 164, 109, 0.08), transparent 70%);
+}
+
 .contour-plate {
   background-color: var(--color-green-deep);
   background-image:
-    radial-gradient(120% 90% at 30% 40%, rgba(22, 116, 93, 0.45), transparent 60%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520'%3E%3Cg fill='none' stroke='%23C5A46D' stroke-opacity='0.09' stroke-width='1'%3E%3Cpath d='M-20 120c80-40 150 30 240-10s160-70 320 10'/%3E%3Cpath d='M-20 160c90-40 160 30 250-10s170-60 310 20'/%3E%3Cpath d='M-20 200c100-40 170 30 260-10s170-50 300 30'/%3E%3Cpath d='M-20 300c70 30 140-40 230 0s180 60 330-10'/%3E%3Cpath d='M-20 340c80 30 150-40 240 0s170 50 320-10'/%3E%3Cpath d='M-20 380c90 30 160-40 250 0s160 40 310-10'/%3E%3Cpath d='M-20 440c100 20 180-30 270 0s150 30 290-10'/%3E%3C/g%3E%3C/svg%3E");
+    radial-gradient(120% 90% at 30% 40%, rgba(22, 116, 93, 0.4), transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520'%3E%3Cg fill='none' stroke='%23C5A46D' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M-20 120c80-40 150 30 240-10s160-70 320 10'/%3E%3Cpath d='M-20 160c90-40 160 30 250-10s170-60 310 20'/%3E%3Cpath d='M-20 200c100-40 170 30 260-10s170-50 300 30'/%3E%3Cpath d='M-20 300c70 30 140-40 230 0s180 60 330-10'/%3E%3Cpath d='M-20 340c80 30 150-40 240 0s170 50 320-10'/%3E%3Cpath d='M-20 380c90 30 160-40 250 0s160 40 310-10'/%3E%3Cpath d='M-20 440c100 20 180-30 270 0s150 30 290-10'/%3E%3C/g%3E%3C/svg%3E");
   background-size: auto, 520px 520px;
+}
+
+/* ورق الأطلس: خلفية عاجية بملمس خفيف */
+.paper {
+  background-color: var(--color-ivory);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.34 0 0 0 0 0.2 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.glass-panel {
+  background: rgba(10, 43, 36, 0.62);
+  border: 1px solid rgba(197, 164, 109, 0.32);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  height: 3rem; padding-inline: 1.5rem; border-radius: 999px;
+  background: linear-gradient(180deg, #D8BB84, #B8945A);
+  color: #10251F; font-weight: 700; font-size: 0.95rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 10px 24px -12px rgba(197,164,109,0.7);
+  transition: transform 200ms var(--ease-atlas), box-shadow 200ms;
+}
+.btn-gold:hover { transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 16px 30px -14px rgba(197,164,109,0.85); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  height: 3rem; padding-inline: 1.25rem; border-radius: 999px;
+  border: 1px solid rgba(248, 245, 237, 0.28); color: var(--color-ivory); font-size: 0.95rem;
+  transition: border-color 200ms, color 200ms, background 200ms;
+}
+.btn-ghost:hover { border-color: var(--color-sand); color: var(--color-sand); background: rgba(197,164,109,0.06); }
+
+/* بطاقة متحفية: إطار مزدوج وزوايا ذهبية */
+.museum {
+  position: relative;
+  background: #FFFDF8;
+  border: 1px solid var(--color-line);
+  box-shadow: 0 1px 0 #fff inset, 0 18px 40px -30px rgba(16, 59, 50, 0.45);
+}
+.museum::before {
+  content: ""; position: absolute; inset: 6px; border: 1px solid rgba(197,164,109,0.28); pointer-events: none;
+}
+.museum::after {
+  content: ""; position: absolute; inset: -1px; pointer-events: none;
+  background:
+    linear-gradient(var(--color-sand), var(--color-sand)) top right / 18px 2px no-repeat,
+    linear-gradient(var(--color-sand), var(--color-sand)) top right / 2px 18px no-repeat,
+    linear-gradient(var(--color-sand), var(--color-sand)) bottom left / 18px 2px no-repeat,
+    linear-gradient(var(--color-sand), var(--color-sand)) bottom left / 2px 18px no-repeat;
 }
 
 .flag-pending {
@@ -66,9 +130,15 @@ p { text-wrap: pretty; }
   border: 1px dashed #B8955A;
 }
 
-.num {
-  font-variant-numeric: tabular-nums;
+/* رسم الحدود عند التحميل: لحظة افتتاحية واحدة */
+.atlas-draw > use {
+  animation: atlas-fade 1.2s var(--ease-atlas) both;
 }
+.atlas-rise {
+  animation: atlas-rise 1.6s var(--ease-atlas) both;
+}
+@keyframes atlas-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes atlas-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -77,4 +147,13 @@ p { text-wrap: pretty; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+.hero-title {
+  background: linear-gradient(175deg, #FFFBF0 10%, #F1E2BE 55%, #C5A46D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 8px 30px rgba(0, 0, 0, 0.35));
+  padding-bottom: 0.1em;
 }

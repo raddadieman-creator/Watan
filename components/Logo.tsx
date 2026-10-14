@@ -1,12 +1,18 @@
-/** شعار نصي: كلمة «وطن» مع نقطة رملية تمثّل موقعًا على الخريطة */
+/** الشعار: «وطن» بخط نسخي، تعلوه شُرفة نجدية صغيرة */
 export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
   const ink = tone === "dark" ? "text-green-deep" : "text-ivory";
   return (
-    <span className={`inline-flex items-baseline gap-2 ${ink}`}>
-      <span className="font-display text-[1.65rem] font-extrabold leading-none tracking-tight">وطن</span>
-      <span aria-hidden className="inline-block size-2 translate-y-[-0.35rem] rounded-full bg-sand" />
-      <span className="font-display text-[0.7rem] font-medium tracking-[0.2em] opacity-70" lang="en" dir="ltr">
-        WATAN
+    <span className={`inline-flex items-center gap-2.5 ${ink}`}>
+      <span className="relative inline-flex flex-col items-center">
+        <svg width="22" height="11" viewBox="0 0 30 16" aria-hidden className="mb-[-6px]">
+          <path d="M2 16 V12 H5 V8 H8 V4 H11 V1 H19 V4 H22 V8 H25 V12 H28 V16 Z M15 6 L12.5 12 H17.5 Z" fill="#C5A46D" fillRule="evenodd" />
+        </svg>
+        <span className="font-display text-[2rem] font-bold leading-[1.3]">وطن</span>
+      </span>
+      <span className="hidden h-7 w-px bg-current opacity-20 sm:block" aria-hidden />
+      <span className="hidden text-[0.68rem] leading-4 opacity-70 sm:block">
+        <span className="block" lang="en" dir="ltr">WATAN</span>
+        <span className="block">أطلس المملكة التفاعلي</span>
       </span>
     </span>
   );

@@ -39,7 +39,7 @@ export function RegionCompare({ regions }: { regions: CompareRegion[] }) {
     <div className="grid gap-12">
       <section aria-labelledby="chart-h">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 id="chart-h" className="font-display text-2xl font-bold text-green-deep">المناطق حسب {METRICS[metric].label}</h2>
+          <h2 id="chart-h" className="font-display text-[2rem] text-green-deep">المناطق حسب {METRICS[metric].label}</h2>
           <div role="radiogroup" aria-label="اختر المؤشر" className="inline-flex rounded-full border border-line bg-paper p-1">
             {(Object.keys(METRICS) as Metric[]).map((m) => (
               <button
@@ -70,8 +70,8 @@ export function RegionCompare({ regions }: { regions: CompareRegion[] }) {
         </ol>
       </section>
 
-      <section aria-labelledby="cmp-h" className="rounded-2xl border border-line bg-paper p-5 sm:p-8">
-        <h2 id="cmp-h" className="font-display text-2xl font-bold text-green-deep">قارن بين منطقتين</h2>
+      <section aria-labelledby="cmp-h" className="museum p-6 sm:p-9">
+        <h2 id="cmp-h" className="font-display text-[2rem] text-green-deep">قارن بين منطقتين</h2>
         <div className="mt-5 grid gap-4 sm:grid-cols-2">
           {[{ v: a, set: setA, id: "cmp-a" }, { v: b, set: setB, id: "cmp-b" }].map((s, i) => (
             <label key={s.id} htmlFor={s.id} className="grid gap-1.5 text-sm text-ink-muted">
