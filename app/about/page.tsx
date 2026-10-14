@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { PROJECT_CREDIT } from "@/lib/site";
 
 export const metadata: Metadata = { title: "عن وطن", description: "فكرة منصة وطن وأهدافها وما أُنجز منها وما يجري العمل عليه." };
 
@@ -36,12 +37,26 @@ export default function AboutPage() {
           «وطن» منصة معرفية تفاعلية عن المملكة العربية السعودية، تجعل الخريطة مدخلًا إلى المعرفة: يختار الزائر منطقة، فيصل منها إلى سكانها ومحافظاتها وتراثها وجامعاتها، ويقارنها بغيرها.
         </p>
         <p>
-          المنصة مشروع مستقل، لا يتبع جهة حكومية ولا مدرسة ولا مؤسسة تعليمية، ولا يحمل أي اعتماد رسمي. تُعرض المعلومة فيها بمصدرها، وما لم يُتحقق منه بعد يظهر موسومًا بأنه بحاجة للتحقق بدل أن يُملأ بتقدير.
+          المنصة لا تتبع جهة حكومية، ولا تحمل أي اعتماد رسمي. تُعرض المعلومة فيها بمصدرها، وما لم يُتحقق منه بعد يظهر موسومًا بأنه بحاجة للتحقق بدل أن يُملأ بتقدير.
         </p>
         <p>
           تخدم المنصة طلاب التعليم العام والجامعي ومعلميهم، والمهتمين بالجغرافيا والتراث، وزوار المملكة. ويمكن توظيفها في دروس الجغرافيا والدراسات الاجتماعية، وفي أنشطة التعلم القائم على الاستكشاف.
         </p>
       </div>
+
+      <section className="museum mt-12 p-7" aria-labelledby="team-h">
+        <h2 id="team-h" className="font-display text-[1.9rem] text-ink">تقديم المشروع</h2>
+        <dl className="mt-4 grid gap-4 sm:grid-cols-2">
+          <div>
+            <dt className="text-sm text-ink-muted">مقدِّمة المشروع</dt>
+            <dd className="mt-1 font-display text-2xl leading-10 text-ink">{PROJECT_CREDIT.presenter}</dd>
+          </div>
+          <div>
+            <dt className="text-sm text-ink-muted">المدرسة</dt>
+            <dd className="mt-1 font-display text-2xl leading-10 text-ink">{PROJECT_CREDIT.school}</dd>
+          </div>
+        </dl>
+      </section>
 
       <section className="mt-14" aria-labelledby="built-h">
         <h2 id="built-h" className="font-display text-[2.2rem] text-ink">ما يعمل الآن</h2>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { Parapet } from "./Parapet";
-import { CONTENT_LAST_REVIEW, NAV, SITE_TAGLINE } from "@/lib/site";
+import { CONTENT_LAST_REVIEW, NAV, PROJECT_CREDIT, SITE_TAGLINE } from "@/lib/site";
 import { formatDate } from "@/lib/format";
 
 export function SiteFooter() {
@@ -14,8 +14,13 @@ export function SiteFooter() {
             <Logo tone="light" />
             <p className="mt-6 max-w-sm font-display text-2xl leading-[1.6] text-[#FFD08A]">{SITE_TAGLINE}</p>
             <p className="mt-3 max-w-sm text-sm leading-7 text-white/70">
-              منصة معرفية مستقلة، لا تتبع جهة حكومية ولا مؤسسة تعليمية، ولا تحمل اعتمادًا رسميًا.
+              منصة معرفية تفاعلية، لا تتبع جهة حكومية ولا تحمل اعتمادًا رسميًا.
             </p>
+            <div className="mt-6 max-w-sm rounded-2xl bg-white/10 px-4 py-3 ring-1 ring-white/15">
+              <p className="text-xs text-white/65">المشروع من تقديم</p>
+              <p className="mt-0.5 font-display text-xl leading-9 text-white">{PROJECT_CREDIT.presenter}</p>
+              <p className="text-sm text-[#FFD08A]">{PROJECT_CREDIT.school}</p>
+            </div>
           </div>
           <nav aria-label="روابط التذييل">
             <ul className="grid gap-2.5 text-[0.95rem]">

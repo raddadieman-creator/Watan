@@ -20,3 +20,9 @@ export const NAV = [
 ] as const;
 
 export const CONTENT_LAST_REVIEW = "2026-10-14";
+
+/** بيانات تقديم المشروع */
+export const PROJECT_CREDIT = {
+  presenter: "ديما فهد الردادي",
+  school: "مدرسة الموهوبين التقنية — بنات",
+} as const;

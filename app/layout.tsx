@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: { default: `${SITE_NAME} | ${SITE_TAGLINE}`, template: `%s | ${SITE_NAME}` },
   description:
     "منصة معرفية تفاعلية مستقلة عن المملكة العربية السعودية: أطلس للمناطق الثلاث عشرة، وتراث موثق من قوائم اليونسكو، وأرقام من مصادرها الرسمية.",
+  authors: [{ name: "ديما فهد الردادي" }],
   openGraph: { type: "website", locale: "ar_SA", siteName: SITE_NAME },
 };
 
