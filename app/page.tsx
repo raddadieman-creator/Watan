@@ -2,10 +2,11 @@ import Link from "next/link";
 import { AtlasMap } from "@/components/AtlasMap";
 import { Ornament, Parapet } from "@/components/Parapet";
 import { RegionPlate } from "@/components/RegionPlate";
-import { PendingTag, SourceRef } from "@/components/SourceRef";
+import { SourceRef } from "@/components/SourceRef";
 import { SourcesFooter } from "@/components/SourcesFooter";
+import { LiveNow } from "@/components/LiveNow";
 import { getAtlas } from "@/lib/geo";
-import { getRegion, indicators, journeyOrder, NATIONAL_POPULATION_2022, regions, worldHeritage } from "@/lib/data";
+import { getRegion, indicators, journeyOrder, NATIONAL_POPULATION_2022, regions, religious, worldHeritage } from "@/lib/data";
 import { formatCompact, formatNumber } from "@/lib/format";
 
 function SectionTitle({ title, lead, tone = "light" }: { title: string; lead?: string; tone?: "light" | "dark" }) {
@@ -21,7 +22,7 @@ export default function HomePage() {
   const atlas = getAtlas();
   const mapRegions = regions.map((r) => ({
     id: r.id, nameAr: r.nameAr, shortAr: r.shortAr, seatAr: r.seatAr, accent: r.accent,
-    population: r.population.value, areaKm2: r.areaKm2.value, governorates: r.governorates.count, detailLevel: r.detailLevel,
+    population: r.population.value, areaKm2: r.areaKm2.value, governorates: r.governorates.count, detailLevel: r.detailLevel, seat: r.seat,
   }));
   const byPop = [...regions].sort((a, b) => b.population.value - a.population.value);
   const maxPop = byPop[0].population.value;
@@ -53,19 +54,46 @@ export default function HomePage() {
       <AtlasMap atlas={atlas} regions={mapRegions} intro={intro} />
       <Parapet color="#FFFBF4" className="-mt-[22px] relative z-10" />
 
+      <LiveNow regions={regions.filter((r) => r.seat).map((r) => ({ id: r.id, shortAr: r.shortAr, seatAr: r.seatAr, accent: r.accent, seat: r.seat! }))} />
+
+      {/* السياحة الدينية */}
+      <section className="mx-auto max-w-[1400px] px-5 pt-24 sm:px-8" aria-labelledby="rel-h">
+        <div className="relative overflow-hidden rounded-[2rem] p-7 sm:p-10" style={{ background: "linear-gradient(120deg,#0F5F6E 0%,#16839A 45%,#23A887 100%)" }}>
+          <div className="pointer-events-none absolute -end-20 -top-24 size-80 rounded-full bg-[#FFD58A]/30 blur-3xl" aria-hidden />
+          <div className="relative grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-center">
+            <div className="text-white">
+              <p className="text-sm font-bold text-[#FFD58A]">ضيوف الرحمن</p>
+              <h2 id="rel-h" className="mt-1 font-display text-[clamp(2.2rem,4.5vw,3.4rem)] leading-[1.4]">السياحة الدينية</h2>
+              <p className="mt-2 max-w-xl text-[1.05rem] leading-9 text-white/85">
+                المسجد الحرام والمشاعر المقدسة في مكة المكرمة، والمسجد النبوي ومساجد المدينة المنورة ومعالمها ومتاحفها، مع روابط تصاريح العمرة وزيارة الروضة الشريفة.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link href="/religious-tourism#religious-makkah" className="btn-gold">مكة المكرمة</Link>
+                <Link href="/religious-tourism#religious-madinah" className="inline-flex h-12 items-center rounded-full bg-white px-6 font-bold text-sea hover:bg-cream">المدينة المنورة</Link>
+              </div>
+            </div>
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {[...religious.makkah.sites.slice(0, 2), ...religious.madinah.sites.slice(0, 2)].map((s) => (
+                <li key={s.nameAr} className="rounded-2xl bg-white/12 p-4 text-white ring-1 ring-white/20 backdrop-blur">
+                  <p className="font-display text-xl leading-9">{s.nameAr}</p>
+                  <p className="mt-1 line-clamp-2 text-sm leading-7 text-white/80">{s.descAr}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* المؤشرات */}
       <section className="mx-auto max-w-[1400px] px-5 pt-16 sm:px-8" aria-labelledby="facts-h">
-        <div id="facts-h"><SectionTitle title="المملكة في ستة أسطر" lead="كل رقم هنا مرتبط بمصدره وسنته. وما لم يُتحقق منه بعد يظهر بوسم واضح بدل رقم تقديري." /></div>
+        <div id="facts-h"><SectionTitle title="المملكة في ستة أسطر" lead="كل رقم هنا مرتبط بمصدره وسنته، ويمكن فتح المصدر مباشرة." /></div>
         <dl className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {indicators.map((ind) => (
             <div key={ind.id} className="museum flex flex-col p-7">
               <dt className="text-sm text-ink-muted">{ind.label}</dt>
               <dd className="mt-3 flex-1">
-                {ind.status === "verified" ? (
-                  <span className="num block text-[clamp(2rem,3.4vw,2.8rem)] font-extrabold leading-tight text-sea">{ind.value}</span>
-                ) : (
-                  <PendingTag />
-                )}
+                <span className="num block text-[clamp(2rem,3.4vw,2.8rem)] font-extrabold leading-tight text-sea">{ind.value}</span>
+
                 <span className="mt-2 block text-[0.95rem] leading-7 text-ink-muted">{ind.detail}</span>
               </dd>
               <dd className="mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-line pt-4 text-sm">
@@ -149,7 +177,7 @@ export default function HomePage() {
                     <h3 className="mt-1 font-display text-[1.35rem] leading-[1.6]">
                       <Link href={`/heritage#${s.id}`} className="hover:text-coral">{s.nameAr}</Link>
                     </h3>
-                    <p className="text-sm text-ink/60">{s.category} — {region ? region.shortAr : "المنطقة بحاجة للتحقق"}</p>
+                    <p className="text-sm text-ink/60">{s.category}{region ? ` — ${region.shortAr}` : ""}</p>
                   </li>
                 );
               })}

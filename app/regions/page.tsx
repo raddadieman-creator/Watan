@@ -42,7 +42,7 @@ export default function RegionsIndex() {
                 <td className="px-4 py-3">{r.seatAr}</td>
                 <td className="num px-4 py-3">{formatNumber(r.population.value)}</td>
                 <td className="num px-4 py-3">{formatNumber(r.areaKm2.value)} كم²</td>
-                <td className="num px-4 py-3">{r.governorates.count ?? <span className="text-xs text-[#8A6A2E]">بحاجة للتحقق</span>}</td>
+                <td className="num px-4 py-3">{r.governorates.count ?? r.governorates.names.length}</td>
               </tr>
             ))}
           </tbody>

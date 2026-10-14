@@ -1,6 +1,6 @@
-import { regions, worldHeritage, intangible } from "./data";
+import { folkArts, intangible, regionGuide, regions, religious, universities, worldHeritage } from "./data";
 
-export type SearchKind = "منطقة" | "محافظة" | "تراث عالمي" | "تراث غير مادي" | "جامعة" | "صفحة";
+export type SearchKind = "منطقة" | "محافظة" | "تراث عالمي" | "تراث غير مادي" | "جامعة" | "فن شعبي" | "مكان" | "سياحة دينية" | "صفحة";
 
 export interface SearchDoc {
   id: string;
@@ -57,15 +57,24 @@ for (const r of regions) {
       terms: g,
     });
   }
-  for (const u of r.universities) {
-    docs.push({
-      id: `uni-${u.url}`,
-      kind: "جامعة",
-      title: u.nameAr,
-      subtitle: `${u.type} — ${r.nameAr}`,
-      href: `/regions/${r.id}#universities`,
-      terms: u.url,
-    });
+  for (const p of regionGuide[r.id]?.places ?? []) {
+    docs.push({ id: `place-${r.id}-${p.nameAr}`, kind: "مكان", title: p.nameAr, subtitle: r.nameAr, href: `/regions/${r.id}#places`, terms: p.descAr });
+  }
+}
+
+for (const u of universities) {
+  const r = regions.find((x) => x.id === u.region)!;
+  docs.push({ id: `uni-${u.url}`, kind: "جامعة", title: u.nameAr, subtitle: `${u.cityAr} — ${r.nameAr}`, href: `/regions/${r.id}#universities`, terms: `${u.url} ${u.note ?? ""}` });
+}
+
+for (const a of folkArts) {
+  const first = a.regions[0];
+  docs.push({ id: `art-${a.id}`, kind: "فن شعبي", title: a.nameAr, subtitle: a.regions.map((x) => regions.find((r) => r.id === x)!.shortAr).join("، "), href: first ? `/regions/${first}#folk-arts` : "/heritage#folk-arts", terms: `${a.areaAr ?? ""} عرضه رقصه فن شعبي` });
+}
+
+for (const city of ["makkah", "madinah"] as const) {
+  for (const s of religious[city].sites) {
+    docs.push({ id: `rel-${city}-${s.nameAr}`, kind: "سياحة دينية", title: s.nameAr, subtitle: religious[city].title, href: `/religious-tourism#religious-${city}`, terms: `${s.kind} ${s.descAr}` });
   }
 }
 
@@ -75,7 +84,7 @@ for (const s of worldHeritage) {
     id: `whs-${s.id}`,
     kind: "تراث عالمي",
     title: s.nameAr,
-    subtitle: `${s.year} — ${region ? region.nameAr : "المنطقة بحاجة للتحقق"}`,
+    subtitle: `${s.year}${region ? ` — ${region.nameAr}` : ""}`,
     href: `/heritage#${s.id}`,
     terms: `${s.nameEn} ${s.regionNote ?? ""}`,
   });
@@ -94,6 +103,8 @@ for (const e of intangible) {
 
 const pages: Array<[string, string, string]> = [
   ["/regions", "المناطق الإدارية الثلاث عشرة", "مناطق امارات اطلس خريطه"],
+  ["/religious-tourism", "السياحة الدينية في مكة المكرمة والمدينة المنورة", "حرم عمره زياره مسجد"],
+  ["/universities", "الجامعات الحكومية", "جامعات تعليم عالي"],
   ["/heritage", "التراث في قوائم اليونسكو", "يونسكو تراث عالمي غير مادي"],
   ["/numbers", "المملكة بالأرقام", "سكان تعداد احصاء ارقام مساحه"],
   ["/sources", "المصادر والمراجع", "مراجع مصادر توثيق"],
@@ -110,7 +121,7 @@ const prepared = docs.map((d) => ({
 }));
 
 const kindWeight: Record<SearchKind, number> = {
-  "منطقة": 6, "تراث عالمي": 5, "تراث غير مادي": 5, "جامعة": 4, "محافظة": 3, "صفحة": 2,
+  "منطقة": 6, "سياحة دينية": 5, "تراث عالمي": 5, "تراث غير مادي": 5, "فن شعبي": 4, "مكان": 4, "جامعة": 4, "محافظة": 3, "صفحة": 2,
 };
 
 export function search(query: string, limit = 20): SearchDoc[] {

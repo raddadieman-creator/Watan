@@ -22,9 +22,3 @@ export function SourceRef({ ids }: { ids: string[] }) {
     </span>
   );
 }
-
-export function PendingTag({ children = "بحاجة للتحقق" }: { children?: React.ReactNode }) {
-  return (
-    <span className="flag-pending inline-flex items-center rounded px-2 py-0.5 text-xs text-[#7A5A22]">{children}</span>
-  );
-}

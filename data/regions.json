@@ -5,13 +5,46 @@
     "shortAr": "الرياض",
     "nameEn": "Riyadh",
     "seatAr": "مدينة الرياض",
-    "seat": [46.771, 24.643],
+    "seat": [
+      46.771,
+      24.643
+    ],
     "accent": "#F28C38",
-    "population": { "value": 8591748, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 380000, "approx": true, "source": "saudipedia-provinces" },
+    "population": {
+      "value": 8591748,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 380000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
     "governorates": {
       "count": 22,
-      "names": ["الدرعية", "الخرج", "الدوادمي", "المجمعة", "القويعية", "وادي الدواسر", "الأفلاج", "الزلفي", "شقراء", "حوطة بني تميم", "الغاط", "عفيف", "السليل", "ضرما", "المزاحمية", "رماح", "ثادق", "حريملاء", "الحريق", "مرات", "الدلم", "الرين"],
+      "names": [
+        "الدرعية",
+        "الخرج",
+        "الدوادمي",
+        "المجمعة",
+        "القويعية",
+        "وادي الدواسر",
+        "الأفلاج",
+        "الزلفي",
+        "شقراء",
+        "حوطة بني تميم",
+        "الغاط",
+        "عفيف",
+        "السليل",
+        "ضرما",
+        "المزاحمية",
+        "رماح",
+        "ثادق",
+        "حريملاء",
+        "الحريق",
+        "مرات",
+        "الدلم",
+        "الرين"
+      ],
       "source": "saudipedia-provinces"
     },
     "detailLevel": "full",
@@ -21,41 +54,75 @@
         "key": "geography",
         "title": "الموقع والتضاريس",
         "items": [
-          { "text": "تقع في وسط المملكة، وتحدها المنطقة الشرقية من الشرق والشمال الشرقي، والقصيم من الشمال، ونجران وعسير من الجنوب، ومكة المكرمة وجزء من المدينة المنورة من الغرب.", "sources": ["saudipedia-provinces"] },
-          { "text": "تقع على هضبة الصفراء ضمن إقليم نجد، ويبلغ أعلى ارتفاع فيها نحو 600 متر قرب الزلفي.", "sources": ["saudipedia-provinces"] },
-          { "text": "يمتد جبل طويق نحو 1,200 كم بارتفاعات بين 800 و1,000 متر؛ واجهته الغربية شديدة الانحدار، ومنحدراته الشرقية متدرجة تنتهي جنوبًا برمال الربع الخالي.", "sources": ["saudipedia-provinces"] }
+          {
+            "text": "تقع في وسط المملكة، وتحدها المنطقة الشرقية من الشرق والشمال الشرقي، والقصيم من الشمال، ونجران وعسير من الجنوب، ومكة المكرمة وجزء من المدينة المنورة من الغرب.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "تقع على هضبة الصفراء ضمن إقليم نجد، ويبلغ أعلى ارتفاع فيها نحو 600 متر قرب الزلفي.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "يمتد جبل طويق نحو 1,200 كم بارتفاعات بين 800 و1,000 متر؛ واجهته الغربية شديدة الانحدار، ومنحدراته الشرقية متدرجة تنتهي جنوبًا برمال الربع الخالي.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       },
       {
         "key": "climate",
         "title": "المناخ",
         "items": [
-          { "text": "مناخ قاري جاف، حار صيفًا وبارد شتاءً، وأمطاره معتدلة تهطل غالبًا في الشتاء، ويختلف من محافظة إلى أخرى.", "sources": ["saudipedia-provinces"] }
+          {
+            "text": "مناخ قاري جاف، حار صيفًا وبارد شتاءً، وأمطاره معتدلة تهطل غالبًا في الشتاء، ويختلف من محافظة إلى أخرى.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       },
       {
         "key": "heritage",
         "title": "التراث والمعالم",
         "items": [
-          { "text": "حي الطريف في الدرعية مسجل في قائمة التراث العالمي لليونسكو منذ 2010.", "sources": ["unesco-whc-sa"] },
-          { "text": "من معالم مدينة الرياض قصر المصمك وقصر المربع، وحي البجيري في الدرعية.", "sources": ["saudipedia-provinces"] }
+          {
+            "text": "حي الطريف في الدرعية مسجل في قائمة التراث العالمي لليونسكو منذ 2010.",
+            "sources": [
+              "unesco-whc-sa"
+            ]
+          },
+          {
+            "text": "من معالم مدينة الرياض قصر المصمك وقصر المربع، وحي البجيري في الدرعية.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       },
       {
         "key": "development",
         "title": "التنمية والمشروعات",
         "items": [
-          { "text": "تضم العاصمة مقار الجهات الحكومية ومنظمات دولية، ومطار الملك خالد الدولي، وشبكة مترو الرياض بطول 176 كم.", "sources": ["saudipedia-provinces"] },
-          { "text": "من مشروعات رؤية 2030 المعلنة في الرياض: حديقة الملك سلمان، والرياض الخضراء، والرياض آرت. حالة إنجاز كل مشروع بحاجة للتحقق من الجهة المنفذة قبل عرضها.", "sources": ["saudipedia-provinces"], "flag": "status-pending" }
+          {
+            "text": "تضم العاصمة مقار الجهات الحكومية ومنظمات دولية، ومطار الملك خالد الدولي، وشبكة مترو الرياض بطول 176 كم.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "من مشروعات رؤية 2030 المعلنة في الرياض: حديقة الملك سلمان، والرياض الخضراء، والرياض آرت.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       }
-    ],
-    "universities": [
-      { "nameAr": "جامعة الملك سعود", "url": "https://ksu.edu.sa", "type": "حكومية" },
-      { "nameAr": "جامعة الإمام محمد بن سعود الإسلامية", "url": "https://imamu.edu.sa", "type": "حكومية" },
-      { "nameAr": "جامعة الأميرة نورة بنت عبدالرحمن", "url": "https://pnu.edu.sa", "type": "حكومية" }
-    ],
-    "universitiesNote": "قائمة جزئية. القائمة الكاملة وسنوات التأسيس تُستكمل من قوائم وزارة التعليم."
+    ]
   },
   {
     "id": "makkah",
@@ -63,15 +130,88 @@
     "shortAr": "مكة المكرمة",
     "nameEn": "Makkah",
     "seatAr": "مدينة مكة المكرمة",
-    "seat": [39.818, 21.432],
+    "seat": [
+      39.818,
+      21.432
+    ],
     "accent": "#E5534B",
-    "population": { "value": 8021463, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 137000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": null, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 8021463,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 137000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 16,
+      "names": [
+        "جدة",
+        "الطائف",
+        "القنفذة",
+        "الليث",
+        "رابغ",
+        "خليص",
+        "الخرمة",
+        "رنية",
+        "تربة",
+        "الجموم",
+        "الكامل",
+        "ميسان",
+        "المويه",
+        "أضم",
+        "العرضيات",
+        "بحرة"
+      ],
+      "source": "sp-makkah"
+    },
+    "detailLevel": "full",
+    "lead": "تمتد على ساحل البحر الأحمر غرب المملكة، وفيها المسجد الحرام والمشاعر المقدسة، ومحافظتا جدة والطائف.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع غرب المملكة على ساحل البحر الأحمر، تحدها منطقة الرياض شرقًا، والمدينة المنورة شمالًا، وعسير والباحة جنوبًا.",
+            "sources": [
+              "sp-makkah"
+            ]
+          },
+          {
+            "text": "تقع ضمن تكوين الدرع العربي النوبي، وتشكّل الحرّات 16% من مساحتها، ويمتد ساحلها 610 كم.",
+            "sources": [
+              "sp-makkah"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "حارة صيفًا من يونيو إلى أغسطس، ويبلغ متوسط الحرارة السنوي نحو 31 درجة، والطائف أبرد محافظاتها وأغزرها مطرًا.",
+            "sources": [
+              "sp-makkah"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "تسهم بنحو 13% من الناتج المحلي الإجمالي للمملكة، وتضم مدينة الملك عبدالله الاقتصادية وميناء جدة الإسلامي.",
+            "sources": [
+              "sp-makkah"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "madinah",
@@ -79,13 +219,32 @@
     "shortAr": "المدينة المنورة",
     "nameEn": "Madinah",
     "seatAr": "المدينة المنورة",
-    "seat": [39.578, 24.502],
+    "seat": [
+      39.578,
+      24.502
+    ],
     "accent": "#23A887",
-    "population": { "value": 2137983, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 150000, "approx": true, "source": "saudipedia-provinces" },
+    "population": {
+      "value": 2137983,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 150000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
     "governorates": {
       "count": 8,
-      "names": ["ينبع", "العلا", "المهد", "بدر", "خيبر", "الحناكية", "العيص", "وادي الفرع"],
+      "names": [
+        "ينبع",
+        "العلا",
+        "المهد",
+        "بدر",
+        "خيبر",
+        "الحناكية",
+        "العيص",
+        "وادي الفرع"
+      ],
       "source": "saudipedia-provinces"
     },
     "detailLevel": "full",
@@ -95,41 +254,81 @@
         "key": "geography",
         "title": "الموقع والتضاريس",
         "items": [
-          { "text": "تقع في غرب المملكة، وتحدها مكة المكرمة من الجنوب، وتبوك من الشمال، والرياض والقصيم وحائل من الشرق، والبحر الأحمر من الغرب.", "sources": ["saudipedia-provinces"] },
-          { "text": "لها ساحل على البحر الأحمر بطول نحو 200 كم.", "sources": ["saudipedia-provinces"] }
+          {
+            "text": "تقع في غرب المملكة، وتحدها مكة المكرمة من الجنوب، وتبوك من الشمال، والرياض والقصيم وحائل من الشرق، والبحر الأحمر من الغرب.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "لها ساحل على البحر الأحمر بطول نحو 200 كم.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       },
       {
         "key": "climate",
         "title": "المناخ",
         "items": [
-          { "text": "مناخ صحراوي جاف: صيف حار وشتاء بارد، وربيع وخريف معتدلان. المناطق الساحلية أشد حرارة ورطوبة في الصيف.", "sources": ["saudipedia-provinces"] },
-          { "text": "تنخفض الصغرى شتاءً إلى نحو 10°م، وتصل العظمى صيفًا إلى نحو 45°م. هذه قيم وصفية من المصدر وليست متوسطات مناخية لفترة محددة.", "sources": ["saudipedia-provinces"], "flag": "climate-normals-pending" }
+          {
+            "text": "مناخ صحراوي جاف: صيف حار وشتاء بارد، وربيع وخريف معتدلان. المناطق الساحلية أشد حرارة ورطوبة في الصيف.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "تنخفض الصغرى شتاءً إلى نحو 10°م، وتصل العظمى صيفًا إلى نحو 45°م.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       },
       {
         "key": "heritage",
         "title": "التراث والمعالم",
         "items": [
-          { "text": "المسجد النبوي ومسجد قباء في مدينة المدينة المنورة.", "sources": ["saudipedia-provinces"] },
-          { "text": "موقع الحِجر الأثري (مدائن صالح) في العلا مسجل في قائمة التراث العالمي لليونسكو منذ 2008.", "sources": ["unesco-whc-sa"] },
-          { "text": "قصر الفريد من أبرز معالم العلا.", "sources": ["saudipedia-provinces"] }
+          {
+            "text": "المسجد النبوي ومسجد قباء في مدينة المدينة المنورة.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "موقع الحِجر الأثري (مدائن صالح) في العلا مسجل في قائمة التراث العالمي لليونسكو منذ 2008.",
+            "sources": [
+              "unesco-whc-sa"
+            ]
+          },
+          {
+            "text": "قصر الفريد من أبرز معالم العلا.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       },
       {
         "key": "economy",
         "title": "الاقتصاد",
         "items": [
-          { "text": "منجم مهد الذهب أكبر مناجم الذهب في المملكة وأقدمها.", "sources": ["saudipedia-provinces"] },
-          { "text": "للسياحة الثقافية والأثرية وزن خاص في المنطقة، ولا سيما في العلا.", "sources": ["saudipedia-provinces"] }
+          {
+            "text": "منجم مهد الذهب أكبر مناجم الذهب في المملكة وأقدمها.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "للسياحة الثقافية والأثرية وزن خاص في المنطقة، ولا سيما في العلا.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       }
-    ],
-    "universities": [
-      { "nameAr": "الجامعة الإسلامية بالمدينة المنورة", "url": "https://iu.edu.sa", "type": "حكومية" },
-      { "nameAr": "جامعة طيبة", "url": "https://taibahu.edu.sa", "type": "حكومية" }
-    ],
-    "universitiesNote": "قائمة جزئية. القائمة الكاملة وسنوات التأسيس تُستكمل من قوائم وزارة التعليم."
+    ]
   },
   {
     "id": "eastern",
@@ -137,15 +336,84 @@
     "shortAr": "الشرقية",
     "nameEn": "Eastern Province",
     "seatAr": "مدينة الدمام",
-    "seat": [50.098, 26.43],
+    "seat": [
+      50.098,
+      26.43
+    ],
     "accent": "#2E8FD9",
-    "population": { "value": 5125254, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 540000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": 12, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 5125254,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 540000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 12,
+      "names": [
+        "الأحساء",
+        "حفر الباطن",
+        "الجبيل",
+        "القطيف",
+        "الخبر",
+        "الخفجي",
+        "العديد",
+        "رأس تنورة",
+        "أبقيق",
+        "النعيرية",
+        "قرية العليا",
+        "البيضاء"
+      ],
+      "source": "sp-eastern"
+    },
+    "detailLevel": "full",
+    "lead": "أكبر المناطق مساحة، تمتد من الخليج العربي إلى رمال الدهناء، وفيها واحة الأحساء وحقول النفط وموانئه.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع شرق المملكة، تحدها الكويت والعراق شمالًا، وقطر والبحرين شرقًا.",
+            "sources": [
+              "sp-eastern"
+            ]
+          },
+          {
+            "text": "سهل صحراوي يمتد من الخليج العربي إلى صحراء الدهناء، ويضم مناطق ساحلية ومجاري أودية وجزرًا مثل تاروت وأبو علي.",
+            "sources": [
+              "sp-eastern"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "صيفها حار رطب تبلغ الحرارة فيه نحو 46 درجة من مايو إلى أغسطس، وشتاؤها معتدل تهطل فيه أمطار خفيفة أحيانًا.",
+            "sources": [
+              "sp-eastern"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "تضم 11 حقلًا لإنتاج النفط الخام، ويمر عبر ميناء رأس تنورة نحو 90% من صادرات المملكة الهيدروكربونية.",
+            "sources": [
+              "sp-eastern"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "qassim",
@@ -153,15 +421,85 @@
     "shortAr": "القصيم",
     "nameEn": "Qassim",
     "seatAr": "مدينة بريدة",
-    "seat": [43.963, 26.366],
+    "seat": [
+      43.963,
+      26.366
+    ],
     "accent": "#EDB92E",
-    "population": { "value": 1336179, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 73000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": 13, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 1336179,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 73000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 13,
+      "names": [
+        "عنيزة",
+        "الرس",
+        "المذنب",
+        "البكيرية",
+        "البدائع",
+        "الأسياح",
+        "النبهانية",
+        "عيون الجواء",
+        "رياض الخبراء",
+        "الشماسية",
+        "عقلة الصقور",
+        "ضرية",
+        "أبانات"
+      ],
+      "source": "sp-qassim"
+    },
+    "detailLevel": "full",
+    "lead": "في الشمال الأوسط من المملكة، يعبرها وادي الرمة أطول أودية الجزيرة العربية، وتشتهر بالنخيل وأسواق التمور.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع في الشمال الأوسط من المملكة، تحدها حائل شمالًا، والمدينة المنورة غربًا، والرياض جنوبًا، والمنطقة الشرقية شرقًا.",
+            "sources": [
+              "sp-qassim"
+            ]
+          },
+          {
+            "text": "يعبرها وادي الرمة من الغرب إلى الشرق بطول 510 كم، وهو أطول أودية الجزيرة العربية.",
+            "sources": [
+              "sp-qassim"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "حارة سبعة أشهر في السنة، وتبلغ الحرارة ذروتها في أغسطس وسبتمبر، وتنخفض شتاءً إلى نحو 5 درجات في بعض المحافظات.",
+            "sources": [
+              "sp-qassim"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "اقتصادها زراعي في الأساس، وفيها من أكبر مزارع النخيل وأسواق التمور في العالم.",
+            "sources": [
+              "sp-qassim"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "asir",
@@ -169,15 +507,43 @@
     "shortAr": "عسير",
     "nameEn": "Asir",
     "seatAr": "مدينة أبها",
-    "seat": [42.5, 18.23],
+    "seat": [
+      42.5,
+      18.23
+    ],
     "accent": "#4CAF50",
-    "population": { "value": 2024285, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 81000, "approx": true, "source": "saudipedia-provinces" },
+    "population": {
+      "value": 2024285,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 81000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
     "governorates": {
       "count": 18,
-      "names": ["خميس مشيط", "بيشة", "النماص", "محايل", "سراة عبيدة", "تثليث", "رجال ألمع", "بلقرن", "أحد رفيدة", "ظهران الجنوب", "المجاردة", "تنومة", "طريب", "البرك", "بارق", "الأمواه", "الفرشة"],
-      "namesNote": "المصدر يذكر ثماني عشرة محافظة ويسرد سبع عشرة؛ الاسم الناقص بحاجة للتحقق.",
-      "source": "saudipedia-provinces"
+      "names": [
+        "خميس مشيط",
+        "بيشة",
+        "النماص",
+        "محايل",
+        "تثليث",
+        "رجال ألمع",
+        "ظهران الجنوب",
+        "سراة عبيدة",
+        "أحد رفيدة",
+        "بلقرن",
+        "المجاردة",
+        "تنومة",
+        "طريب",
+        "بارق",
+        "البرك",
+        "الحرجة",
+        "الأمواه",
+        "الفرشة"
+      ],
+      "source": "sp-asir"
     },
     "detailLevel": "full",
     "lead": "منطقة جبلية في جنوب غرب المملكة، فيها نحو 29% من جبال المملكة، وتهبط من قمم السروات إلى ساحل البحر الأحمر. في بيوتها نشأ فن القط العسيري المسجل لدى اليونسكو.",
@@ -186,39 +552,75 @@
         "key": "geography",
         "title": "الموقع والتضاريس",
         "items": [
-          { "text": "تقع جنوب منطقة الرياض وغرب نجران وشمال جازان وشرقها وجنوب مكة المكرمة، ولها ساحل على البحر الأحمر بطول 140 كم.", "sources": ["saudipedia-provinces"] },
-          { "text": "تضم نحو 29% من جبال المملكة، مع أخاديد وعرة وطرق جبلية. تغطي الحرّات 3.75% من مساحتها، وتخترقها ثمانية أودية.", "sources": ["saudipedia-provinces"] },
-          { "text": "يبلغ ارتفاع جبل السودة غرب أبها 3,015 مترًا وفق المصدر.", "sources": ["saudipedia-provinces"] }
+          {
+            "text": "تقع جنوب منطقة الرياض وغرب نجران وشمال جازان وشرقها وجنوب مكة المكرمة، ولها ساحل على البحر الأحمر بطول 140 كم.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "تضم نحو 29% من جبال المملكة، مع أخاديد وعرة وطرق جبلية. تغطي الحرّات 3.75% من مساحتها، وتخترقها ثمانية أودية.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "يبلغ ارتفاع جبل السودة غرب أبها 3,015 مترًا.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       },
       {
         "key": "climate",
         "title": "المناخ",
         "items": [
-          { "text": "معتدل صيفًا؛ لا تتجاوز الحرارة في أغسطس 25°م وفق المصدر، والشتاء بارد نسبيًا. تكثر الأمطار والعواصف في المرتفعات بتأثير الرياح الموسمية.", "sources": ["saudipedia-provinces"], "flag": "climate-normals-pending" }
+          {
+            "text": "معتدل صيفًا؛ لا تتجاوز الحرارة في أغسطس 25°م، والشتاء بارد نسبيًا. تكثر الأمطار والعواصف في المرتفعات بتأثير الرياح الموسمية.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       },
       {
         "key": "heritage",
         "title": "التراث والمعالم",
         "items": [
-          { "text": "القط العسيري، فن زخرفة الجدران الداخلية الذي تمارسه النساء، مدرج في القائمة التمثيلية للتراث الثقافي غير المادي لدى اليونسكو منذ 2017.", "sources": ["unesco-ich-sa"] },
-          { "text": "قرية المفتاحة في أبها، وفيها مركز الملك فهد الثقافي ومسرح طلال مداح.", "sources": ["saudipedia-provinces"] },
-          { "text": "قرية رجال ألمع التاريخية، وتضم ثماني قلاع.", "sources": ["saudipedia-provinces"] }
+          {
+            "text": "القط العسيري، فن زخرفة الجدران الداخلية الذي تمارسه النساء، مدرج في القائمة التمثيلية للتراث الثقافي غير المادي لدى اليونسكو منذ 2017.",
+            "sources": [
+              "unesco-ich-sa"
+            ]
+          },
+          {
+            "text": "قرية المفتاحة في أبها، وفيها مركز الملك فهد الثقافي ومسرح طلال مداح.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          },
+          {
+            "text": "قرية رجال ألمع التاريخية، وتضم ثماني قلاع.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       },
       {
         "key": "development",
         "title": "التنمية والمشروعات",
         "items": [
-          { "text": "من المشروعات المعلنة: شركة السودة للتطوير، واستراتيجية تطوير منطقة عسير، ومشروع وادي أبها، وقمم السودة. حالة الإنجاز بحاجة للتحقق من الجهات المنفذة.", "sources": ["saudipedia-provinces"], "flag": "status-pending" }
+          {
+            "text": "من المشروعات المعلنة: شركة السودة للتطوير، واستراتيجية تطوير منطقة عسير، ومشروع وادي أبها، وقمم السودة.",
+            "sources": [
+              "saudipedia-provinces"
+            ]
+          }
         ]
       }
-    ],
-    "universities": [
-      { "nameAr": "جامعة الملك خالد", "url": "https://kku.edu.sa", "type": "حكومية" }
-    ],
-    "universitiesNote": "قائمة جزئية. القائمة الكاملة وسنوات التأسيس تُستكمل من قوائم وزارة التعليم."
+    ]
   },
   {
     "id": "tabuk",
@@ -226,15 +628,78 @@
     "shortAr": "تبوك",
     "nameEn": "Tabuk",
     "seatAr": "مدينة تبوك",
-    "seat": [36.555, 28.384],
+    "seat": [
+      36.555,
+      28.384
+    ],
     "accent": "#8C6BDB",
-    "population": { "value": 886036, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 136000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": 6, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 886036,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 136000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 6,
+      "names": [
+        "الوجه",
+        "ضباء",
+        "تيماء",
+        "أملج",
+        "حقل",
+        "البدع"
+      ],
+      "source": "sp-tabuk"
+    },
+    "detailLevel": "full",
+    "lead": "في شمال غرب المملكة، وهي المنطقة الوحيدة المطلة على البحر الأحمر وخليج العقبة معًا، وفيها جبل اللوز وتيماء الأثرية.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع شمال غربي المملكة، تحدها الأردن شمالًا، وخليج العقبة والبحر الأحمر غربًا، والجوف وحائل شرقًا، والمدينة المنورة جنوبًا.",
+            "sources": [
+              "sp-tabuk"
+            ]
+          },
+          {
+            "text": "المنطقة الوحيدة المطلة على البحر الأحمر وخليج العقبة معًا، وتضم نحو مئة جزيرة مرجانية ورملية وبركانية، وتغطي المحميات الطبيعية 23% من مساحتها.",
+            "sources": [
+              "sp-tabuk"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "تنخفض الحرارة شتاءً إلى الصفر، وتتجاوز 40 درجة صيفًا، وأمطارها شتوية.",
+            "sources": [
+              "sp-tabuk"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "الزراعة وصيد الأسماك في مقدمة أنشطتها الاقتصادية، وتضم مشروعات نيوم وأمالا والبحر الأحمر.",
+            "sources": [
+              "sp-tabuk"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "hail",
@@ -242,15 +707,80 @@
     "shortAr": "حائل",
     "nameEn": "Hail",
     "seatAr": "مدينة حائل",
-    "seat": [41.7, 27.524],
+    "seat": [
+      41.7,
+      27.524
+    ],
     "accent": "#EC6A8C",
-    "population": { "value": 746406, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 120000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": 8, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 746406,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 120000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 8,
+      "names": [
+        "بقعاء",
+        "الحائط",
+        "الغزالة",
+        "الشنان",
+        "السليمي",
+        "سميراء",
+        "الشملي",
+        "موقق"
+      ],
+      "source": "sp-hail"
+    },
+    "detailLevel": "full",
+    "lead": "في شمال وسط المملكة بين جبلي أجا وسلمى ورمال النفود، وفيها الرسوم الصخرية في جبة والشويمس المسجلة لدى اليونسكو.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع في وسط شمال المملكة، تحيط بها مناطق الجوف والحدود الشمالية وتبوك والمدينة المنورة والقصيم.",
+            "sources": [
+              "sp-hail"
+            ]
+          },
+          {
+            "text": "تغطي صحراء النفود شمالها، وتتوسطها جبال شمّر، ويمتد جبل أجا نحو 100 كم وترتفع قمته إلى 1,350 م.",
+            "sources": [
+              "sp-hail"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "مناخها قاري، تتراوح حرارة النهار صيفًا بين 30 و40 درجة، وشتاؤها بارد قد تنخفض فيه الحرارة دون الصفر.",
+            "sources": [
+              "sp-hail"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "يتصدر قطاع البناء نشاطها الاقتصادي، وفيها مدينة صناعية تضم نحو 115 مصنعًا.",
+            "sources": [
+              "sp-hail"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "northern-borders",
@@ -258,15 +788,75 @@
     "shortAr": "الحدود الشمالية",
     "nameEn": "Northern Borders",
     "seatAr": "مدينة عرعر",
-    "seat": [41.021, 30.99],
+    "seat": [
+      41.021,
+      30.99
+    ],
     "accent": "#5E7FD6",
-    "population": { "value": 373577, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 104000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": 3, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 373577,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 104000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 3,
+      "names": [
+        "رفحاء",
+        "طريف",
+        "العويقيلة"
+      ],
+      "source": "sp-northern-borders"
+    },
+    "detailLevel": "full",
+    "lead": "في أقصى شمال المملكة على حدود العراق والأردن، يمر بها درب زبيدة التاريخي، وفيها ثالث أكبر احتياطي للفوسفات في العالم.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع في أقصى شمال المملكة، تحدها العراق والأردن شمالًا، والمنطقة الشرقية جنوبًا، والقصيم وحائل من الجنوب الغربي، والجوف غربًا.",
+            "sources": [
+              "sp-northern-borders"
+            ]
+          },
+          {
+            "text": "يقع معظم أراضيها ضمن الرف العربي، وفيها مراعٍ للإبل والأغنام، ومرتفعات يتساقط عليها الثلج أحيانًا.",
+            "sources": [
+              "sp-northern-borders"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "مناخها قاري حار صيفًا شديد البرودة شتاءً، تنخفض الحرارة دون الصفر في يناير وفبراير.",
+            "sources": [
+              "sp-northern-borders"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "التعدين قطاعها الرئيس، وفيها ثالث أكبر احتياطي للفوسفات في العالم، ومدينة وعد الشمال.",
+            "sources": [
+              "sp-northern-borders"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "jawf",
@@ -274,15 +864,76 @@
     "shortAr": "الجوف",
     "nameEn": "Al-Jawf",
     "seatAr": "مدينة سكاكا",
-    "seat": [40.133, 30.0],
+    "seat": [
+      40.133,
+      30.0
+    ],
     "accent": "#C7A12A",
-    "population": { "value": 595822, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 85000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": 4, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 595822,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 85000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 4,
+      "names": [
+        "القريات",
+        "دومة الجندل",
+        "طبرجل",
+        "صوير"
+      ],
+      "source": "sp-jawf"
+    },
+    "detailLevel": "full",
+    "lead": "في شمال المملكة على أرض منخفضة أعطتها اسمها، وفيها بحيرة دومة الجندل وقلعة مارد، وهي مركز للطاقة المتجددة.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع شمال المملكة، تحدها الأردن شمالًا، والحدود الشمالية شرقًا، وتبوك غربًا، وحائل جنوبًا.",
+            "sources": [
+              "sp-jawf"
+            ]
+          },
+          {
+            "text": "تقع على أرض منخفضة مقارنة ببقية مناطق المملكة، ومن ذلك جاءت تسميتها، وفيها بحيرة دومة الجندل.",
+            "sources": [
+              "sp-jawf"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "مناخها قاري صحراوي، شتاؤها من أبرد شتاءات المملكة، وصيفها حار جاف تصل حرارته إلى نحو 42 درجة.",
+            "sources": [
+              "sp-jawf"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "مركز للطاقة المتجددة في المملكة، وفيها محطة سكاكا للطاقة الشمسية بقدرة 300 ميغاواط.",
+            "sources": [
+              "sp-jawf"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "jazan",
@@ -290,15 +941,88 @@
     "shortAr": "جازان",
     "nameEn": "Jazan",
     "seatAr": "مدينة جازان",
-    "seat": [42.557, 16.907],
+    "seat": [
+      42.557,
+      16.907
+    ],
     "accent": "#1DB4C8",
-    "population": { "value": 1404997, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 13000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": 16, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 1404997,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 13000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 16,
+      "names": [
+        "صبيا",
+        "أبو عريش",
+        "صامطة",
+        "بيش",
+        "جزر فرسان",
+        "الدرب",
+        "الحرث",
+        "ضمد",
+        "الريث",
+        "الدائر",
+        "أحد المسارحة",
+        "العيدابي",
+        "العارضة",
+        "هروب",
+        "فيفاء",
+        "الطوال"
+      ],
+      "source": "sp-jazan"
+    },
+    "detailLevel": "full",
+    "lead": "في جنوب غرب المملكة بين البحر الأحمر وجبال فيفاء، وفيها جزر فرسان، أكبر أرخبيل في البحر الأحمر.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع جنوب غربي المملكة، يحدها البحر الأحمر غربًا، وعسير شمالًا وشرقًا، واليمن جنوبًا.",
+            "sources": [
+              "sp-jazan"
+            ]
+          },
+          {
+            "text": "تتنوع تضاريسها بين الجبال والسهول والجزر، وأعلى قممها جبل العريف بارتفاع 2,632 م، وجزر فرسان أكبر أرخبيل في البحر الأحمر.",
+            "sources": [
+              "sp-jazan"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "شديدة الحرارة صيفًا معتدلة شتاءً، عدا المرتفعات الجبلية التي يعتدل فيها الجو وتهطل الأمطار طوال العام.",
+            "sources": [
+              "sp-jazan"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "الزراعة وصيد الأسماك ركيزتا اقتصادها، وفيها مصفاة جازان وميناء صناعي.",
+            "sources": [
+              "sp-jazan"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "najran",
@@ -306,15 +1030,78 @@
     "shortAr": "نجران",
     "nameEn": "Najran",
     "seatAr": "مدينة نجران",
-    "seat": [44.132, 17.507],
+    "seat": [
+      44.132,
+      17.507
+    ],
     "accent": "#B86A2C",
-    "population": { "value": 592300, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 130000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": 6, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 592300,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 130000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 6,
+      "names": [
+        "شرورة",
+        "حبونا",
+        "بدر الجنوب",
+        "يدمة",
+        "ثار",
+        "خباش"
+      ],
+      "source": "sp-najran"
+    },
+    "detailLevel": "full",
+    "lead": "في جنوب المملكة على أطراف الربع الخالي، يشقها وادي نجران، وفيها موقع الأخدود ومنطقة حمى الثقافية المسجلة لدى اليونسكو.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع جنوب غربي المملكة، تحدها المنطقة الشرقية من الشمال والشمال الشرقي، والرياض شمالًا، وعسير غربًا، واليمن جنوبًا.",
+            "sources": [
+              "sp-najran"
+            ]
+          },
+          {
+            "text": "تتداخل صحراء الربع الخالي مع وسطها وشرقها، ويشقها وادي نجران بطول نحو 150 كم، وأقصى ارتفاع فيها 2,224 م.",
+            "sources": [
+              "sp-najran"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "حارة صيفًا باردة شتاءً بوجه عام، وتتراوح الحرارة بين 14 و37 درجة، وتهطل الأمطار في المرتفعات.",
+            "sources": [
+              "sp-najran"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "يقوم اقتصادها على التجارة والتعدين والصناعة، وهي مصدر رئيس للحمضيات.",
+            "sources": [
+              "sp-najran"
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "bahah",
@@ -322,15 +1109,81 @@
     "shortAr": "الباحة",
     "nameEn": "Al-Bahah",
     "seatAr": "مدينة الباحة",
-    "seat": null,
-    "seatNote": "إحداثيات مقر الإمارة غير متوفرة في مصدر النقاط المستخدم — بحاجة للإكمال",
+    "seat": [
+      41.4677,
+      20.0129
+    ],
     "accent": "#F2A541",
-    "population": { "value": 339174, "source": "gastat-census-2022" },
-    "areaKm2": { "value": 12000, "approx": true, "source": "saudipedia-provinces" },
-    "governorates": { "count": 9, "names": [], "source": "saudipedia-provinces" },
-    "detailLevel": "basic",
-    "lead": null,
-    "sections": [],
-    "universities": []
+    "population": {
+      "value": 339174,
+      "source": "gastat-census-2022"
+    },
+    "areaKm2": {
+      "value": 12000,
+      "approx": true,
+      "source": "saudipedia-provinces"
+    },
+    "governorates": {
+      "count": 9,
+      "names": [
+        "بلجرشي",
+        "المندق",
+        "المخواة",
+        "قلوة",
+        "العقيق",
+        "القرى",
+        "بني حسن",
+        "غامد الزناد",
+        "الحجرة"
+      ],
+      "source": "sp-bahah"
+    },
+    "detailLevel": "full",
+    "lead": "في جنوب غرب المملكة بين سهول تهامة وجبال السراة، تهطل فيها الأمطار على مدار العام، وفيها قرية ذي عين الأثرية.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          {
+            "text": "تقع جنوب غربي المملكة، تحيط بها منطقة مكة المكرمة من الشمال والغرب، وعسير من الشرق والجنوب.",
+            "sources": [
+              "sp-bahah"
+            ]
+          },
+          {
+            "text": "تنقسم إلى سهول تهامة وجبال السراة، وأعلى نقطة فيها جبل ثربان بارتفاع 2,447 م جنوب شرقي بلجرشي.",
+            "sources": [
+              "sp-bahah"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          {
+            "text": "معتدلة في الربيع والصيف باردة شتاءً، وتهطل الأمطار على مدار العام.",
+            "sources": [
+              "sp-bahah"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          {
+            "text": "الزراعة عماد اقتصادها، وتنتشر المدرجات الزراعية في المرتفعات وتربية الماشية في السهول.",
+            "sources": [
+              "sp-bahah"
+            ]
+          }
+        ]
+      }
+    ],
+    "seatSource": "GeoNames عبر Open-Meteo Geocoding"
   }
 ]

@@ -44,14 +44,124 @@
     "title": "الهيئة العامة للمساحة والمعلومات الجيومكانية",
     "publisher": "الهيئة العامة للمساحة والمعلومات الجيومكانية",
     "url": "https://geosa.gov.sa",
-    "note": "المرجع الرسمي للحدود؛ لم تُدمج بياناتها بعد",
+    "note": "المرجع الرسمي للحدود الإدارية",
     "verified": "2026-10-14"
   },
   "moe": {
     "title": "وزارة التعليم",
     "publisher": "وزارة التعليم",
     "url": "https://www.moe.gov.sa",
-    "note": "المرجع المعتمد لقوائم الجامعات؛ لم يُستخرج العدد بعد",
+    "note": "جهة الإشراف على التعليم العام والجامعي",
+    "verified": "2026-10-14"
+  },
+  "sp-riyadh": {
+    "title": "منطقة الرياض",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/riyadh-province",
+    "verified": "2026-10-14"
+  },
+  "sp-makkah": {
+    "title": "منطقة مكة المكرمة",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/makkah-al-mukarramah-province",
+    "verified": "2026-10-14"
+  },
+  "sp-madinah": {
+    "title": "منطقة المدينة المنورة",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/al-madinah-al-munawwarah-province",
+    "verified": "2026-10-14"
+  },
+  "sp-eastern": {
+    "title": "المنطقة الشرقية",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/eastern-province",
+    "verified": "2026-10-14"
+  },
+  "sp-qassim": {
+    "title": "منطقة القصيم",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/qassim-province",
+    "verified": "2026-10-14"
+  },
+  "sp-asir": {
+    "title": "منطقة عسير",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/aseer-province",
+    "verified": "2026-10-14"
+  },
+  "sp-tabuk": {
+    "title": "منطقة تبوك",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/tabuk-province",
+    "verified": "2026-10-14"
+  },
+  "sp-hail": {
+    "title": "منطقة حائل",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/hail-province",
+    "verified": "2026-10-14"
+  },
+  "sp-northern-borders": {
+    "title": "منطقة الحدود الشمالية",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/northern-borders-province",
+    "verified": "2026-10-14"
+  },
+  "sp-jawf": {
+    "title": "منطقة الجوف",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/al-jawf-province",
+    "verified": "2026-10-14"
+  },
+  "sp-jazan": {
+    "title": "منطقة جازان",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/jazan-province",
+    "verified": "2026-10-14"
+  },
+  "sp-najran": {
+    "title": "منطقة نجران",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/najran-province",
+    "verified": "2026-10-14"
+  },
+  "sp-bahah": {
+    "title": "منطقة الباحة",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/al-bahah-province",
+    "verified": "2026-10-14"
+  },
+  "saudipedia-universities": {
+    "title": "الجامعات في السعودية",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/الجامعات-في-السعودية",
+    "refYear": "2026",
+    "verified": "2026-10-14"
+  },
+  "saudipedia-folk-arts": {
+    "title": "الفنون الشعبية في السعودية (مقالات متعددة)",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/قائمة-ثمانية-فنون-ورقصات-شعبية-في-السعودية",
+    "verified": "2026-10-14"
+  },
+  "visitsaudi": {
+    "title": "روح السعودية — الوجهات",
+    "publisher": "الهيئة السعودية للسياحة",
+    "url": "https://www.visitsaudi.com/ar",
+    "verified": "2026-10-14"
+  },
+  "open-meteo": {
+    "title": "Open-Meteo Weather API",
+    "publisher": "Open-Meteo",
+    "url": "https://open-meteo.com",
+    "note": "بيانات الطقس مرخصة CC BY 4.0، وتُحدَّث كل 15 دقيقة في المتصفح",
+    "verified": "2026-10-14"
+  },
+  "unesco-uruq-nomination": {
+    "title": "ملف ترشيح عروق بني معارض — تقسيم المساحة بين منطقتي الرياض (57%) ونجران (43%)",
+    "publisher": "مركز التراث العالمي – اليونسكو",
+    "url": "https://whc.unesco.org/document/205788",
     "verified": "2026-10-14"
   }
 }

@@ -107,8 +107,8 @@ export function RegionCompare({ regions }: { regions: CompareRegion[] }) {
             })}
             <tr>
               <th scope="row" className="py-3 text-start text-sm font-normal text-ink-muted">المحافظات</th>
-              <td className="py-3">{ra.governorates ?? "بحاجة للتحقق"}</td>
-              <td className="py-3">{rb.governorates ?? "بحاجة للتحقق"}</td>
+              <td className="py-3">{ra.governorates ?? "—"}</td>
+              <td className="py-3">{rb.governorates ?? "—"}</td>
             </tr>
           </tbody>
         </table>

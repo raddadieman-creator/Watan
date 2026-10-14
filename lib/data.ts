@@ -1,7 +1,11 @@
 import regionsJson from "@/data/regions.json";
 import sourcesJson from "@/data/sources.json";
 import heritageJson from "@/data/heritage.json";
-import type { Indicator, IntangibleElement, Region, Source, WorldHeritageSite } from "./types";
+import universitiesJson from "@/data/universities.json";
+import folkArtsJson from "@/data/folk-arts.json";
+import guideJson from "@/data/region-guide.json";
+import religiousJson from "@/data/religious.json";
+import type { FolkArt, GovUniversity, Indicator, IntangibleElement, Region, RegionGuide, ReligiousCity, Source, WorldHeritageSite } from "./types";
 import { formatNumber } from "./format";
 
 export const regions = regionsJson as Region[];
@@ -9,6 +13,14 @@ export const sources = sourcesJson as Record<string, Source>;
 export const worldHeritage = heritageJson.worldHeritage as WorldHeritageSite[];
 export const intangible = heritageJson.intangible as IntangibleElement[];
 export const intangibleNotes = heritageJson.intangibleNotes as string[];
+export const universities = universitiesJson.items as GovUniversity[];
+export const UNIVERSITY_COUNT = universitiesJson.count;
+export const folkArts = folkArtsJson as FolkArt[];
+export const regionGuide = guideJson as unknown as Record<string, RegionGuide>;
+export const religious = religiousJson as unknown as { makkah: ReligiousCity; madinah: ReligiousCity; services: Array<{ nameAr: string; url: string; descAr: string }> };
+
+export const universitiesInRegion = (id: string) => universities.filter((u) => u.region === id);
+export const folkArtsInRegion = (id: string) => folkArts.filter((a) => a.regions.includes(id));
 
 export const NATIONAL_POPULATION_2022 = 32175224;
 
@@ -36,7 +48,7 @@ export function journeyNeighbors(id: string) {
 }
 
 export function sitesInRegion(id: string) {
-  return worldHeritage.filter((s) => s.region === id);
+  return worldHeritage.filter((s) => s.region === id || s.alsoRegion === id);
 }
 
 export function intangibleInRegion(id: string) {
@@ -48,7 +60,10 @@ export function sourcesForRegion(r: Region): string[] {
   r.sections.forEach((s) => s.items.forEach((it) => it.sources.forEach((x) => ids.add(x))));
   if (sitesInRegion(r.id).length) ids.add("unesco-whc-sa");
   if (intangibleInRegion(r.id).length) ids.add("unesco-ich-sa");
-  if (r.universities.length || r.detailLevel === "basic") ids.add("moe");
+  if (universitiesInRegion(r.id).length) ids.add("saudipedia-universities");
+  if (folkArtsInRegion(r.id).length) ids.add("saudipedia-folk-arts");
+  if (regionGuide[r.id]?.visitSaudi) ids.add("visitsaudi");
+  ids.add("open-meteo");
   return [...ids];
 }
 
@@ -99,10 +114,11 @@ export const indicators: Indicator[] = [
   },
   {
     id: "universities",
-    label: "الجامعات",
-    value: "بحاجة للتحقق",
-    detail: "يُعتمد العدد بعد تحديد التعريف (حكومية، أهلية، أو كلتاهما) من قوائم وزارة التعليم",
-    status: "pending",
-    sources: ["moe"],
+    label: "الجامعات الحكومية",
+    value: String(universitiesJson.count),
+    detail: "موزعة على المناطق الثلاث عشرة",
+    status: "verified",
+    sources: ["saudipedia-universities"],
+    href: "/universities",
   },
 ];

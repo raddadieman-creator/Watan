@@ -13,8 +13,10 @@ export function siteUrl(): string {
 export const NAV = [
   { href: "/", label: "الرئيسية" },
   { href: "/regions", label: "مناطقنا" },
+  { href: "/religious-tourism", label: "السياحة الدينية" },
   { href: "/heritage", label: "التراث" },
-  { href: "/numbers", label: "المملكة بالأرقام" },
+  { href: "/universities", label: "الجامعات" },
+  { href: "/numbers", label: "بالأرقام" },
   { href: "/sources", label: "المصادر" },
   { href: "/about", label: "عن وطن" },
 ] as const;

@@ -7,6 +7,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { AtlasPatterns } from "./AtlasDefs";
 import { formatCompact, formatNumber } from "@/lib/format";
 import type { AtlasData } from "@/lib/geo";
+import { describeWeather, useWeather } from "@/lib/weather";
 
 export interface MapRegionInfo {
   id: string;
@@ -18,6 +19,7 @@ export interface MapRegionInfo {
   areaKm2: number;
   governorates: number | null;
   detailLevel: "full" | "basic";
+  seat: [number, number] | null;
 }
 
 interface Props {
@@ -47,7 +49,13 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [view, setView] = useState<View>({ k: 1, tx: 0, ty: 0 });
-  const [layers, setLayers] = useState({ terrain: true, labels: true, seats: true, population: false });
+  const [layers, setLayers] = useState({ terrain: true, labels: true, seats: true, population: false, weather: false });
+  const [touring, setTouring] = useState(false);
+  const weatherPoints = useMemo(
+    () => regions.filter((r) => r.seat).map((r) => ({ id: r.id, lat: r.seat![1], lon: r.seat![0] })),
+    [regions],
+  );
+  const { data: weather } = useWeather(weatherPoints);
   // على الهاتف تُقص اللوحة حول المملكة لتكبر الخريطة؛ وعلى الشاشات الكبيرة تظهر بسياقها البحري
   const [isLg, setIsLg] = useState(true);
   useEffect(() => {
@@ -91,12 +99,26 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
     });
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape" && selected) select(null); };
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape" && selected) { setTouring(false); select(null); } };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [selected, select]);
 
-  const activate = (id: string) => (selected === id ? router.push(`/regions/${id}`) : select(id));
+  // جولة تلقائية بين المناطق
+  useEffect(() => {
+    if (!touring) return;
+    const order = [...regions].sort((a, b) => b.population - a.population).map((r) => r.id);
+    let i = selected ? Math.max(0, order.indexOf(selected) + 1) : 0;
+    const step = () => { select(order[i % order.length]); i++; };
+    if (!selected) step();
+    const t = setInterval(step, 4200);
+    return () => clearInterval(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [touring]);
+
+  const reset = () => { setTouring(false); select(null); };
+  const activate = (id: string) => { setTouring(false); activateRegion(id); };
+  const activateRegion = (id: string) => (selected === id ? router.push(`/regions/${id}`) : select(id));
   const lifted = selected ?? hovered;
   const tip = hovered && hovered !== selected ? shapeById.get(hovered) : null;
   const sel = selected ? info.get(selected) : null;
@@ -136,6 +158,14 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
       </p>
       <h2 className="mt-3 font-display text-[clamp(2.4rem,4.4vw,3.8rem)] font-bold leading-[1.3] text-ink">{sel.nameAr}</h2>
       <p className="mt-1 text-ink/70">المقر الإداري: {sel.seatAr}</p>
+      {weather?.[sel.id] && (
+        <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-sm text-ink shadow-sm ring-1 ring-ink/5">
+          <span aria-hidden>{describeWeather(weather[sel.id].code, weather[sel.id].isDay).icon}</span>
+          الطقس الآن في {sel.seatAr.replace(/^مدينة /, "")}:
+          <span className="num font-bold">{Math.round(weather[sel.id].temp)}°</span>
+          {describeWeather(weather[sel.id].code, weather[sel.id].isDay).label}
+        </p>
+      )}
       <dl className="mt-6 grid grid-cols-3 rounded-2xl bg-white/80 shadow-[0_18px_40px_-28px_rgba(30,111,134,0.6)] ring-1 ring-ink/5">
         {[
           { k: "السكان، تعداد 2022", v: formatCompact(sel.population), t: formatNumber(sel.population) },
@@ -152,11 +182,9 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
       </dl>
       <div className="mt-7 flex flex-wrap items-center gap-3">
         <Link href={`/regions/${sel.id}`} className="btn-gold">افتح صفحة {sel.shortAr}</Link>
-        <button type="button" onClick={() => select(null)} className="btn-ghost">عرض المملكة كاملة</button>
+        <button type="button" onClick={reset} className="btn-ghost">عرض المملكة كاملة</button>
       </div>
-      {sel.detailLevel === "basic" && (
-        <p className="mt-4 text-xs text-ink/55">صفحة أساسية؛ المحتوى التفصيلي قيد التوثيق ولن يُنشر إلا بمصادره.</p>
-      )}
+
     </motion.section>
   );
 
@@ -206,6 +234,15 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                 {atlas.regions.map((r) => <use key={r.id} href={`#${P}-r-${r.id}`} />)}
               </g>
               {atlas.physical.map((p) => <path key={p.id} id={`${P}-ph-${p.id}`} d={p.d} />)}
+              <filter id={`${P}-halo`} x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="22" />
+              </filter>
+              {lifted && (
+                <filter id={`${P}-glow`} x="-40%" y="-40%" width="180%" height="180%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="10" floodColor={info.get(lifted)!.accent} floodOpacity="0.85" />
+                  <feDropShadow dx="0" dy="12" stdDeviation="10" floodColor="#1E6F86" floodOpacity="0.35" />
+                </filter>
+              )}
               <clipPath id={`${P}-ksa`}>
                 {atlas.regions.map((r) => <use key={r.id} href={`#${P}-r-${r.id}`} />)}
               </clipPath>
@@ -230,6 +267,9 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
               ))}
               {/* اليابسة المجاورة */}
               <use href={`#${P}-land`} fill="#F6EEDC" stroke="#E4D3AE" strokeWidth={s(0.8)} />
+
+              {/* هالة ضوئية حول المملكة */}
+              <use href={`#${P}-ksa-shape`} fill="#FFE2A8" filter={`url(#${P}-halo)`} className="atlas-halo" />
 
               {/* سماكة الصفيحة: تمنح المملكة عمقًا ثلاثي الأبعاد */}
               <g filter={`url(#${P}-slab)`}>
@@ -301,7 +341,7 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
 
               {/* المنطقة المرفوعة عند المرور أو الاختيار */}
               {lifted && (
-                <g pointerEvents="none" transform={`translate(0 ${s(-7)})`} filter={`url(#${P}-lift)`}>
+                <g pointerEvents="none" transform={`translate(0 ${s(-7)})`} filter={`url(#${P}-glow)`}>
                   <use href={`#${P}-r-${lifted}`} fill="#FFF7E6" />
                   <use href={`#${P}-r-${lifted}`} fill={baseFill(lifted)} fillOpacity={layers.population ? 1 : selected === lifted ? 0.92 : 0.75} />
                   {layers.terrain && (
@@ -361,10 +401,28 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                   {atlas.regions.map((r) =>
                     r.seat ? (
                       <g key={r.id} transform={`translate(${r.seat[0]} ${r.seat[1] + (lifted === r.id ? s(-7) : 0)})`}>
+                        <circle r={s(9)} fill={info.get(r.id)!.accent} className={reduce ? "" : "seat-pulse"} style={{ animationDelay: `${(r.id.length % 7) * 0.35}s` }} />
                         <rect x={s(-4.5)} y={s(-4.5)} width={s(9)} height={s(9)} transform="rotate(45)" fill="#FFFFFF" stroke="#1E2B28" strokeWidth={s(1.6)} />
                       </g>
                     ) : null,
                   )}
+                </g>
+              )}
+
+              {/* طبقة الطقس */}
+              {layers.weather && weather && (
+                <g pointerEvents="none" fontFamily="var(--font-sans)">
+                  {atlas.regions.map((r) => {
+                    const w = weather[r.id];
+                    if (!w || !r.seat) return null;
+                    const label = `${describeWeather(w.code, w.isDay).icon} ${Math.round(w.temp)}°`;
+                    return (
+                      <g key={r.id} transform={`translate(${r.seat[0]} ${r.seat[1] - s(20) + (lifted === r.id ? s(-7) : 0)})`}>
+                        <rect x={s(-30)} y={s(-15)} width={s(60)} height={s(26)} rx={s(13)} fill="#FFFFFF" stroke={info.get(r.id)!.accent} strokeWidth={s(2)} />
+                        <text textAnchor="middle" y={s(4)} fontSize={s(14)} fontWeight={800} fill="#1E2B28">{label}</text>
+                      </g>
+                    );
+                  })}
                 </g>
               )}
 
@@ -392,7 +450,7 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
             </g>
 
             {/* سهم الشمال */}
-            <g transform={`translate(${vb.x + vb.w * 0.33} ${vb.y + vb.h - 70})`} pointerEvents="none" aria-hidden display={isLg ? undefined : "none"}>
+            <g transform={`translate(${vb.x + vb.w * 0.33} ${vb.y + vb.h - 70})`} pointerEvents="none" aria-hidden display={isLg && view.k === 1 ? undefined : "none"}>
               <circle r="26" fill="#FFFFFF" fillOpacity="0.6" stroke="#1E6F86" strokeOpacity="0.4" />
               <path d="M0 -22 L7 6 L0 1 L-7 6 Z" fill="#E5534B" />
               <text y="42" textAnchor="middle" fill="#1E6F86" fontSize="14" fontFamily="var(--font-sans)">ش</text>
@@ -415,7 +473,7 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
           <div className="absolute end-3 top-3 flex gap-1.5 lg:bottom-8 lg:end-8 lg:top-auto lg:flex-col" role="group" aria-label="التحكم في الخريطة">
             <MapButton label="تكبير" onClick={() => zoomBy(1.4)}>+</MapButton>
             <MapButton label="تصغير" onClick={() => zoomBy(1 / 1.4)}>−</MapButton>
-            <MapButton label="إعادة ضبط الخريطة" onClick={() => select(null)}>
+            <MapButton label="إعادة ضبط الخريطة" onClick={reset}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </MapButton>
           </div>
@@ -425,6 +483,16 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
             <LayerToggle checked={layers.labels} onChange={(v) => setLayers((l) => ({ ...l, labels: v }))} label="الأسماء" />
             <LayerToggle checked={layers.seats} onChange={(v) => setLayers((l) => ({ ...l, seats: v }))} label="مقار الإمارات" />
             <LayerToggle checked={layers.population} onChange={(v) => setLayers((l) => ({ ...l, population: v }))} label="السكان 2022" />
+            <LayerToggle checked={layers.weather} onChange={(v) => setLayers((l) => ({ ...l, weather: v }))} label="الطقس الآن" />
+            <button
+              type="button"
+              onClick={() => setTouring((t) => !t)}
+              aria-pressed={touring}
+              className={`inline-flex min-h-9 items-center gap-1.5 rounded-full px-3 text-sm font-bold transition ${touring ? "bg-coral text-white" : "bg-gradient-to-l from-coral to-sun text-white"}`}
+            >
+              <span aria-hidden>{touring ? "⏸" : "▶"}</span>
+              {touring ? "إيقاف الجولة" : "جولة تلقائية"}
+            </button>
           </fieldset>
         </div>
       </div>
@@ -444,7 +512,7 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                   <button
                     type="button"
                     aria-pressed={selected === r.id}
-                    onClick={() => select(selected === r.id ? null : r.id)}
+                    onClick={() => { setTouring(false); select(selected === r.id ? null : r.id); }}
                     onPointerEnter={() => setHovered(r.id)}
                     onPointerLeave={() => setHovered((h) => (h === r.id ? null : h))}
                     style={selected === r.id ? { background: r.accent } : undefined}

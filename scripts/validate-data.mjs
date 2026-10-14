@@ -6,6 +6,10 @@ const regions = read("data/regions.json");
 const sources = read("data/sources.json");
 const heritage = read("data/heritage.json");
 const geo = read("data/geo/sa-regions.geojson.json");
+const universities = read("data/universities.json");
+const folkArts = read("data/folk-arts.json");
+const guide = read("data/region-guide.json");
+const religious = read("data/religious.json");
 
 const errors = [];
 const fail = (m) => errors.push(m);
@@ -41,8 +45,21 @@ for (const [id, s] of Object.entries(sources)) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(s.verified)) fail(`تاريخ تحقق غير صالح في ${id}`);
 }
 
+if (universities.items.length !== universities.count) fail(`عدد الجامعات ${universities.items.length} لا يطابق ${universities.count}`);
+for (const u of universities.items) {
+  if (!ids.has(u.region)) fail(`جامعة بمنطقة غير معروفة: ${u.nameAr}`);
+  if (!/^https:\/\//.test(u.url)) fail(`رابط جامعة غير صالح: ${u.nameAr}`);
+}
+for (const a of folkArts) {
+  if (!a.sourceUrl) fail(`فن بلا مصدر: ${a.nameAr}`);
+  a.regions.forEach((r) => { if (!ids.has(r)) fail(`فن بمنطقة غير معروفة: ${a.nameAr}`); });
+}
+for (const id of ids) if (!guide[id]) fail(`لا يوجد دليل للمنطقة ${id}`);
+for (const city of ["makkah", "madinah"]) for (const s of religious[city].sites) if (!s.url) fail(`موقع ديني بلا رابط: ${s.nameAr}`);
+for (const r of regions) if (!r.seat) fail(`المنطقة ${r.id} بلا إحداثيات مقر`);
+
 if (errors.length) {
   console.error("✗ فشل فحص البيانات:\n- " + errors.join("\n- "));
   process.exit(1);
 }
-console.log(`✓ البيانات سليمة: 13 منطقة، ${heritage.worldHeritage.length} مواقع تراث عالمي، ${heritage.intangible.length} عنصرًا غير مادي، ${Object.keys(sources).length} مصادر. مجموع السكان يطابق التعداد.`);
+console.log(`✓ البيانات سليمة: 13 منطقة، ${universities.count} جامعة، ${folkArts.length} فنًّا شعبيًا، ${heritage.worldHeritage.length} مواقع تراث عالمي، ${heritage.intangible.length} عنصرًا غير مادي، ${Object.keys(sources).length} مصدرًا. مجموع السكان يطابق التعداد.`);

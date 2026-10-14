@@ -180,3 +180,17 @@ p { text-wrap: pretty; }
   background-clip: text;
   color: transparent;
 }
+
+/* الأطلس المضيء: هالة تتنفس، ونبض حول مقار الإمارات */
+.atlas-halo { animation: halo-breathe 5s ease-in-out infinite; }
+@keyframes halo-breathe { 0%, 100% { opacity: 0.55; } 50% { opacity: 0.95; } }
+.seat-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: seat-pulse 2.6s ease-out infinite;
+  opacity: 0;
+}
+@keyframes seat-pulse {
+  0% { transform: scale(0.6); opacity: 0.55; }
+  100% { transform: scale(2.4); opacity: 0; }
+}

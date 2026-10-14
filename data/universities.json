@@ -1,0 +1,42 @@
+{
+  "source": {
+    "title": "الجامعات في السعودية",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/الجامعات-في-السعودية",
+    "note": "تذكر الصفحة أن عدد الجامعات الحكومية 30 جامعة، وتسردها جميعًا.",
+    "verified": "2026-10-14"
+  },
+  "count": 30,
+  "items": [
+    { "nameAr": "جامعة الملك سعود", "region": "riyadh", "cityAr": "الرياض", "url": "https://ksu.edu.sa" },
+    { "nameAr": "جامعة الإمام محمد بن سعود الإسلامية", "region": "riyadh", "cityAr": "الرياض", "url": "https://imamu.edu.sa" },
+    { "nameAr": "جامعة الأميرة نورة بنت عبدالرحمن", "region": "riyadh", "cityAr": "الرياض", "url": "https://pnu.edu.sa" },
+    { "nameAr": "جامعة الملك سعود بن عبدالعزيز للعلوم الصحية", "region": "riyadh", "cityAr": "الرياض", "url": "https://ksau-hs.edu.sa" },
+    { "nameAr": "جامعة الأمير مساعد بن عبدالرحمن", "region": "riyadh", "cityAr": "الرياض", "url": "https://seu.edu.sa", "note": "الجامعة السعودية الإلكترونية سابقًا" },
+    { "nameAr": "جامعة الرياض للفنون", "region": "riyadh", "cityAr": "الرياض", "url": "https://rua.edu.sa" },
+    { "nameAr": "جامعة الأمير سطام بن عبدالعزيز", "region": "riyadh", "cityAr": "الخرج", "url": "https://psau.edu.sa" },
+    { "nameAr": "جامعة شقراء", "region": "riyadh", "cityAr": "شقراء", "url": "https://su.edu.sa" },
+    { "nameAr": "جامعة المجمعة", "region": "riyadh", "cityAr": "المجمعة", "url": "https://mu.edu.sa" },
+    { "nameAr": "جامعة أم القرى", "region": "makkah", "cityAr": "مكة المكرمة", "url": "https://uqu.edu.sa" },
+    { "nameAr": "جامعة الملك عبدالعزيز", "region": "makkah", "cityAr": "جدة", "url": "https://kau.edu.sa" },
+    { "nameAr": "جامعة جدة", "region": "makkah", "cityAr": "جدة", "url": "https://uj.edu.sa" },
+    { "nameAr": "جامعة الطائف", "region": "makkah", "cityAr": "الطائف", "url": "https://tu.edu.sa" },
+    { "nameAr": "جامعة الملك عبدالله للعلوم والتقنية", "region": "makkah", "cityAr": "ثول — محافظة جدة", "url": "https://kaust.edu.sa" },
+    { "nameAr": "الجامعة الإسلامية بالمدينة المنورة", "region": "madinah", "cityAr": "المدينة المنورة", "url": "https://iu.edu.sa" },
+    { "nameAr": "جامعة طيبة", "region": "madinah", "cityAr": "المدينة المنورة", "url": "https://taibahu.edu.sa" },
+    { "nameAr": "جامعة الملك فهد للبترول والمعادن", "region": "eastern", "cityAr": "الظهران", "url": "https://kfupm.edu.sa" },
+    { "nameAr": "جامعة الإمام عبدالرحمن بن فيصل", "region": "eastern", "cityAr": "الدمام", "url": "https://iau.edu.sa" },
+    { "nameAr": "جامعة الملك فيصل", "region": "eastern", "cityAr": "الأحساء", "url": "https://kfu.edu.sa" },
+    { "nameAr": "جامعة حفر الباطن", "region": "eastern", "cityAr": "حفر الباطن", "url": "https://uhb.edu.sa" },
+    { "nameAr": "جامعة القصيم", "region": "qassim", "cityAr": "القصيم", "url": "https://qu.edu.sa" },
+    { "nameAr": "جامعة الملك خالد", "region": "asir", "cityAr": "أبها", "url": "https://kku.edu.sa" },
+    { "nameAr": "جامعة بيشة", "region": "asir", "cityAr": "بيشة", "url": "https://ub.edu.sa" },
+    { "nameAr": "جامعة تبوك", "region": "tabuk", "cityAr": "تبوك", "url": "https://ut.edu.sa" },
+    { "nameAr": "جامعة حائل", "region": "hail", "cityAr": "حائل", "url": "https://uoh.edu.sa" },
+    { "nameAr": "جامعة الحدود الشمالية", "region": "northern-borders", "cityAr": "عرعر", "url": "https://nbu.edu.sa" },
+    { "nameAr": "جامعة الجوف", "region": "jawf", "cityAr": "الجوف", "url": "https://ju.edu.sa" },
+    { "nameAr": "جامعة جازان", "region": "jazan", "cityAr": "جازان", "url": "https://jazanu.edu.sa" },
+    { "nameAr": "جامعة نجران", "region": "najran", "cityAr": "نجران", "url": "https://nu.edu.sa" },
+    { "nameAr": "جامعة الباحة", "region": "bahah", "cityAr": "الباحة", "url": "https://bu.edu.sa" }
+  ]
+}

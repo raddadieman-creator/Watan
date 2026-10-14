@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SourcesFooter } from "@/components/SourcesFooter";
 import { PageHero } from "@/components/PageHero";
-import { intangible, intangibleNotes, regions, worldHeritage } from "@/lib/data";
+import { folkArts, intangible, intangibleNotes, regions, worldHeritage } from "@/lib/data";
+import { ExternalLink } from "@/components/ExternalLink";
 
 export const metadata: Metadata = {
   title: "تراثنا في اليونسكو",
@@ -53,9 +54,7 @@ export default function HeritagePage() {
                 <p className="mt-3 text-sm">
                   {region ? (
                     <Link href={`/regions/${region.id}`} className="text-emerald underline underline-offset-4">{region.nameAr}</Link>
-                  ) : (
-                    <span className="text-[#8A6A2E]">المنطقة الإدارية بحاجة للتحقق</span>
-                  )}
+                  ) : null}
                   {s.regionNote && <span className="text-ink-muted"> — {s.regionNote}</span>}
                 </p>
                 <a href={s.url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm text-emerald underline decoration-line underline-offset-4">
@@ -102,7 +101,40 @@ export default function HeritagePage() {
         </div>
       </section>
 
-      <SourcesFooter ids={["unesco-whc-sa", "unesco-ich-sa"]} />
+      <section id="folk-arts" aria-labelledby="arts-h" className="mt-20 scroll-mt-24">
+        <h2 id="arts-h" className="font-display text-[2.4rem] text-ink">العرضات والرقصات والفنون الشعبية</h2>
+        <p className="mt-2 max-w-3xl text-ink-muted">
+          <span className="num">{folkArts.length}</span> فنًّا أدائيًا من مختلف المناطق، لكل منها رابط إلى مقال يشرحه. ما يحمل وسم «في قائمة اليونسكو» مسجل رسميًا، وبقية الفنون تراث محلي حي.
+        </p>
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {folkArts.map((a) => {
+            const first = regions.find((r) => r.id === a.regions[0]);
+            return (
+              <li key={a.id} id={`art-${a.id}`} className="flex flex-col rounded-2xl p-5 ring-1 ring-ink/5" style={{ background: `linear-gradient(160deg, ${first?.accent ?? "#1DB4C8"}22, #FFFFFF 62%)` }}>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="font-display text-[1.35rem] leading-[1.6] text-ink">{a.nameAr}</h3>
+                  {a.unesco && <span className="rounded-full bg-sea px-2 py-0.5 text-[0.7rem] font-bold text-white">في قائمة اليونسكو</span>}
+                </div>
+                <p className="mt-1 flex-1 text-[0.95rem] leading-8 text-ink/75">{a.descAr}</p>
+                <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                  {a.regions.map((rid) => {
+                    const r = regions.find((x) => x.id === rid)!;
+                    return (
+                      <Link key={rid} href={`/regions/${rid}#folk-arts`} className="rounded-full px-2.5 py-0.5 text-xs font-bold text-white" style={{ background: r.accent }}>{r.shortAr}</Link>
+                    );
+                  })}
+                  {a.areaAr && <span className="text-xs text-ink-muted">({a.areaAr})</span>}
+                </div>
+                <ExternalLink href={a.sourceUrl} className="mt-3 self-start text-sm font-bold text-sea underline decoration-turq/40 underline-offset-4 hover:decoration-turq">
+                  اقرأ عن {a.nameAr.replace(/^رقصة |^فن /, "")}
+                </ExternalLink>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <SourcesFooter ids={["unesco-whc-sa", "unesco-ich-sa", "saudipedia-folk-arts"]} />
     </div>
     </>
   );
