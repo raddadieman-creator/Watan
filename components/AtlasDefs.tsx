@@ -26,10 +26,10 @@ export function AtlasPatterns({ prefix, tone = "parchment", scale = 1 }: { prefi
         <stop offset="100%" stopColor="#DCC9A0" />
       </radialGradient>
       <filter id={`${prefix}-lift`} x="-30%" y="-30%" width="160%" height="160%">
-        <feDropShadow dx="0" dy="10" stdDeviation="9" floodColor="#04140F" floodOpacity="0.55" />
+        <feDropShadow dx="0" dy="12" stdDeviation="10" floodColor="#1E6F86" floodOpacity="0.45" />
       </filter>
       <filter id={`${prefix}-slab`} x="-10%" y="-10%" width="120%" height="130%">
-        <feDropShadow dx="0" dy="18" stdDeviation="16" floodColor="#020B08" floodOpacity="0.6" />
+        <feDropShadow dx="0" dy="18" stdDeviation="16" floodColor="#1E6F86" floodOpacity="0.35" />
       </filter>
     </>
   );

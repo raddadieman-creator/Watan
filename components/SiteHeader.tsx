@@ -15,7 +15,7 @@ export function SiteHeader() {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
-    <header className="sticky top-0 z-40 border-b border-sand/25 bg-[#F8F5ED]/90 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-ink/5 bg-white/85 shadow-[0_8px_30px_-24px_rgba(30,111,134,0.5)] backdrop-blur-md">
       <div className="mx-auto flex h-[72px] max-w-[1500px] items-center gap-6 px-5 sm:px-8">
         <Link href="/" aria-label="وطن — الصفحة الرئيسية" className="shrink-0 rounded">
           <Logo />
@@ -30,8 +30,8 @@ export function SiteHeader() {
                   aria-current={isActive(item.href) ? "page" : undefined}
                   className={`relative rounded-md px-3 py-2 text-[0.95rem] transition-colors ${
                     isActive(item.href)
-                      ? "font-bold text-green-deep after:absolute after:inset-x-3 after:-bottom-[15px] after:h-[3px] after:rounded-full after:bg-sand"
-                      : "text-ink-muted hover:text-green-deep"
+                      ? "font-bold text-ink after:absolute after:inset-x-3 after:-bottom-[15px] after:h-[3px] after:rounded-full after:bg-gradient-to-l after:from-coral after:to-sun"
+                      : "text-ink-muted hover:text-ink"
                   }`}
                 >
                   {item.label}
@@ -47,7 +47,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="ms-auto inline-flex size-11 items-center justify-center rounded-md text-green-deep lg:hidden"
+          className="ms-auto inline-flex size-11 items-center justify-center rounded-md text-ink lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "إغلاق القائمة" : "فتح القائمة"}
@@ -70,7 +70,7 @@ export function SiteHeader() {
                     href={item.href}
                     aria-current={isActive(item.href) ? "page" : undefined}
                     className={`block rounded-md px-3 py-3 text-base ${
-                      isActive(item.href) ? "bg-paper font-semibold text-green-deep" : "text-charcoal"
+                      isActive(item.href) ? "bg-paper font-semibold text-ink" : "text-charcoal"
                     }`}
                   >
                     {item.label}

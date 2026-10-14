@@ -61,32 +61,32 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
   return (
     <article>
       {/* رأس المنطقة: لوحة داكنة، والمنطقة قطعة مرفوعة بتضاريسها */}
-      <header className="atlas-plate relative overflow-hidden text-ivory">
+      <header className="atlas-plate relative overflow-hidden text-ink">
         <div className="pointer-events-none absolute inset-0" style={{ background: `radial-gradient(55% 70% at 25% 55%, ${r.accent}66, transparent 70%)` }} aria-hidden />
         <div className="relative mx-auto grid max-w-[1400px] gap-8 px-5 pb-16 pt-8 sm:px-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center lg:pb-20">
           <div>
-            <nav aria-label="مسار التنقل" className="text-sm text-ivory/60">
+            <nav aria-label="مسار التنقل" className="text-sm text-ink/60">
               <ol className="flex flex-wrap gap-2">
-                <li><Link href="/" className="hover:text-sand">الرئيسية</Link></li>
+                <li><Link href="/" className="hover:text-coral">الرئيسية</Link></li>
                 <li aria-hidden>/</li>
-                <li><Link href="/regions" className="hover:text-sand">مناطقنا</Link></li>
+                <li><Link href="/regions" className="hover:text-coral">مناطقنا</Link></li>
                 <li aria-hidden>/</li>
-                <li aria-current="page" className="text-ivory">{r.shortAr}</li>
+                <li aria-current="page" className="text-ink">{r.shortAr}</li>
               </ol>
             </nav>
-            <p className="mt-10 flex items-center gap-3 text-sm text-sand">
-              <span className="inline-block h-px w-10 bg-sand" aria-hidden />
+            <p className="mt-10 flex items-center gap-3 text-sm text-sun-deep">
+              <span className="inline-block h-px w-10 bg-sun" aria-hidden />
               <span className="num">المحطة {index} من {total}</span> في رحلة المناطق
             </p>
             <h1 className="hero-title mt-1 font-display text-[clamp(3rem,7vw,5.6rem)] leading-[1.3]">{r.nameAr}</h1>
             {r.lead ? (
-              <p className="mt-3 max-w-[38rem] text-[1.12rem] leading-9 text-ivory/80">{r.lead}</p>
+              <p className="mt-3 max-w-[38rem] text-[1.12rem] leading-9 text-ink/80">{r.lead}</p>
             ) : (
-              <p className="mt-3 max-w-[38rem] text-[1.02rem] leading-8 text-ivory/70">
+              <p className="mt-3 max-w-[38rem] text-[1.02rem] leading-8 text-ink/70">
                 صفحة أساسية تعرض البيانات الموثقة المتاحة حاليًا. المحتوى التفصيلي للمنطقة قيد التوثيق، ولن يُنشر إلا بمصادره.
               </p>
             )}
-            <dl className="mt-10 grid grid-cols-2 border-y border-sand/25 sm:grid-cols-4">
+            <dl className="mt-10 grid grid-cols-2 border-y border-ink/10 sm:grid-cols-4">
               <Fact label="المقر الإداري" value={r.seatAr} />
               <Fact
                 label="السكان، تعداد 2022"
@@ -103,18 +103,18 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
             <RegionPlate id={r.id} accent={r.accent} size={600} />
             <figure className="glass-panel absolute -bottom-4 start-0 w-36 rounded-xl p-2 sm:w-44">
               <RegionLocator highlight={r.id} accent={r.accent} />
-              <figcaption className="mt-1 text-center text-[0.65rem] text-ivory/60">موقعها في المملكة</figcaption>
+              <figcaption className="mt-1 text-center text-[0.65rem] text-ink/60">موقعها في المملكة</figcaption>
             </figure>
           </div>
         </div>
       </header>
-      <Parapet color="#F8F5ED" className="relative z-10 -mt-[22px]" />
+      <Parapet color="#FFFBF4" className="relative z-10 -mt-[22px]" />
 
       <div className="mx-auto grid max-w-[1400px] gap-14 px-5 pt-14 sm:px-8 lg:grid-cols-[minmax(0,1fr)_18rem]">
         <div className="min-w-0">
           {r.sections.map((sec) => (
             <section key={sec.key} id={sec.key} className="mb-12 scroll-mt-24" aria-labelledby={`${sec.key}-h`}>
-              <h2 id={`${sec.key}-h`} className="font-display text-[2rem] text-green-deep">{sec.title}</h2>
+              <h2 id={`${sec.key}-h`} className="font-display text-[2rem] text-ink">{sec.title}</h2>
               <ul className="mt-4 grid max-w-[44rem] gap-4">
                 {sec.items.map((it, i) => (
                   <li key={i} className="border-s-2 ps-5 text-[1.05rem] leading-9" style={{ borderColor: r.accent }}>
@@ -129,7 +129,7 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
           ))}
 
           <section id="governorates" className="mb-12 scroll-mt-24" aria-labelledby="gov-h">
-            <h2 id="gov-h" className="font-display text-[2rem] text-green-deep">المحافظات</h2>
+            <h2 id="gov-h" className="font-display text-[2rem] text-ink">المحافظات</h2>
             {r.governorates.names.length > 0 ? (
               <>
                 <ul className="mt-4 flex max-w-[48rem] flex-wrap gap-2">
@@ -150,7 +150,7 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
           </section>
 
           <section id="heritage-list" className="mb-12 scroll-mt-24" aria-labelledby="her-h">
-            <h2 id="her-h" className="font-display text-[2rem] text-green-deep">في قوائم اليونسكو</h2>
+            <h2 id="her-h" className="font-display text-[2rem] text-ink">في قوائم اليونسكو</h2>
             {sites.length === 0 && ich.length === 0 ? (
               <p className="mt-4 max-w-[44rem] text-sm leading-7 text-ink-muted">
                 لا يوجد في بيانات المنصة حاليًا موقع تراث عالمي أو عنصر تراث غير مادي مرتبط بهذه المنطقة تحديدًا. العناصر الوطنية المشتركة بين المناطق معروضة في{" "}
@@ -181,7 +181,7 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
           </section>
 
           <section id="universities" className="mb-12 scroll-mt-24" aria-labelledby="uni-h">
-            <h2 id="uni-h" className="font-display text-[2rem] text-green-deep">الجامعات</h2>
+            <h2 id="uni-h" className="font-display text-[2rem] text-ink">الجامعات</h2>
             {r.universities.length > 0 ? (
               <>
                 <ul className="mt-4 grid max-w-[44rem] gap-2">
@@ -204,7 +204,7 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
 
         {/* حالة التوثيق للمحاور العشرة */}
         <aside className="museum p-6 lg:sticky lg:top-24 lg:self-start" aria-labelledby="cov-h">
-          <h2 id="cov-h" className="font-display text-xl text-green-deep">حالة توثيق المحاور</h2>
+          <h2 id="cov-h" className="font-display text-xl text-ink">حالة توثيق المحاور</h2>
           <ul className="mt-3 grid gap-1.5 text-sm">
             {TOPICS.map((t) => {
               const done = topicDone(t.key);
@@ -252,11 +252,11 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
 
 function Fact({ label, value, note, sources }: { label: string; value: string | null; note?: string; sources?: string[] }) {
   return (
-    <div className="border-sand/25 py-4 pe-3 odd:border-e sm:border-e sm:last:border-e-0 sm:[&:not(:first-child)]:ps-4">
-      <dt className="text-xs text-ivory/60">{label}</dt>
+    <div className="border-ink/10 py-4 pe-3 odd:border-e sm:border-e sm:last:border-e-0 sm:[&:not(:first-child)]:ps-4">
+      <dt className="text-xs text-ink/60">{label}</dt>
       <dd className="mt-1">
-        {value ? <span className="num text-xl font-extrabold text-ivory">{value}</span> : <PendingTag />}
-        {note && <span className="block text-xs text-ivory/60">{note}</span>}
+        {value ? <span className="num text-xl font-extrabold text-ink">{value}</span> : <PendingTag />}
+        {note && <span className="block text-xs text-ink/60">{note}</span>}
         {sources && <span className="mt-1.5 block opacity-90"><SourceRef ids={sources} /></span>}
       </dd>
     </div>

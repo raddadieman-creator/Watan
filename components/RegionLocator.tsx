@@ -17,16 +17,16 @@ export function RegionLocator({ highlight, accent }: { highlight: string; accent
             <title>{r.nameAr}</title>
             <path
               d={s.d}
-              fill={on ? accent : "rgba(248,245,237,0.1)"}
-              stroke={on ? "#F3E3BC" : "rgba(197,164,109,0.55)"}
+              fill={on ? accent : "#FFF1D9"}
+              stroke={on ? "#FFFFFF" : "#E3CFA6"}
               strokeWidth={on ? 2 : 1}
-              className={on ? "" : "transition-colors hover:fill-[rgba(197,164,109,0.3)]"}
+              className={on ? "" : "transition-colors hover:fill-[#FFE2B0]"}
             />
           </a>
         );
       })}
       {current?.seat && (
-        <rect x={current.seat[0] - 6} y={current.seat[1] - 6} width={12} height={12} transform={`rotate(45 ${current.seat[0]} ${current.seat[1]})`} fill="#103B32" stroke="#F3E3BC" strokeWidth={2} pointerEvents="none" />
+        <rect x={current.seat[0] - 6} y={current.seat[1] - 6} width={12} height={12} transform={`rotate(45 ${current.seat[0]} ${current.seat[1]})`} fill="#FFFFFF" stroke="#1E2B28" strokeWidth={2} pointerEvents="none" />
       )}
     </svg>
   );

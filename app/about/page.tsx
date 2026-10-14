@@ -44,7 +44,7 @@ export default function AboutPage() {
       </div>
 
       <section className="mt-14" aria-labelledby="built-h">
-        <h2 id="built-h" className="font-display text-[2.2rem] text-green-deep">ما يعمل الآن</h2>
+        <h2 id="built-h" className="font-display text-[2.2rem] text-ink">ما يعمل الآن</h2>
         <ul className="mt-4 divide-y divide-line border-y border-line">
           {BUILT.map(([t, d]) => (
             <li key={t} className="grid gap-1 py-4 sm:grid-cols-[16rem_1fr] sm:gap-6">
@@ -56,12 +56,12 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-14" aria-labelledby="next-h">
-        <h2 id="next-h" className="font-display text-[2.2rem] text-green-deep">قيد البناء</h2>
+        <h2 id="next-h" className="font-display text-[2.2rem] text-ink">قيد البناء</h2>
         <p className="mt-2 text-sm text-ink-muted">هذه أقسام مخطط لها، وليست روابط بعد. لن يظهر أي قسم في القائمة الرئيسية قبل أن يعمل فعلًا.</p>
         <ol className="mt-4 grid gap-2">
           {NEXT.map((n, i) => (
             <li key={n} className="grid grid-cols-[2rem_1fr] gap-2 text-[0.98rem] leading-8">
-              <span className="num font-display text-sand">{i + 1}</span>
+              <span className="num font-display text-sun-deep">{i + 1}</span>
               <span>{n}</span>
             </li>
           ))}

@@ -34,7 +34,7 @@ export default function RegionsIndex() {
               <tr key={r.id} className="border-b border-line/70 last:border-0 hover:bg-ivory/60">
                 <th scope="row" className="px-4 py-3 text-start font-medium">
                   <span className="me-2 inline-block size-2.5 rounded-full align-middle" style={{ background: r.accent }} aria-hidden />
-                  <Link href={`/regions/${r.id}`} className="font-display text-xl text-green-deep underline decoration-line underline-offset-4 hover:decoration-sand">
+                  <Link href={`/regions/${r.id}`} className="font-display text-xl text-ink underline decoration-line underline-offset-4 hover:decoration-sand">
                     {r.nameAr}
                   </Link>
                   {r.detailLevel === "full" && <span className="ms-2 text-xs font-normal text-emerald">مفصلة</span>}

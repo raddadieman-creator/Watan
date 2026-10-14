@@ -39,7 +39,7 @@ export function RegionCompare({ regions }: { regions: CompareRegion[] }) {
     <div className="grid gap-12">
       <section aria-labelledby="chart-h">
         <div className="flex flex-wrap items-end justify-between gap-4">
-          <h2 id="chart-h" className="font-display text-[2rem] text-green-deep">المناطق حسب {METRICS[metric].label}</h2>
+          <h2 id="chart-h" className="font-display text-[2rem] text-ink">المناطق حسب {METRICS[metric].label}</h2>
           <div role="radiogroup" aria-label="اختر المؤشر" className="inline-flex rounded-full border border-line bg-paper p-1">
             {(Object.keys(METRICS) as Metric[]).map((m) => (
               <button
@@ -48,7 +48,7 @@ export function RegionCompare({ regions }: { regions: CompareRegion[] }) {
                 role="radio"
                 aria-checked={metric === m}
                 onClick={() => setMetric(m)}
-                className={`min-h-10 rounded-full px-4 text-sm ${metric === m ? "bg-green-deep text-ivory" : "text-ink-muted hover:text-green-deep"}`}
+                className={`min-h-10 rounded-full px-4 text-sm ${metric === m ? "bg-sea text-white" : "text-ink-muted hover:text-ink"}`}
               >
                 {METRICS[m].label}
               </button>
@@ -71,7 +71,7 @@ export function RegionCompare({ regions }: { regions: CompareRegion[] }) {
       </section>
 
       <section aria-labelledby="cmp-h" className="museum p-6 sm:p-9">
-        <h2 id="cmp-h" className="font-display text-[2rem] text-green-deep">قارن بين منطقتين</h2>
+        <h2 id="cmp-h" className="font-display text-[2rem] text-ink">قارن بين منطقتين</h2>
         <div className="mt-5 grid gap-4 sm:grid-cols-2">
           {[{ v: a, set: setA, id: "cmp-a" }, { v: b, set: setB, id: "cmp-b" }].map((s, i) => (
             <label key={s.id} htmlFor={s.id} className="grid gap-1.5 text-sm text-ink-muted">
@@ -100,8 +100,8 @@ export function RegionCompare({ regions }: { regions: CompareRegion[] }) {
               return (
                 <tr key={m} className="border-b border-line/60">
                   <th scope="row" className="py-3 text-start text-sm font-normal text-ink-muted">{METRICS[m].label}{m !== "population" && " (تقريبية)"}</th>
-                  <td className={`py-3 ${va > vb ? "font-bold text-green-deep" : ""}`}>{f(va)}</td>
-                  <td className={`py-3 ${vb > va ? "font-bold text-green-deep" : ""}`}>{f(vb)}</td>
+                  <td className={`py-3 ${va > vb ? "font-bold text-ink" : ""}`}>{f(va)}</td>
+                  <td className={`py-3 ${vb > va ? "font-bold text-ink" : ""}`}>{f(vb)}</td>
                 </tr>
               );
             })}

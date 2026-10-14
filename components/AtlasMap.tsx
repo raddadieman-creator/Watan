@@ -30,11 +30,11 @@ interface Props {
 type View = { k: number; tx: number; ty: number };
 
 const POP_CLASSES = [
-  { max: 600_000, fill: "#E9DDBF", label: "أقل من 600 ألف" },
-  { max: 1_500_000, fill: "#D6BE8A", label: "600 ألف – 1.5 مليون" },
-  { max: 2_500_000, fill: "#B99558", label: "1.5 – 2.5 مليون" },
-  { max: 6_000_000, fill: "#8F6B37", label: "2.5 – 6 ملايين" },
-  { max: Infinity, fill: "#5E4423", label: "أكثر من 6 ملايين" },
+  { max: 600_000, fill: "#FFE6BF", label: "أقل من 600 ألف" },
+  { max: 1_500_000, fill: "#FDC584", label: "600 ألف – 1.5 مليون" },
+  { max: 2_500_000, fill: "#F69E52", label: "1.5 – 2.5 مليون" },
+  { max: 6_000_000, fill: "#E6702F", label: "2.5 – 6 ملايين" },
+  { max: Infinity, fill: "#C24A1C", label: "أكثر من 6 ملايين" },
 ];
 const popFill = (p: number) => POP_CLASSES.find((c) => p < c.max)!.fill;
 
@@ -116,8 +116,9 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
     return { left: ox + (c[0] * view.k + view.tx - vb.x) * scale, top: oy + (c[1] * view.k + view.ty - vb.y) * scale };
   };
 
-  const baseFill = (id: string) =>
-    layers.population ? popFill(info.get(id)!.population) : `url(#${P}-parchment)`;
+  // كل منطقة بلونها المميز فوق أرضية رملية فاتحة؛ وطبقة السكان تستبدل اللون بتدرج دافئ
+  const baseFill = (id: string) => (layers.population ? popFill(info.get(id)!.population) : info.get(id)!.accent);
+  const baseOpacity = (id: string) => (layers.population ? 1 : selected && selected !== id ? 0.18 : 0.5);
 
   const panel = sel && (
     <motion.section
@@ -129,22 +130,22 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
       aria-label={`ملخص ${sel.nameAr}`}
       className="relative"
     >
-      <p className="flex items-center gap-2 text-sm text-sand">
-        <span className="inline-block h-px w-8 bg-sand" aria-hidden />
+      <p className="flex items-center gap-2 text-sm font-bold" style={{ color: sel.accent }}>
+        <span className="inline-block h-[3px] w-8 rounded-full" style={{ background: sel.accent }} aria-hidden />
         المنطقة المختارة
       </p>
-      <h2 className="mt-3 font-display text-[clamp(2.4rem,4.4vw,3.8rem)] font-bold leading-[1.15] text-ivory">{sel.nameAr}</h2>
-      <p className="mt-2 text-ivory/70">المقر الإداري: {sel.seatAr}</p>
-      <dl className="mt-7 grid grid-cols-3 border-y border-sand/25">
+      <h2 className="mt-3 font-display text-[clamp(2.4rem,4.4vw,3.8rem)] font-bold leading-[1.3] text-ink">{sel.nameAr}</h2>
+      <p className="mt-1 text-ink/70">المقر الإداري: {sel.seatAr}</p>
+      <dl className="mt-6 grid grid-cols-3 rounded-2xl bg-white/80 shadow-[0_18px_40px_-28px_rgba(30,111,134,0.6)] ring-1 ring-ink/5">
         {[
           { k: "السكان، تعداد 2022", v: formatCompact(sel.population), t: formatNumber(sel.population) },
           { k: "المساحة التقريبية", v: `${formatNumber(sel.areaKm2)}`, u: "كم²" },
           { k: "المحافظات", v: sel.governorates != null ? String(sel.governorates) : "—" },
         ].map((x, i) => (
-          <div key={x.k} className={`py-4 ${i > 0 ? "border-s border-sand/25 ps-4" : ""}`}>
-            <dt className="text-xs text-ivory/60">{x.k}</dt>
-            <dd className="num mt-1 whitespace-nowrap text-xl font-extrabold text-ivory" title={x.t}>
-              {x.v} {x.u && <span className="text-sm font-normal text-ivory/70">{x.u}</span>}
+          <div key={x.k} className={`px-4 py-4 ${i > 0 ? "border-s border-ink/8" : ""}`}>
+            <dt className="text-xs text-ink/60">{x.k}</dt>
+            <dd className="num mt-1 whitespace-nowrap text-xl font-extrabold text-ink" title={x.t}>
+              {x.v} {x.u && <span className="text-sm font-normal text-ink/60">{x.u}</span>}
             </dd>
           </div>
         ))}
@@ -154,16 +155,16 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
         <button type="button" onClick={() => select(null)} className="btn-ghost">عرض المملكة كاملة</button>
       </div>
       {sel.detailLevel === "basic" && (
-        <p className="mt-4 text-xs text-ivory/55">صفحة أساسية؛ المحتوى التفصيلي قيد التوثيق ولن يُنشر إلا بمصادره.</p>
+        <p className="mt-4 text-xs text-ink/55">صفحة أساسية؛ المحتوى التفصيلي قيد التوثيق ولن يُنشر إلا بمصادره.</p>
       )}
     </motion.section>
   );
 
   return (
-    <section className="atlas-plate relative overflow-hidden text-ivory" aria-label="أطلس وطن التفاعلي">
+    <section className="atlas-plate relative overflow-hidden text-ink" aria-label="أطلس وطن التفاعلي">
       <div className="relative mx-auto max-w-[1600px] lg:grid lg:h-[calc(100svh-72px)] lg:[direction:rtl] lg:min-h-[660px] lg:max-h-[980px] lg:grid-cols-[minmax(24rem,32rem)_minmax(0,1fr)]">
         {/* الافتتاحية، وتحل محلها لوحة المنطقة المختارة على الشاشات الكبيرة */}
-        <div className="relative z-10 px-5 pt-10 sm:px-8 lg:flex lg:items-center lg:bg-gradient-to-l lg:from-[#0A2B24] lg:from-35% lg:via-[#0A2B24]/75 lg:via-65% lg:to-transparent lg:py-10 lg:pe-0 lg:ps-12">
+        <div className="relative z-10 px-5 pt-10 sm:px-8 lg:flex lg:items-center lg:bg-gradient-to-l lg:from-[#FFF4E4] lg:from-30% lg:via-[#FFF4E4]/70 lg:via-60% lg:to-transparent lg:py-10 lg:pe-0 lg:ps-12">
           <div className="w-full">
             <AnimatePresence mode="wait" initial={false}>
               {sel && isLg ? (
@@ -214,7 +215,7 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
               </radialGradient>
             </defs>
 
-            <path d={atlas.graticule} fill="none" stroke="#C5A46D" strokeOpacity="0.1" strokeWidth="0.8" strokeDasharray="2 6" />
+            <path d={atlas.graticule} fill="none" stroke="#1E6F86" strokeOpacity="0.14" strokeWidth="0.8" strokeDasharray="2 6" />
 
             <g
               style={{
@@ -225,17 +226,20 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
             >
               {/* خطوط الماء الساحلية: اصطلاح خرائطي يحدد الساحل */}
               {[20, 11, 5].map((w, i) => (
-                <use key={w} href={`#${P}-land`} fill="none" stroke="#9FC2B4" strokeOpacity={[0.035, 0.05, 0.08][i]} strokeWidth={s(w)} strokeLinejoin="round" />
+                <use key={w} href={`#${P}-land`} fill="none" stroke="#FFFFFF" strokeOpacity={[0.3, 0.45, 0.7][i]} strokeWidth={s(w)} strokeLinejoin="round" />
               ))}
               {/* اليابسة المجاورة */}
-              <use href={`#${P}-land`} fill="#1C4A3F" stroke="#3E6B5D" strokeWidth={s(0.8)} />
+              <use href={`#${P}-land`} fill="#F6EEDC" stroke="#E4D3AE" strokeWidth={s(0.8)} />
 
               {/* سماكة الصفيحة: تمنح المملكة عمقًا ثلاثي الأبعاد */}
               <g filter={`url(#${P}-slab)`}>
                 {[7, 5, 3].map((dy) => (
-                  <use key={dy} href={`#${P}-ksa-shape`} fill={dy === 7 ? "#5B4526" : "#8A6C40"} transform={`translate(0 ${s(dy)})`} />
+                  <use key={dy} href={`#${P}-ksa-shape`} fill={dy === 7 ? "#D9B77A" : "#EBD2A0"} transform={`translate(0 ${s(dy)})`} />
                 ))}
               </g>
+
+              {/* أرضية رملية تحت ألوان المناطق */}
+              <use href={`#${P}-ksa-shape`} fill="#FFF7E6" />
 
               {/* المناطق */}
               {atlas.regions.map((r) => {
@@ -261,8 +265,9 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                     className="atlas-region cursor-pointer outline-none"
                     style={{
                       fill: baseFill(r.id),
-                      opacity: dim ? 0.55 : 1,
-                      transition: reduce ? "none" : "opacity 400ms ease",
+                      fillOpacity: baseOpacity(r.id),
+                      opacity: dim && layers.population ? 0.5 : 1,
+                      transition: reduce ? "none" : "fill-opacity 400ms ease, opacity 400ms ease",
                     }}
                   />
                 );
@@ -284,27 +289,27 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                     key={r.id}
                     href={`#${P}-r-${r.id}`}
                     fill="none"
-                    stroke="#7D6037"
+                    stroke="#FFFFFF"
                     strokeWidth={s(1)}
                     strokeDasharray={`${s(5)} ${s(3)}`}
                     strokeOpacity="0.75"
                     style={{ animationDelay: `${i * 70}ms` }}
                   />
                 ))}
-                <use href={`#${P}-ksa-shape`} fill="none" stroke="#C5A46D" strokeWidth={s(1.6)} />
+                <use href={`#${P}-ksa-shape`} fill="none" stroke="#FFFFFF" strokeWidth={s(2.4)} />
               </g>
 
               {/* المنطقة المرفوعة عند المرور أو الاختيار */}
               {lifted && (
                 <g pointerEvents="none" transform={`translate(0 ${s(-7)})`} filter={`url(#${P}-lift)`}>
-                  <use href={`#${P}-r-${lifted}`} fill={baseFill(lifted)} />
-                  <use href={`#${P}-r-${lifted}`} fill={info.get(lifted)!.accent} fillOpacity={selected === lifted ? 0.82 : 0.4} />
+                  <use href={`#${P}-r-${lifted}`} fill="#FFF7E6" />
+                  <use href={`#${P}-r-${lifted}`} fill={baseFill(lifted)} fillOpacity={layers.population ? 1 : selected === lifted ? 0.92 : 0.75} />
                   {layers.terrain && (
                     <g clipPath={`url(#${P}-c-${lifted})`}>
                       {atlas.physical.map((p) => <use key={p.id} href={`#${P}-ph-${p.id}`} fill={`url(#${P}-${p.kind})`} opacity={0.7} />)}
                     </g>
                   )}
-                  <use href={`#${P}-r-${lifted}`} fill="none" stroke="#F3E3BC" strokeWidth={s(2)} />
+                  <use href={`#${P}-r-${lifted}`} fill="none" stroke="#FFFFFF" strokeWidth={s(2.6)} />
                 </g>
               )}
 
@@ -316,8 +321,8 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                       key={sea.label}
                       transform={`translate(${sea.at[0]} ${sea.at[1]}) rotate(${sea.angle})`}
                       textAnchor="middle"
-                      fill="#CFE0D8"
-                      fillOpacity="0.55"
+                      fill="#1E6F86"
+                      fillOpacity="0.7"
                       fontSize={s(26)}
                     >
                       {sea.label}
@@ -329,10 +334,10 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                       x={p.labelAt[0]}
                       y={p.labelAt[1]}
                       textAnchor="middle"
-                      fill="#6B4F2A"
+                      fill="#5A4220"
                       fillOpacity={selected ? 0.5 : 0.85}
                       fontSize={s(p.kind === "desert" ? 22 : 16)}
-                      stroke="#F1E6CC"
+                      stroke="#FFFFFF"
                       strokeWidth={s(3)}
                       paintOrder="stroke"
                     >
@@ -341,8 +346,8 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                   ))}
                   {layers.terrain && atlas.peaks.map((pk) => (
                     <g key={pk.label} transform={`translate(${pk.at[0]} ${pk.at[1]})`}>
-                      <path d={`M0 ${s(-7)} L${s(6)} ${s(4)} L${s(-6)} ${s(4)}Z`} fill="#5B4526" />
-                      <text y={s(18)} textAnchor="middle" fontSize={s(13)} fill="#5B4526" stroke="#F1E6CC" strokeWidth={s(2.5)} paintOrder="stroke">
+                      <path d={`M0 ${s(-7)} L${s(6)} ${s(4)} L${s(-6)} ${s(4)}Z`} fill="#5A4220" />
+                      <text y={s(18)} textAnchor="middle" fontSize={s(13)} fill="#5A4220" stroke="#FFFFFF" strokeWidth={s(2.5)} paintOrder="stroke">
                         {pk.label}
                       </text>
                     </g>
@@ -356,7 +361,7 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                   {atlas.regions.map((r) =>
                     r.seat ? (
                       <g key={r.id} transform={`translate(${r.seat[0]} ${r.seat[1] + (lifted === r.id ? s(-7) : 0)})`}>
-                        <rect x={s(-4.5)} y={s(-4.5)} width={s(9)} height={s(9)} transform="rotate(45)" fill="#103B32" stroke="#F3E3BC" strokeWidth={s(1.5)} />
+                        <rect x={s(-4.5)} y={s(-4.5)} width={s(9)} height={s(9)} transform="rotate(45)" fill="#FFFFFF" stroke="#1E2B28" strokeWidth={s(1.6)} />
                       </g>
                     ) : null,
                   )}
@@ -373,8 +378,8 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                       y={r.centroid[1] + (lifted === r.id ? s(-7) : 0) + s(r.seat ? 24 : 0)}
                       textAnchor="middle"
                       fontSize={s(selected === r.id ? 19 : 14)}
-                      fill={selected === r.id ? "#FFFDF7" : "#2A2216"}
-                      stroke={selected === r.id ? "#2A2216" : "#F4EAD2"}
+                      fill="#1E2B28"
+                      stroke="#FFFFFF"
                       strokeWidth={s(3.5)}
                       paintOrder="stroke"
                       opacity={selected && selected !== r.id ? 0.45 : 1}
@@ -387,22 +392,22 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
             </g>
 
             {/* سهم الشمال */}
-            <g transform={`translate(${vb.x + vb.w - 60} ${vb.y + vb.h - 90})`} pointerEvents="none" aria-hidden>
-              <circle r="26" fill="none" stroke="#C5A46D" strokeOpacity="0.5" />
-              <path d="M0 -22 L7 6 L0 1 L-7 6 Z" fill="#C5A46D" />
-              <text y="42" textAnchor="middle" fill="#C5A46D" fontSize="14" fontFamily="var(--font-sans)">ش</text>
+            <g transform={`translate(${vb.x + vb.w * 0.33} ${vb.y + vb.h - 70})`} pointerEvents="none" aria-hidden display={isLg ? undefined : "none"}>
+              <circle r="26" fill="#FFFFFF" fillOpacity="0.6" stroke="#1E6F86" strokeOpacity="0.4" />
+              <path d="M0 -22 L7 6 L0 1 L-7 6 Z" fill="#E5534B" />
+              <text y="42" textAnchor="middle" fill="#1E6F86" fontSize="14" fontFamily="var(--font-sans)">ش</text>
             </g>
           </svg>
 
           {/* بطاقة الاسم عند المرور */}
           {tip && (
             <div
-              className="pointer-events-none absolute z-20 -translate-x-1/2 -translate-y-[130%] rounded-md border border-sand/50 bg-[#0B2A23]/95 px-3 py-1.5 text-ivory shadow-xl"
+              className="pointer-events-none absolute z-20 -translate-x-1/2 -translate-y-[130%] rounded-xl bg-white px-3.5 py-2 text-ink shadow-[0_16px_34px_-14px_rgba(30,111,134,0.55)] ring-1 ring-ink/5"
               style={tipPos(tip.centroid)}
               role="status"
             >
               <p className="font-display text-lg leading-7">{info.get(tip.id)!.nameAr}</p>
-              <p className="text-xs text-ivory/70">المقر: {info.get(tip.id)!.seatAr}</p>
+              <p className="text-xs text-ink/60">المقر: {info.get(tip.id)!.seatAr}</p>
             </div>
           )}
 
@@ -414,7 +419,7 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </MapButton>
           </div>
-          <fieldset className="glass-panel mx-5 mt-4 flex flex-wrap items-center gap-x-5 gap-y-1 rounded-xl px-4 py-2 text-sm text-ivory/85 sm:mx-8 lg:absolute lg:end-8 lg:top-6 lg:m-0">
+          <fieldset className="glass-panel mx-5 mt-4 flex flex-wrap items-center gap-x-5 gap-y-1 rounded-2xl px-4 py-2 text-sm text-ink/80 sm:mx-8 lg:absolute lg:end-8 lg:top-6 lg:m-0">
             <legend className="sr-only">طبقات الخريطة</legend>
             <LayerToggle checked={layers.terrain} onChange={(v) => setLayers((l) => ({ ...l, terrain: v }))} label="التضاريس" />
             <LayerToggle checked={layers.labels} onChange={(v) => setLayers((l) => ({ ...l, labels: v }))} label="الأسماء" />
@@ -442,11 +447,12 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
                     onClick={() => select(selected === r.id ? null : r.id)}
                     onPointerEnter={() => setHovered(r.id)}
                     onPointerLeave={() => setHovered((h) => (h === r.id ? null : h))}
+                    style={selected === r.id ? { background: r.accent } : undefined}
                     className={`inline-flex min-h-10 items-center gap-2 rounded-full border px-3.5 text-sm transition-colors ${
-                      selected === r.id ? "border-sand bg-sand text-green-deep" : "border-ivory/15 bg-[#0B2A23]/40 text-ivory/85 hover:border-sand/70 hover:text-ivory"
+                      selected === r.id ? "border-transparent text-white shadow-md" : "border-ink/10 bg-white/75 text-ink/80 hover:border-ink/25 hover:bg-white"
                     }`}
                   >
-                    <span className="inline-block size-2 rounded-full" style={{ background: r.accent }} aria-hidden />
+                    <span className="inline-block size-2.5 rounded-full ring-2 ring-white" style={{ background: selected === r.id ? "#fff" : r.accent }} aria-hidden />
                     {r.shortAr}
                   </button>
                 </li>
@@ -454,17 +460,17 @@ export function AtlasMap({ atlas, regions, intro }: Props) {
             </ul>
           </nav>
           {layers.population && (
-            <div className="flex flex-wrap items-center gap-3 text-xs text-ivory/80" aria-label="وسيلة إيضاح طبقة السكان">
+            <div className="flex flex-wrap items-center gap-3 text-xs text-ink/75" aria-label="وسيلة إيضاح طبقة السكان">
               {POP_CLASSES.map((c) => (
                 <span key={c.label} className="inline-flex items-center gap-1.5">
-                  <span className="inline-block size-3 rounded-sm border border-ivory/30" style={{ background: c.fill }} />
+                  <span className="inline-block size-3 rounded-sm border border-ink/15" style={{ background: c.fill }} />
                   {c.label}
                 </span>
               ))}
-              <span className="text-ivory/55">المصدر: الهيئة العامة للإحصاء، تعداد 2022</span>
+              <span className="text-ink/55">المصدر: الهيئة العامة للإحصاء، تعداد 2022</span>
             </div>
           )}
-          <p className="text-[0.7rem] text-ivory/45">
+          <p className="text-[0.7rem] text-ink/50">
             الحدود الإدارية مرحلية من Natural Earth، والمعالم الطبيعية تقريبية للإيضاح؛ المرجع الرسمي للحدود هو الهيئة العامة للمساحة والمعلومات الجيومكانية.
           </p>
         </div>
@@ -480,7 +486,7 @@ function MapButton({ label, onClick, children }: { label: string; onClick: () =>
       aria-label={label}
       title={label}
       onClick={onClick}
-      className="glass-panel inline-flex size-11 items-center justify-center rounded-xl text-xl text-ivory hover:text-sand"
+      className="glass-panel inline-flex size-11 items-center justify-center rounded-xl text-xl text-ink hover:text-coral"
     >
       {children}
     </button>
@@ -490,7 +496,7 @@ function MapButton({ label, onClick, children }: { label: string; onClick: () =>
 function LayerToggle({ checked, onChange, label }: { checked: boolean; onChange: (v: boolean) => void; label: string }) {
   return (
     <label className="inline-flex min-h-10 cursor-pointer items-center gap-2">
-      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="size-4 accent-[#C5A46D]" />
+      <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="size-4 accent-[#F28C38]" />
       {label}
     </label>
   );

@@ -7,10 +7,19 @@
   --color-sand: #C5A46D;
   --color-sand-soft: #E7D9BC;
   --color-parchment: #EFE5CC;
-  --color-ivory: #F8F5ED;
+  --color-ivory: #FFFBF4;
+  --color-ink: #1E2B28;
+  --color-sun: #F28C38;
+  --color-sun-deep: #C9641C;
+  --color-coral: #E5534B;
+  --color-sky: #2E8FD9;
+  --color-turq: #1DB4C8;
+  --color-mint: #23A887;
+  --color-sea: #1E6F86;
   --color-paper: #FFFFFF;
   --color-charcoal: #182522;
   --color-ink-muted: #56655F;
+  --color-cream: #FFF3DE;
   --color-line: #DDD2BA;
   --color-umber: #6B4F2A;
 
@@ -59,20 +68,30 @@ p { text-wrap: pretty; }
 
 .num { font-variant-numeric: tabular-nums; font-family: var(--font-sans); }
 
-/* لوحة الأطلس: بحر عميق مع خطوط كنتور خفيفة */
+/* لوحة الأطلس: شروق دافئ خلف العنوان، وبحر فيروزي تحت الخريطة */
 .atlas-plate {
-  background-color: var(--color-green-night);
+  background-color: #EAF7F6;
   background-image:
-    radial-gradient(90% 70% at 30% 45%, rgba(22, 116, 93, 0.35), transparent 70%),
-    radial-gradient(60% 50% at 90% 10%, rgba(197, 164, 109, 0.08), transparent 70%);
+    radial-gradient(40% 55% at 92% 18%, rgba(255, 205, 120, 0.75), transparent 70%),
+    radial-gradient(35% 45% at 70% 95%, rgba(242, 140, 56, 0.16), transparent 70%),
+    linear-gradient(90deg, #BFE9EE 0%, #D6F1F1 45%, #FFF2DF 72%, #FFF6E8 100%);
 }
 
 .contour-plate {
-  background-color: var(--color-green-deep);
+  background-color: #FFF4E4;
   background-image:
-    radial-gradient(120% 90% at 30% 40%, rgba(22, 116, 93, 0.4), transparent 60%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520'%3E%3Cg fill='none' stroke='%23C5A46D' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M-20 120c80-40 150 30 240-10s160-70 320 10'/%3E%3Cpath d='M-20 160c90-40 160 30 250-10s170-60 310 20'/%3E%3Cpath d='M-20 200c100-40 170 30 260-10s170-50 300 30'/%3E%3Cpath d='M-20 300c70 30 140-40 230 0s180 60 330-10'/%3E%3Cpath d='M-20 340c80 30 150-40 240 0s170 50 320-10'/%3E%3Cpath d='M-20 380c90 30 160-40 250 0s160 40 310-10'/%3E%3Cpath d='M-20 440c100 20 180-30 270 0s150 30 290-10'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: auto, 520px 520px;
+    radial-gradient(45% 80% at 95% 0%, rgba(255, 200, 110, 0.7), transparent 70%),
+    radial-gradient(40% 70% at 0% 100%, rgba(29, 180, 200, 0.22), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520'%3E%3Cg fill='none' stroke='%23F28C38' stroke-opacity='0.14' stroke-width='1'%3E%3Cpath d='M-20 120c80-40 150 30 240-10s160-70 320 10'/%3E%3Cpath d='M-20 160c90-40 160 30 250-10s170-60 310 20'/%3E%3Cpath d='M-20 200c100-40 170 30 260-10s170-50 300 30'/%3E%3Cpath d='M-20 300c70 30 140-40 230 0s180 60 330-10'/%3E%3Cpath d='M-20 340c80 30 150-40 240 0s170 50 320-10'/%3E%3Cpath d='M-20 380c90 30 160-40 250 0s160 40 310-10'/%3E%3Cpath d='M-20 440c100 20 180-30 270 0s150 30 290-10'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: auto, auto, 520px 520px;
+}
+
+/* التذييل: فيروزي عميق مشرق بدل الأخضر الداكن */
+.footer-plate {
+  background-color: #0F5F6E;
+  background-image:
+    radial-gradient(50% 90% at 100% 0%, rgba(242, 140, 56, 0.35), transparent 70%),
+    radial-gradient(60% 90% at 0% 100%, rgba(29, 180, 200, 0.45), transparent 70%);
 }
 
 /* ورق الأطلس: خلفية عاجية بملمس خفيف */
@@ -82,48 +101,47 @@ p { text-wrap: pretty; }
 }
 
 .glass-panel {
-  background: rgba(10, 43, 36, 0.62);
-  border: 1px solid rgba(197, 164, 109, 0.32);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(30, 43, 40, 0.1);
+  box-shadow: 0 10px 30px -18px rgba(30, 111, 134, 0.45);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
 .btn-gold {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  height: 3rem; padding-inline: 1.5rem; border-radius: 999px;
-  background: linear-gradient(180deg, #D8BB84, #B8945A);
-  color: #10251F; font-weight: 700; font-size: 0.95rem;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 10px 24px -12px rgba(197,164,109,0.7);
-  transition: transform 200ms var(--ease-atlas), box-shadow 200ms;
+  height: 3rem; padding-inline: 1.6rem; border-radius: 999px;
+  background: linear-gradient(120deg, #E5534B 0%, #F28C38 55%, #F6B13D 100%);
+  color: #fff; font-weight: 700; font-size: 0.95rem;
+  box-shadow: 0 14px 30px -14px rgba(229, 83, 75, 0.75), inset 0 1px 0 rgba(255,255,255,0.35);
+  transition: transform 200ms var(--ease-atlas), box-shadow 200ms, filter 200ms;
 }
-.btn-gold:hover { transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 16px 30px -14px rgba(197,164,109,0.85); }
+.btn-gold:hover { transform: translateY(-2px); filter: saturate(1.1); box-shadow: 0 20px 36px -16px rgba(229, 83, 75, 0.85), inset 0 1px 0 rgba(255,255,255,0.4); }
 
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  height: 3rem; padding-inline: 1.25rem; border-radius: 999px;
-  border: 1px solid rgba(248, 245, 237, 0.28); color: var(--color-ivory); font-size: 0.95rem;
-  transition: border-color 200ms, color 200ms, background 200ms;
+  height: 3rem; padding-inline: 1.3rem; border-radius: 999px;
+  border: 1.5px solid rgba(30, 43, 40, 0.14); color: var(--color-ink); font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.6);
+  transition: border-color 200ms, color 200ms, background 200ms, transform 200ms;
 }
-.btn-ghost:hover { border-color: var(--color-sand); color: var(--color-sand); background: rgba(197,164,109,0.06); }
+.btn-ghost:hover { border-color: var(--color-turq); color: var(--color-sea); background: #fff; transform: translateY(-1px); }
 
 /* بطاقة متحفية: إطار مزدوج وزوايا ذهبية */
 .museum {
   position: relative;
-  background: #FFFDF8;
-  border: 1px solid var(--color-line);
-  box-shadow: 0 1px 0 #fff inset, 0 18px 40px -30px rgba(16, 59, 50, 0.45);
+  background: #FFFFFF;
+  border: 1px solid #F0E3CC;
+  border-radius: 1.1rem;
+  box-shadow: 0 22px 44px -32px rgba(30, 111, 134, 0.45);
 }
 .museum::before {
-  content: ""; position: absolute; inset: 6px; border: 1px solid rgba(197,164,109,0.28); pointer-events: none;
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(90deg, #1DB4C8, #23A887 35%, #EDB92E 70%, #F28C38) top / 100% 4px no-repeat;
+  -webkit-mask: linear-gradient(#000 0 0) top / 100% 4px no-repeat;
+  mask: linear-gradient(#000 0 0) top / 100% 4px no-repeat;
 }
-.museum::after {
-  content: ""; position: absolute; inset: -1px; pointer-events: none;
-  background:
-    linear-gradient(var(--color-sand), var(--color-sand)) top right / 18px 2px no-repeat,
-    linear-gradient(var(--color-sand), var(--color-sand)) top right / 2px 18px no-repeat,
-    linear-gradient(var(--color-sand), var(--color-sand)) bottom left / 18px 2px no-repeat,
-    linear-gradient(var(--color-sand), var(--color-sand)) bottom left / 2px 18px no-repeat;
-}
+.museum::after { content: none; }
 
 .flag-pending {
   background: repeating-linear-gradient(-45deg, #FBF3E2, #FBF3E2 6px, #F6EAD0 6px, #F6EAD0 12px);
@@ -150,10 +168,15 @@ p { text-wrap: pretty; }
 }
 
 .hero-title {
-  background: linear-gradient(175deg, #FFFBF0 10%, #F1E2BE 55%, #C5A46D 100%);
+  background: linear-gradient(115deg, #E0483F 0%, #F07C34 45%, #F5A33A 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 8px 30px rgba(0, 0, 0, 0.35));
-  padding-bottom: 0.1em;
+  padding-bottom: 0.12em;
+}
+.hero-title-light {
+  background: linear-gradient(115deg, #FFFFFF 0%, #FFE3B5 60%, #FFC27A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
