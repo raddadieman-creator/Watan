@@ -1,0 +1,57 @@
+{
+  "gastat-census-2022": {
+    "title": "تعداد السعودية 2022 — النتائج حسب المنطقة الإدارية",
+    "publisher": "الهيئة العامة للإحصاء",
+    "url": "https://www.stats.gov.sa",
+    "secondaryUrl": "https://gulfmigration.grc.net/saudi-arabia-population-by-nationality-saudi-non-saudi-and-administrative-region-governorate-of-residence-2022/",
+    "secondaryNote": "جدول منشور عن بيانات الهيئة (برنامج GLMM)، استُخدم للوصول إلى الأرقام حسب المنطقة",
+    "refYear": "2022 (التاريخ المرجعي للتعداد: 10 مايو 2022)",
+    "verified": "2026-10-14"
+  },
+  "saudipedia-provinces": {
+    "title": "Provinces of Saudi Arabia",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/en/provinces-of-saudi-arabia",
+    "refYear": "غير محدد في الصفحة لبعض البيانات",
+    "verified": "2026-10-14"
+  },
+  "saudipedia-geography": {
+    "title": "جغرافيا السعودية",
+    "publisher": "سعوديبيديا",
+    "url": "https://saudipedia.com/جغرافيا-السعودية",
+    "verified": "2026-10-14"
+  },
+  "unesco-whc-sa": {
+    "title": "Saudi Arabia — Properties inscribed on the World Heritage List",
+    "publisher": "مركز التراث العالمي – اليونسكو",
+    "url": "https://whc.unesco.org/en/statesparties/sa",
+    "verified": "2026-10-14"
+  },
+  "unesco-ich-sa": {
+    "title": "Saudi Arabia — Elements on the Lists of Intangible Cultural Heritage",
+    "publisher": "اليونسكو – التراث الثقافي غير المادي",
+    "url": "https://ich.unesco.org/en/state/saudi-arabia-SA?info=elements-on-the-lists",
+    "verified": "2026-10-14"
+  },
+  "natural-earth": {
+    "title": "Natural Earth 1:10m Admin 1 – States, Provinces (v5.2.0-pre)",
+    "publisher": "Natural Earth",
+    "url": "https://github.com/nvkelso/natural-earth-vector",
+    "note": "ملكية عامة. حدود مرحلية لأغراض العرض حتى استبدالها بحدود الهيئة العامة للمساحة والمعلومات الجيومكانية",
+    "verified": "2026-10-14"
+  },
+  "geosa": {
+    "title": "الهيئة العامة للمساحة والمعلومات الجيومكانية",
+    "publisher": "الهيئة العامة للمساحة والمعلومات الجيومكانية",
+    "url": "https://geosa.gov.sa",
+    "note": "المرجع الرسمي للحدود؛ لم تُدمج بياناتها بعد",
+    "verified": "2026-10-14"
+  },
+  "moe": {
+    "title": "وزارة التعليم",
+    "publisher": "وزارة التعليم",
+    "url": "https://www.moe.gov.sa",
+    "note": "المرجع المعتمد لقوائم الجامعات؛ لم يُستخرج العدد بعد",
+    "verified": "2026-10-14"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "worldHeritage": [
+    {
+      "id": "hegra",
+      "nameAr": "موقع الحِجر الأثري (مدائن صالح)",
+      "nameEn": "Hegra Archaeological Site (al-Hijr / Madā’in Ṣāliḥ)",
+      "year": 2008,
+      "category": "ثقافي",
+      "region": "madinah",
+      "regionNote": "محافظة العُلا",
+      "url": "https://whc.unesco.org/en/list/1293/",
+      "source": "unesco-whc-sa"
+    },
+    {
+      "id": "turaif",
+      "nameAr": "حي الطريف في الدرعية",
+      "nameEn": "At-Turaif District in ad-Dir’iyah",
+      "year": 2010,
+      "category": "ثقافي",
+      "region": "riyadh",
+      "regionNote": "محافظة الدرعية",
+      "url": "https://whc.unesco.org/en/list/1329/",
+      "source": "unesco-whc-sa"
+    },
+    {
+      "id": "historic-jeddah",
+      "nameAr": "جدة التاريخية، بوابة مكة",
+      "nameEn": "Historic Jeddah, the Gate to Makkah",
+      "year": 2014,
+      "category": "ثقافي",
+      "region": "makkah",
+      "regionNote": "محافظة جدة",
+      "url": "https://whc.unesco.org/en/list/1361/",
+      "source": "unesco-whc-sa"
+    },
+    {
+      "id": "hail-rock-art",
+      "nameAr": "الفنون الصخرية في منطقة حائل",
+      "nameEn": "Rock Art in the Hail Region of Saudi Arabia",
+      "year": 2015,
+      "category": "ثقافي",
+      "region": "hail",
+      "regionNote": "جبل أم سنمان في جبة، وجبلا المنجور وراط في الشويمس",
+      "url": "https://whc.unesco.org/en/list/1472/",
+      "source": "unesco-whc-sa"
+    },
+    {
+      "id": "ahsa-oasis",
+      "nameAr": "واحة الأحساء، مشهد ثقافي متطور",
+      "nameEn": "Al-Ahsa Oasis, an Evolving Cultural Landscape",
+      "year": 2018,
+      "category": "ثقافي",
+      "region": "eastern",
+      "regionNote": "محافظة الأحساء",
+      "url": "https://whc.unesco.org/en/list/1563/",
+      "source": "unesco-whc-sa"
+    },
+    {
+      "id": "hima",
+      "nameAr": "منطقة حِمى الثقافية",
+      "nameEn": "Ḥimā Cultural Area",
+      "year": 2021,
+      "category": "ثقافي",
+      "region": "najran",
+      "regionNote": null,
+      "url": "https://whc.unesco.org/en/list/1619/",
+      "source": "unesco-whc-sa"
+    },
+    {
+      "id": "uruq-bani-maarid",
+      "nameAr": "عروق بني معارض",
+      "nameEn": "‘Uruq Bani Ma‘arid",
+      "year": 2023,
+      "category": "طبيعي",
+      "region": null,
+      "regionNote": "تقع عند الطرف الجنوبي لجبال طويق في غرب الربع الخالي؛ لا تذكر صفحة اليونسكو المنطقة الإدارية — بحاجة للتحقق",
+      "url": "https://whc.unesco.org/en/list/1699/",
+      "source": "unesco-whc-sa"
+    },
+    {
+      "id": "al-faw",
+      "nameAr": "المنظر الثقافي لمنطقة الفاو الأثرية",
+      "nameEn": "The Cultural Landscape of Al-Faw Archaeological Area",
+      "year": 2024,
+      "category": "ثقافي",
+      "region": null,
+      "regionNote": "صفحة اليونسكو تذكر أنها في جنوب المملكة دون تحديد المنطقة الإدارية — بحاجة للتحقق",
+      "url": "https://whc.unesco.org/en/list/1712/",
+      "source": "unesco-whc-sa"
+    }
+  ],
+  "intangible": [
+    { "id": "ardah", "nameAr": "العرضة النجدية: رقص وقرع طبول وشعر", "nameEn": "Alardah Alnajdiyah, dance, drumming and poetry in Saudi Arabia", "year": 2015, "areaNote": "نجد", "regions": [] },
+    { "id": "majlis", "nameAr": "المجلس: فضاء ثقافي واجتماعي", "nameEn": "Majlis, a cultural and social space", "year": 2015, "areaNote": null, "regions": [] },
+    { "id": "mezmar", "nameAr": "المِزمار: قرع الطبول والرقص بالعصي", "nameEn": "Almezmar, drumming and dancing with sticks", "year": 2016, "areaNote": "يرتبط عادةً بالحجاز — بحاجة لتأكيد من ملف العنصر", "regions": [] },
+    { "id": "qatt", "nameAr": "القط العسيري: زخرفة الجدران الداخلية التي تمارسها النساء في عسير", "nameEn": "Al-Qatt Al-Asiri, female traditional interior wall decoration in Asir, Saudi Arabia", "year": 2017, "areaNote": "عسير", "regions": ["asir"] },
+    { "id": "calligraphy", "nameAr": "الخط العربي: المعارف والمهارات والممارسات", "nameEn": "Arabic calligraphy: knowledge, skills and practices", "year": 2021, "areaNote": null, "regions": [] },
+    { "id": "falconry", "nameAr": "الصقارة، تراث إنساني حي", "nameEn": "Falconry, a living human heritage", "year": 2021, "areaNote": null, "regions": [] },
+    { "id": "date-palm", "nameAr": "النخلة: المعارف والمهارات والتقاليد والممارسات", "nameEn": "Date palm, knowledge, skills, traditions and practices", "year": 2022, "areaNote": null, "regions": [] },
+    { "id": "khawlani", "nameAr": "المعارف والممارسات المرتبطة بزراعة البن الخولاني", "nameEn": "Knowledge and practices related to cultivating Khawlani coffee beans", "year": 2022, "areaNote": "يرتبط بمرتفعات جازان — بحاجة لتأكيد من ملف العنصر", "regions": ["jazan"] },
+    { "id": "heda", "nameAr": "الحداء: تقاليد شفهية لنداء قطعان الإبل", "nameEn": "Alheda’a, oral traditions of calling camel flocks", "year": 2022, "areaNote": null, "regions": [] },
+    { "id": "metal-engraving", "nameAr": "فنون النقش على المعادن (الذهب والفضة والنحاس) ومهاراته وممارساته", "nameEn": "Arts, skills and practices associated with engraving on metals (gold, silver and copper)", "year": 2023, "areaNote": null, "regions": [] },
+    { "id": "harees", "nameAr": "الهريس: المعرفة والمهارات والممارسات", "nameEn": "Harees dish: know-how, skills and practices", "year": 2023, "areaNote": null, "regions": [] },
+    { "id": "semsemiah", "nameAr": "السمسمية: صناعة الآلة والعزف عليها", "nameEn": "Semsemiah: instrument crafting and playing", "year": 2024, "areaNote": "بحاجة للتحقق من المناطق المرتبطة", "regions": [] },
+    { "id": "henna", "nameAr": "الحناء: الطقوس والممارسات الجمالية والاجتماعية", "nameEn": "Henna: rituals, aesthetic and social practices", "year": 2024, "areaNote": null, "regions": [] },
+    { "id": "arabic-coffee", "nameAr": "القهوة العربية رمزًا للكرم", "nameEn": "Arabic coffee, a symbol of generosity", "year": 2024, "areaNote": null, "regions": [] },
+    { "id": "taif-roses", "nameAr": "الممارسات الثقافية المرتبطة بالورد الطائفي", "nameEn": "Cultural practices related to Taif roses", "year": 2024, "areaNote": "الطائف", "regions": ["makkah"] },
+    { "id": "sadu", "nameAr": "النسيج التقليدي: السدو", "nameEn": "Traditional weaving of Al Sadu", "year": 2025, "areaNote": null, "regions": [] },
+    { "id": "bisht", "nameAr": "البشت (عباءة الرجال): المهارات والممارسات", "nameEn": "Bisht (men's Abaa): skills and practices", "year": 2025, "areaNote": null, "regions": [] },
+    { "id": "kohl", "nameAr": "الكحل العربي", "nameEn": "Arabic Kohl", "year": 2025, "areaNote": null, "regions": [] }
+  ],
+  "intangibleNotes": [
+    "جميع العناصر أعلاه مدرجة في القائمة التمثيلية للتراث الثقافي غير المادي للبشرية، وفق صفحة المملكة لدى اليونسكو.",
+    "بعض هذه العناصر ملفات مشتركة مع دول أخرى؛ تفاصيل الدول المشاركة في صفحة كل عنصر لدى اليونسكو.",
+    "العناوين العربية ترجمة عمل للعناوين الإنجليزية الرسمية، والمرجع هو العنوان الرسمي.",
+    "الفنون غير المدرجة في هذه القائمة، ومنها الدحة والسامري والخطوة، لا تُنسب إلى قوائم اليونسكو في هذه المنصة."
+  ]
+}

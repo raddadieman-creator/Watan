@@ -1,0 +1,336 @@
+[
+  {
+    "id": "riyadh",
+    "nameAr": "منطقة الرياض",
+    "shortAr": "الرياض",
+    "nameEn": "Riyadh",
+    "seatAr": "مدينة الرياض",
+    "seat": [46.771, 24.643],
+    "accent": "#A06A3B",
+    "population": { "value": 8591748, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 380000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": {
+      "count": 22,
+      "names": ["الدرعية", "الخرج", "الدوادمي", "المجمعة", "القويعية", "وادي الدواسر", "الأفلاج", "الزلفي", "شقراء", "حوطة بني تميم", "الغاط", "عفيف", "السليل", "ضرما", "المزاحمية", "رماح", "ثادق", "حريملاء", "الحريق", "مرات", "الدلم", "الرين"],
+      "source": "saudipedia-provinces"
+    },
+    "detailLevel": "full",
+    "lead": "قلب نجد ومقر العاصمة. تمتد المنطقة على هضبة نجد، ويشقها جبل طويق من الشمال إلى الجنوب حتى رمال الربع الخالي، وفيها نشأت الدولة السعودية الأولى في الدرعية.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          { "text": "تقع في وسط المملكة، وتحدها المنطقة الشرقية من الشرق والشمال الشرقي، والقصيم من الشمال، ونجران وعسير من الجنوب، ومكة المكرمة وجزء من المدينة المنورة من الغرب.", "sources": ["saudipedia-provinces"] },
+          { "text": "تقع على هضبة الصفراء ضمن إقليم نجد، ويبلغ أعلى ارتفاع فيها نحو 600 متر قرب الزلفي.", "sources": ["saudipedia-provinces"] },
+          { "text": "يمتد جبل طويق نحو 1,200 كم بارتفاعات بين 800 و1,000 متر؛ واجهته الغربية شديدة الانحدار، ومنحدراته الشرقية متدرجة تنتهي جنوبًا برمال الربع الخالي.", "sources": ["saudipedia-provinces"] }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          { "text": "مناخ قاري جاف، حار صيفًا وبارد شتاءً، وأمطاره معتدلة تهطل غالبًا في الشتاء، ويختلف من محافظة إلى أخرى.", "sources": ["saudipedia-provinces"] }
+        ]
+      },
+      {
+        "key": "heritage",
+        "title": "التراث والمعالم",
+        "items": [
+          { "text": "حي الطريف في الدرعية مسجل في قائمة التراث العالمي لليونسكو منذ 2010.", "sources": ["unesco-whc-sa"] },
+          { "text": "من معالم مدينة الرياض قصر المصمك وقصر المربع، وحي البجيري في الدرعية.", "sources": ["saudipedia-provinces"] }
+        ]
+      },
+      {
+        "key": "development",
+        "title": "التنمية والمشروعات",
+        "items": [
+          { "text": "تضم العاصمة مقار الجهات الحكومية ومنظمات دولية، ومطار الملك خالد الدولي، وشبكة مترو الرياض بطول 176 كم.", "sources": ["saudipedia-provinces"] },
+          { "text": "من مشروعات رؤية 2030 المعلنة في الرياض: حديقة الملك سلمان، والرياض الخضراء، والرياض آرت. حالة إنجاز كل مشروع بحاجة للتحقق من الجهة المنفذة قبل عرضها.", "sources": ["saudipedia-provinces"], "flag": "status-pending" }
+        ]
+      }
+    ],
+    "universities": [
+      { "nameAr": "جامعة الملك سعود", "url": "https://ksu.edu.sa", "type": "حكومية" },
+      { "nameAr": "جامعة الإمام محمد بن سعود الإسلامية", "url": "https://imamu.edu.sa", "type": "حكومية" },
+      { "nameAr": "جامعة الأميرة نورة بنت عبدالرحمن", "url": "https://pnu.edu.sa", "type": "حكومية" }
+    ],
+    "universitiesNote": "قائمة جزئية. القائمة الكاملة وسنوات التأسيس تُستكمل من قوائم وزارة التعليم."
+  },
+  {
+    "id": "makkah",
+    "nameAr": "منطقة مكة المكرمة",
+    "shortAr": "مكة المكرمة",
+    "nameEn": "Makkah",
+    "seatAr": "مدينة مكة المكرمة",
+    "seat": [39.818, 21.432],
+    "accent": "#8A4F4A",
+    "population": { "value": 8021463, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 137000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": null, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  },
+  {
+    "id": "madinah",
+    "nameAr": "منطقة المدينة المنورة",
+    "shortAr": "المدينة المنورة",
+    "nameEn": "Madinah",
+    "seatAr": "المدينة المنورة",
+    "seat": [39.578, 24.502],
+    "accent": "#3D6B5E",
+    "population": { "value": 2137983, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 150000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": {
+      "count": 8,
+      "names": ["ينبع", "العلا", "المهد", "بدر", "خيبر", "الحناكية", "العيص", "وادي الفرع"],
+      "source": "saudipedia-provinces"
+    },
+    "detailLevel": "full",
+    "lead": "تمتد من ساحل البحر الأحمر غربًا إلى أطراف نجد شرقًا. فيها المسجد النبوي ومسجد قباء، وفي محافظة العلا أول موقع سعودي سُجّل في قائمة التراث العالمي.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          { "text": "تقع في غرب المملكة، وتحدها مكة المكرمة من الجنوب، وتبوك من الشمال، والرياض والقصيم وحائل من الشرق، والبحر الأحمر من الغرب.", "sources": ["saudipedia-provinces"] },
+          { "text": "لها ساحل على البحر الأحمر بطول نحو 200 كم.", "sources": ["saudipedia-provinces"] }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          { "text": "مناخ صحراوي جاف: صيف حار وشتاء بارد، وربيع وخريف معتدلان. المناطق الساحلية أشد حرارة ورطوبة في الصيف.", "sources": ["saudipedia-provinces"] },
+          { "text": "تنخفض الصغرى شتاءً إلى نحو 10°م، وتصل العظمى صيفًا إلى نحو 45°م. هذه قيم وصفية من المصدر وليست متوسطات مناخية لفترة محددة.", "sources": ["saudipedia-provinces"], "flag": "climate-normals-pending" }
+        ]
+      },
+      {
+        "key": "heritage",
+        "title": "التراث والمعالم",
+        "items": [
+          { "text": "المسجد النبوي ومسجد قباء في مدينة المدينة المنورة.", "sources": ["saudipedia-provinces"] },
+          { "text": "موقع الحِجر الأثري (مدائن صالح) في العلا مسجل في قائمة التراث العالمي لليونسكو منذ 2008.", "sources": ["unesco-whc-sa"] },
+          { "text": "قصر الفريد من أبرز معالم العلا.", "sources": ["saudipedia-provinces"] }
+        ]
+      },
+      {
+        "key": "economy",
+        "title": "الاقتصاد",
+        "items": [
+          { "text": "منجم مهد الذهب أكبر مناجم الذهب في المملكة وأقدمها.", "sources": ["saudipedia-provinces"] },
+          { "text": "للسياحة الثقافية والأثرية وزن خاص في المنطقة، ولا سيما في العلا.", "sources": ["saudipedia-provinces"] }
+        ]
+      }
+    ],
+    "universities": [
+      { "nameAr": "الجامعة الإسلامية بالمدينة المنورة", "url": "https://iu.edu.sa", "type": "حكومية" },
+      { "nameAr": "جامعة طيبة", "url": "https://taibahu.edu.sa", "type": "حكومية" }
+    ],
+    "universitiesNote": "قائمة جزئية. القائمة الكاملة وسنوات التأسيس تُستكمل من قوائم وزارة التعليم."
+  },
+  {
+    "id": "eastern",
+    "nameAr": "المنطقة الشرقية",
+    "shortAr": "الشرقية",
+    "nameEn": "Eastern Province",
+    "seatAr": "مدينة الدمام",
+    "seat": [50.098, 26.43],
+    "accent": "#2E6A86",
+    "population": { "value": 5125254, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 540000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": 12, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  },
+  {
+    "id": "qassim",
+    "nameAr": "منطقة القصيم",
+    "shortAr": "القصيم",
+    "nameEn": "Qassim",
+    "seatAr": "مدينة بريدة",
+    "seat": [43.963, 26.366],
+    "accent": "#B08A3E",
+    "population": { "value": 1336179, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 73000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": 13, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  },
+  {
+    "id": "asir",
+    "nameAr": "منطقة عسير",
+    "shortAr": "عسير",
+    "nameEn": "Asir",
+    "seatAr": "مدينة أبها",
+    "seat": [42.5, 18.23],
+    "accent": "#5C6E3A",
+    "population": { "value": 2024285, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 81000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": {
+      "count": 18,
+      "names": ["خميس مشيط", "بيشة", "النماص", "محايل", "سراة عبيدة", "تثليث", "رجال ألمع", "بلقرن", "أحد رفيدة", "ظهران الجنوب", "المجاردة", "تنومة", "طريب", "البرك", "بارق", "الأمواه", "الفرشة"],
+      "namesNote": "المصدر يذكر ثماني عشرة محافظة ويسرد سبع عشرة؛ الاسم الناقص بحاجة للتحقق.",
+      "source": "saudipedia-provinces"
+    },
+    "detailLevel": "full",
+    "lead": "منطقة جبلية في جنوب غرب المملكة، فيها نحو 29% من جبال المملكة، وتهبط من قمم السروات إلى ساحل البحر الأحمر. في بيوتها نشأ فن القط العسيري المسجل لدى اليونسكو.",
+    "sections": [
+      {
+        "key": "geography",
+        "title": "الموقع والتضاريس",
+        "items": [
+          { "text": "تقع جنوب منطقة الرياض وغرب نجران وشمال جازان وشرقها وجنوب مكة المكرمة، ولها ساحل على البحر الأحمر بطول 140 كم.", "sources": ["saudipedia-provinces"] },
+          { "text": "تضم نحو 29% من جبال المملكة، مع أخاديد وعرة وطرق جبلية. تغطي الحرّات 3.75% من مساحتها، وتخترقها ثمانية أودية.", "sources": ["saudipedia-provinces"] },
+          { "text": "يبلغ ارتفاع جبل السودة غرب أبها 3,015 مترًا وفق المصدر.", "sources": ["saudipedia-provinces"] }
+        ]
+      },
+      {
+        "key": "climate",
+        "title": "المناخ",
+        "items": [
+          { "text": "معتدل صيفًا؛ لا تتجاوز الحرارة في أغسطس 25°م وفق المصدر، والشتاء بارد نسبيًا. تكثر الأمطار والعواصف في المرتفعات بتأثير الرياح الموسمية.", "sources": ["saudipedia-provinces"], "flag": "climate-normals-pending" }
+        ]
+      },
+      {
+        "key": "heritage",
+        "title": "التراث والمعالم",
+        "items": [
+          { "text": "القط العسيري، فن زخرفة الجدران الداخلية الذي تمارسه النساء، مدرج في القائمة التمثيلية للتراث الثقافي غير المادي لدى اليونسكو منذ 2017.", "sources": ["unesco-ich-sa"] },
+          { "text": "قرية المفتاحة في أبها، وفيها مركز الملك فهد الثقافي ومسرح طلال مداح.", "sources": ["saudipedia-provinces"] },
+          { "text": "قرية رجال ألمع التاريخية، وتضم ثماني قلاع.", "sources": ["saudipedia-provinces"] }
+        ]
+      },
+      {
+        "key": "development",
+        "title": "التنمية والمشروعات",
+        "items": [
+          { "text": "من المشروعات المعلنة: شركة السودة للتطوير، واستراتيجية تطوير منطقة عسير، ومشروع وادي أبها، وقمم السودة. حالة الإنجاز بحاجة للتحقق من الجهات المنفذة.", "sources": ["saudipedia-provinces"], "flag": "status-pending" }
+        ]
+      }
+    ],
+    "universities": [
+      { "nameAr": "جامعة الملك خالد", "url": "https://kku.edu.sa", "type": "حكومية" }
+    ],
+    "universitiesNote": "قائمة جزئية. القائمة الكاملة وسنوات التأسيس تُستكمل من قوائم وزارة التعليم."
+  },
+  {
+    "id": "tabuk",
+    "nameAr": "منطقة تبوك",
+    "shortAr": "تبوك",
+    "nameEn": "Tabuk",
+    "seatAr": "مدينة تبوك",
+    "seat": [36.555, 28.384],
+    "accent": "#7C5A86",
+    "population": { "value": 886036, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 136000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": 6, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  },
+  {
+    "id": "hail",
+    "nameAr": "منطقة حائل",
+    "shortAr": "حائل",
+    "nameEn": "Hail",
+    "seatAr": "مدينة حائل",
+    "seat": [41.7, 27.524],
+    "accent": "#9C5B34",
+    "population": { "value": 746406, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 120000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": 8, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  },
+  {
+    "id": "northern-borders",
+    "nameAr": "منطقة الحدود الشمالية",
+    "shortAr": "الحدود الشمالية",
+    "nameEn": "Northern Borders",
+    "seatAr": "مدينة عرعر",
+    "seat": [41.021, 30.99],
+    "accent": "#6F6A58",
+    "population": { "value": 373577, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 104000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": 3, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  },
+  {
+    "id": "jawf",
+    "nameAr": "منطقة الجوف",
+    "shortAr": "الجوف",
+    "nameEn": "Al-Jawf",
+    "seatAr": "مدينة سكاكا",
+    "seat": [40.133, 30.0],
+    "accent": "#8C7442",
+    "population": { "value": 595822, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 85000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": 4, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  },
+  {
+    "id": "jazan",
+    "nameAr": "منطقة جازان",
+    "shortAr": "جازان",
+    "nameEn": "Jazan",
+    "seatAr": "مدينة جازان",
+    "seat": [42.557, 16.907],
+    "accent": "#3F7C74",
+    "population": { "value": 1404997, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 13000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": 16, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  },
+  {
+    "id": "najran",
+    "nameAr": "منطقة نجران",
+    "shortAr": "نجران",
+    "nameEn": "Najran",
+    "seatAr": "مدينة نجران",
+    "seat": [44.132, 17.507],
+    "accent": "#A0583F",
+    "population": { "value": 592300, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 130000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": 6, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  },
+  {
+    "id": "bahah",
+    "nameAr": "منطقة الباحة",
+    "shortAr": "الباحة",
+    "nameEn": "Al-Bahah",
+    "seatAr": "مدينة الباحة",
+    "seat": null,
+    "seatNote": "إحداثيات مقر الإمارة غير متوفرة في مصدر النقاط المستخدم — بحاجة للإكمال",
+    "accent": "#4E6B4A",
+    "population": { "value": 339174, "source": "gastat-census-2022" },
+    "areaKm2": { "value": 12000, "approx": true, "source": "saudipedia-provinces" },
+    "governorates": { "count": 9, "names": [], "source": "saudipedia-provinces" },
+    "detailLevel": "basic",
+    "lead": null,
+    "sections": [],
+    "universities": []
+  }
+]

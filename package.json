@@ -1,0 +1,38 @@
+{
+  "name": "watan",
+  "version": "0.1.0",
+  "private": true,
+  "description": "وطن | WATAN — منصة معرفية تفاعلية عن المملكة العربية السعودية",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "geo:build": "node scripts/build-geo.mjs",
+    "validate:data": "node scripts/validate-data.mjs",
+    "prebuild": "node scripts/validate-data.mjs"
+  },
+  "engines": {
+    "node": ">=20.9"
+  },
+  "dependencies": {
+    "@fontsource/alexandria": "^5.3.0",
+    "@fontsource/ibm-plex-sans-arabic": "^5.3.0",
+    "d3-geo": "^3.1.1",
+    "framer-motion": "^14.2.0",
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/d3-geo": "^3.1.1",
+    "@types/geojson": "^7946.0.16",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.0"
+  }
+}
