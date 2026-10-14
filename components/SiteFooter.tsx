@@ -14,7 +14,7 @@ export function SiteFooter() {
             <Logo tone="light" />
             <p className="mt-6 max-w-sm font-display text-2xl leading-[1.6] text-[#FFD08A]">{SITE_TAGLINE}</p>
             <p className="mt-3 max-w-sm text-sm leading-7 text-white/70">
-              منصة معرفية تفاعلية، لا تتبع جهة حكومية ولا تحمل اعتمادًا رسميًا.
+              منصة معرفية تفاعلية عن المملكة العربية السعودية.
             </p>
             <div className="mt-6 max-w-sm rounded-2xl bg-white/10 px-4 py-3 ring-1 ring-white/15">
               <p className="text-xs text-white/65">المشروع من تقديم</p>
