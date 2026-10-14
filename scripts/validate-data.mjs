@@ -10,6 +10,8 @@ const universities = read("data/universities.json");
 const folkArts = read("data/folk-arts.json");
 const guide = read("data/region-guide.json");
 const religious = read("data/religious.json");
+const markers = read("data/region-markers.json");
+const videos = read("data/videos.json");
 
 const errors = [];
 const fail = (m) => errors.push(m);
@@ -57,9 +59,21 @@ for (const a of folkArts) {
 for (const id of ids) if (!guide[id]) fail(`لا يوجد دليل للمنطقة ${id}`);
 for (const city of ["makkah", "madinah"]) for (const s of religious[city].sites) if (!s.url) fail(`موقع ديني بلا رابط: ${s.nameAr}`);
 for (const r of regions) if (!r.seat) fail(`المنطقة ${r.id} بلا إحداثيات مقر`);
+for (const [rid, list] of Object.entries(markers)) {
+  if (!ids.has(rid)) fail(`علامات لمنطقة غير معروفة ${rid}`);
+  for (const m of list) {
+    if (!(m.lat > 15 && m.lat < 33 && m.lon > 34 && m.lon < 56)) fail(`إحداثيات خارج المملكة: ${m.nameAr}`);
+    if (!m.coordSource) fail(`علامة بلا مصدر إحداثيات: ${m.nameAr}`);
+    if (!["religious", "heritage", "nature", "leisure", "museum"].includes(m.category)) fail(`تصنيف غير معروف: ${m.nameAr}`);
+  }
+}
+for (const group of ["ich", "whs", "arts"]) for (const [k, v] of Object.entries(videos[group])) {
+  if (!/^[A-Za-z0-9_-]{11}$/.test(v)) fail(`معرّف فيديو غير صالح: ${k}`);
+  if (!videos.channels[v]) fail(`فيديو بلا قناة: ${k}`);
+}
 
 if (errors.length) {
   console.error("✗ فشل فحص البيانات:\n- " + errors.join("\n- "));
   process.exit(1);
 }
-console.log(`✓ البيانات سليمة: 13 منطقة، ${universities.count} جامعة، ${folkArts.length} فنًّا شعبيًا، ${heritage.worldHeritage.length} مواقع تراث عالمي، ${heritage.intangible.length} عنصرًا غير مادي، ${Object.keys(sources).length} مصدرًا. مجموع السكان يطابق التعداد.`);
+console.log(`✓ البيانات سليمة: 13 منطقة، ${universities.count} جامعة، ${folkArts.length} فنًّا شعبيًا، ${Object.values(markers).flat().length} مكانًا على الخرائط، ${new Set([...Object.values(videos.ich), ...Object.values(videos.whs), ...Object.values(videos.arts)]).size} فيديو، ${heritage.worldHeritage.length} مواقع تراث عالمي، ${heritage.intangible.length} عنصرًا غير مادي، ${Object.keys(sources).length} مصدرًا. مجموع السكان يطابق التعداد.`);

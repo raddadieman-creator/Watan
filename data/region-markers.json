@@ -1,0 +1,676 @@
+{
+  "riyadh": [
+    {
+      "nameAr": "حي الطريف في الدرعية",
+      "lat": 24.7341,
+      "lon": 46.5725,
+      "category": "heritage",
+      "descAr": "موقع مسجّل في قائمة التراث العالمي لليونسكو، ويوصف بأنه أكبر مدينة طينية في العالم.",
+      "url": "https://whc.unesco.org/en/list/1329/",
+      "coordSource": "https://whc.unesco.org/en/list/1329/"
+    },
+    {
+      "nameAr": "قصر المصمك",
+      "lat": 24.6311,
+      "lon": 46.7133,
+      "category": "heritage",
+      "descAr": "من أقدم الحصون التاريخية في المملكة، ويعمل اليوم متحفًا.",
+      "url": "https://www.visitsaudi.com/en/riyadh/attractions/al-masmak-palace-in-riyadh",
+      "coordSource": "https://ar.wikipedia.org/wiki/قصر_المصمك"
+    },
+    {
+      "nameAr": "المتحف الوطني السعودي",
+      "lat": 24.6472,
+      "lon": 46.7108,
+      "category": "museum",
+      "descAr": "المتحف الوطني للمملكة في مدينة الرياض.",
+      "url": "https://www.visitsaudi.com/en/riyadh/attractions/the-national-museum-of-saudi-arabia",
+      "coordSource": "https://en.wikipedia.org/wiki/National_Museum_of_Saudi_Arabia"
+    },
+    {
+      "nameAr": "منطقة الفاو الأثرية",
+      "lat": 19.7649,
+      "lon": 45.1634,
+      "category": "heritage",
+      "descAr": "عاصمة مملكة كندة القديمة في محافظة وادي الدواسر، ومسجّلة لدى اليونسكو عام 2024.",
+      "url": "https://whc.unesco.org/en/list/1712/",
+      "coordSource": "https://en.wikipedia.org/wiki/Qaryat_al-Faw"
+    },
+    {
+      "nameAr": "حديقة الملك سلمان",
+      "lat": 24.719,
+      "lon": 46.724,
+      "category": "leisure",
+      "descAr": "مشروع في مدينة الرياض يوصف بأنه أكبر حديقة في العالم.",
+      "url": null,
+      "coordSource": "https://en.wikipedia.org/wiki/King_Salman_Park"
+    },
+    {
+      "nameAr": "بوليفارد سيتي",
+      "lat": 24.7503,
+      "lon": 46.6133,
+      "category": "leisure",
+      "descAr": "منطقة ترفيهية في حي حطين شمال الرياض تضم مسارح ومطاعم وفعاليات موسم الرياض.",
+      "url": "https://saudipedia.com/en/boulevard-city-blvd-city",
+      "coordSource": "https://en.wikipedia.org/wiki/Boulevard_City"
+    },
+    {
+      "nameAr": "بوليفارد وورلد",
+      "lat": 24.7739,
+      "lon": 46.6025,
+      "category": "leisure",
+      "descAr": "منطقة ترفيهية تجمع ثقافات دول العالم، افتُتحت ضمن موسم الرياض 2022.",
+      "url": "https://saudipedia.com/en/article/635/society/entertainment/boulevard-world-blvd-world",
+      "coordSource": "https://en.wikipedia.org/wiki/Boulevard_World"
+    },
+    {
+      "nameAr": "وادي حنيفة",
+      "lat": 24.5809,
+      "lon": 46.7131,
+      "category": "leisure",
+      "descAr": "وادٍ يمتد نحو 160 كم ويخترق الرياض، أُهّل ليكون متنفسًا للتنزه والمشي.",
+      "url": "https://saudipedia.com/en/wadi-hanifa",
+      "coordSource": "https://en.wikipedia.org/wiki/Wadi_Hanifa"
+    },
+    {
+      "nameAr": "محمية عروق بني معارض",
+      "lat": 19.3639,
+      "lon": 45.5983,
+      "category": "nature",
+      "descAr": "موقع تراث عالمي طبيعي في غرب الربع الخالي، تتوزع مساحته بين منطقتي الرياض ونجران.",
+      "url": "https://whc.unesco.org/en/list/1699/",
+      "coordSource": "https://whc.unesco.org/en/list/1699/"
+    }
+  ],
+  "makkah": [
+    {
+      "nameAr": "المسجد الحرام والكعبة المشرفة",
+      "lat": 21.4225,
+      "lon": 39.8261,
+      "category": "religious",
+      "descAr": "يقع وسط مكة المكرمة وتتوسطه الكعبة المشرفة، وتبلغ مساحته نحو 1.5 مليون متر مربع بطاقة استيعابية تزيد على ثلاثة ملايين مصلٍّ.",
+      "url": "https://saudipedia.com/المسجد-الحرام",
+      "coordSource": "https://en.wikipedia.org/wiki/Masjid_al-Haram"
+    },
+    {
+      "nameAr": "مشعر منى",
+      "lat": 21.4133,
+      "lon": 39.8933,
+      "category": "religious",
+      "descAr": "وادٍ تحيط به الجبال على بعد نحو 7 كم من المسجد الحرام، يصل إليه الحجاج يوم الثامن من ذي الحجة ويعودون إليه في أيام التشريق لرمي الجمرات.",
+      "url": "https://saudipedia.com/مشعر-منى",
+      "coordSource": "https://ar.wikipedia.org/wiki/منى"
+    },
+    {
+      "nameAr": "مشعر مزدلفة",
+      "lat": 21.3925,
+      "lon": 39.9378,
+      "category": "religious",
+      "descAr": "ثالث محطات الحجاج في المشاعر المقدسة، يبيتون فيه ليلة العاشر من ذي الحجة بعد النفرة من عرفات، وبه مسجد المشعر الحرام.",
+      "url": "https://saudipedia.com/كم-تبلغ-مساحة-مشعر-مزدلفة؟",
+      "coordSource": "https://ar.wikipedia.org/wiki/مزدلفة"
+    },
+    {
+      "nameAr": "مشعر عرفات وجبل الرحمة",
+      "lat": 21.3547,
+      "lon": 39.9839,
+      "category": "religious",
+      "descAr": "سهل تحيط به الجبال على بعد نحو 22 كم شرق مكة المكرمة، يقف فيه الحجاج يوم التاسع من ذي الحجة، وفي جهته الشرقية جبل الرحمة.",
+      "url": "https://saudipedia.com/ما-حدود-مشعر-عرفات؟",
+      "coordSource": "https://en.wikipedia.org/wiki/Mount_Arafat"
+    },
+    {
+      "nameAr": "جبل النور وغار حراء",
+      "lat": 21.4581,
+      "lon": 39.8614,
+      "category": "religious",
+      "descAr": "يقع شمال شرق المسجد الحرام على بعد 4 كم ويرتفع 642 م عن سطح البحر، وفي أعلاه غار حراء.",
+      "url": "https://saudipedia.com/جبل-النور",
+      "coordSource": "https://en.wikipedia.org/wiki/Jabal_al-Nour"
+    },
+    {
+      "nameAr": "جبل ثور وغار ثور",
+      "lat": 21.3775,
+      "lon": 39.8508,
+      "category": "religious",
+      "descAr": "يقع جنوب مكة المكرمة ويرتفع 760 م عن سطح البحر، ويرتبط بالهجرة النبوية، وأُقيم بجواره حي جبل ثور الثقافي.",
+      "url": "https://saudipedia.com/غار-ثور",
+      "coordSource": "https://en.wikipedia.org/wiki/Jabal_Thawr"
+    },
+    {
+      "nameAr": "مجمع الملك عبدالعزيز لكسوة الكعبة المشرفة",
+      "lat": 21.4348,
+      "lon": 39.7564,
+      "category": "museum",
+      "descAr": "يقع في حي أم الجود بمكة المكرمة، وتُحاك فيه كسوة الكعبة المشرفة.",
+      "url": "https://saudipedia.com/article/10578",
+      "coordSource": "https://en.wikipedia.org/wiki/King_Abdulaziz_Complex_for_Holy_Kaaba_Kiswa"
+    },
+    {
+      "nameAr": "جدة التاريخية",
+      "lat": 21.4839,
+      "lon": 39.1875,
+      "category": "heritage",
+      "descAr": "المنطقة التاريخية في محافظة جدة، مسجّلة في قائمة التراث العالمي لليونسكو.",
+      "url": "https://whc.unesco.org/en/list/1361/",
+      "coordSource": "https://whc.unesco.org/en/list/1361/"
+    },
+    {
+      "nameAr": "حي حراء الثقافي",
+      "lat": 21.4581,
+      "lon": 39.8614,
+      "category": "museum",
+      "descAr": "وجهة ثقافية بجوار جبل النور في مكة المكرمة.",
+      "url": "https://www.visitsaudi.com/en/destinations/makkah/attractions/hira-cultural-district-tour",
+      "coordSource": "https://en.wikipedia.org/wiki/Jabal_al-Nour"
+    },
+    {
+      "nameAr": "جبل الهدا",
+      "lat": 21.3686,
+      "lon": 40.2847,
+      "category": "nature",
+      "descAr": "من أبرز المعالم الطبيعية في الطائف.",
+      "url": "https://www.visitsaudi.com/en/destinations/taif/attractions/alhada-mountain-in-taif",
+      "coordSource": "https://en.wikipedia.org/wiki/Al_Hada"
+    },
+    {
+      "nameAr": "جبل الشفا",
+      "lat": 21.0727,
+      "lon": 40.3184,
+      "category": "nature",
+      "descAr": "مرتفعات جبلية في الطائف يقصدها المصطافون.",
+      "url": "https://www.visitsaudi.com/en/taif/attractions/al-shafa-mountain-in-taif",
+      "coordSource": "https://geocoding-api.open-meteo.com/v1/search?name=Ash%20Shafa&count=10&countryCode=SA"
+    },
+    {
+      "nameAr": "سوق عكاظ",
+      "lat": 21.4744,
+      "lon": 40.6449,
+      "category": "heritage",
+      "descAr": "سوق تاريخي في الطائف، أشهر مصايف المملكة.",
+      "url": null,
+      "coordSource": "https://en.wikipedia.org/wiki/Souk_Okaz"
+    },
+    {
+      "nameAr": "نافورة الملك فهد",
+      "lat": 21.5156,
+      "lon": 39.145,
+      "category": "leisure",
+      "descAr": "من أعلى النوافير في العالم، ويُرى عمودها المائي من أنحاء واسعة من جدة.",
+      "url": "https://en.wikipedia.org/wiki/King_Fahd%27s_Fountain",
+      "coordSource": "https://en.wikipedia.org/wiki/King_Fahd%27s_Fountain"
+    },
+    {
+      "nameAr": "كورنيش جدة",
+      "lat": 21.6021,
+      "lon": 39.1073,
+      "category": "leisure",
+      "descAr": "واجهة بحرية ممتدة على ساحل البحر الأحمر، فيها ممشى وحدائق ومجسمات فنية.",
+      "url": "https://en.wikipedia.org/wiki/Jeddah_Corniche",
+      "coordSource": "https://en.wikipedia.org/wiki/Jeddah_Corniche"
+    }
+  ],
+  "madinah": [
+    {
+      "nameAr": "المسجد النبوي والروضة الشريفة",
+      "lat": 24.4683,
+      "lon": 39.6108,
+      "category": "religious",
+      "descAr": "مسجد رسول الله ﷺ، وأفضل المساجد بعد المسجد الحرام، وتقع فيه الروضة الشريفة التي تبلغ مساحتها نحو 397.5 م².",
+      "url": "https://saudipedia.com/المسجد-النبوي",
+      "coordSource": "https://ar.wikipedia.org/wiki/المسجد_النبوي"
+    },
+    {
+      "nameAr": "مسجد قباء",
+      "lat": 24.4392,
+      "lon": 39.6172,
+      "category": "religious",
+      "descAr": "أول مسجد بُني في الإسلام، يقع جنوب غرب المدينة على بعد نحو 3.5 كم من المسجد النبوي، ويصل بينهما مسار للمشاة بطول نحو 3 كم.",
+      "url": "https://saudipedia.com/مسجد-قباء",
+      "coordSource": "https://en.wikipedia.org/wiki/Quba_Mosque"
+    },
+    {
+      "nameAr": "مسجد القبلتين",
+      "lat": 24.4841,
+      "lon": 39.5789,
+      "category": "religious",
+      "descAr": "يبعد نحو 4 كم عن المسجد النبوي، واكتسب اسمه من حادثة تحويل القبلة في السنة الثانية للهجرة.",
+      "url": "https://saudipedia.com/مسجد-القبلتين",
+      "coordSource": "https://en.wikipedia.org/wiki/Masjid_al-Qiblatayn"
+    },
+    {
+      "nameAr": "جبل أُحُد",
+      "lat": 24.5103,
+      "lon": 39.6139,
+      "category": "religious",
+      "descAr": "يقع شمال المدينة على بعد 4 كم من المسجد النبوي ويمتد نحو 8 كم، وشهد غزوة أحد في السنة الثالثة للهجرة.",
+      "url": "https://saudipedia.com/article/10020",
+      "coordSource": "https://en.wikipedia.org/wiki/Mount_Uhud"
+    },
+    {
+      "nameAr": "مقبرة البقيع",
+      "lat": 24.4669,
+      "lon": 39.6164,
+      "category": "religious",
+      "descAr": "كبرى مقابر المدينة المنورة وأقدمها، تجاور الجدار الجنوبي الشرقي للمسجد النبوي، وتبلغ مساحتها نحو 180 ألف متر مربع.",
+      "url": "https://saudipedia.com/مقبرة-البقيع",
+      "coordSource": "https://en.wikipedia.org/wiki/Al-Baqi_Cemetery"
+    },
+    {
+      "nameAr": "المساجد السبعة وموقع الخندق",
+      "lat": 24.4768,
+      "lon": 39.596,
+      "category": "religious",
+      "descAr": "مساجد تاريخية على السفح الغربي لجبل سلع، في منطقة الخندق الذي حُفر في غزوة الأحزاب سنة 5هـ.",
+      "url": "https://saudipedia.com/المساجد-السبعة",
+      "coordSource": "https://en.wikipedia.org/wiki/The_Seven_Mosques"
+    },
+    {
+      "nameAr": "مجمع الملك فهد لطباعة المصحف الشريف",
+      "lat": 24.5164,
+      "lon": 39.5414,
+      "category": "museum",
+      "descAr": "افتُتح عام 1405هـ، وتزيد طاقته الإنتاجية على 18 مليون نسخة سنويًّا، وتجاوز إنتاجه منذ افتتاحه 361 مليون نسخة.",
+      "url": "https://saudipedia.com/مجمع-الملك-فهد-لطباعة-المصحف-الشريف",
+      "coordSource": "https://en.wikipedia.org/wiki/King_Fahd_Complex_for_the_Printing_of_the_Holy_Quran"
+    },
+    {
+      "nameAr": "الحِجر (مدائن صالح)",
+      "lat": 26.7836,
+      "lon": 37.955,
+      "category": "heritage",
+      "descAr": "موقع أثري في العلا، وأول موقع سعودي يُسجَّل في قائمة التراث العالمي لليونسكو.",
+      "url": "https://whc.unesco.org/en/list/1293/",
+      "coordSource": "https://whc.unesco.org/en/list/1293/"
+    },
+    {
+      "nameAr": "موقع غزوة بدر",
+      "lat": 23.78,
+      "lon": 38.7906,
+      "category": "heritage",
+      "descAr": "موقع أول انتصار في الإسلام، بمحافظة بدر.",
+      "url": "https://www.visitsaudi.com/en/destinations/madinah/attractions/badr-battle-site",
+      "coordSource": "https://en.wikipedia.org/wiki/Badr,_Saudi_Arabia"
+    },
+    {
+      "nameAr": "متحف سكة الحديد",
+      "lat": 24.4617,
+      "lon": 39.6002,
+      "category": "museum",
+      "descAr": "متحف في محطة سكة حديد الحجاز التاريخية قرب المسجد النبوي، يضم 14 قاعة.",
+      "url": "https://saudipedia.com/متحف-سكة-الحديد",
+      "coordSource": "https://en.wikipedia.org/wiki/Hejaz_Railway_Museum"
+    }
+  ],
+  "eastern": [
+    {
+      "nameAr": "واحة الأحساء",
+      "lat": 25.4294,
+      "lon": 49.6219,
+      "category": "nature",
+      "descAr": "من أكبر واحات النخيل في العالم، ومسجّلة في التراث العالمي لليونسكو.",
+      "url": "https://whc.unesco.org/en/list/1563/",
+      "coordSource": "https://en.wikipedia.org/wiki/Al-Ahsa_Oasis"
+    },
+    {
+      "nameAr": "جبل القارة",
+      "lat": 25.4115,
+      "lon": 49.6928,
+      "category": "nature",
+      "descAr": "معلم طبيعي وتاريخي في الأحساء.",
+      "url": "https://www.visitsaudi.com/ar/al-ahsa/attractions/al-qarah-mountain",
+      "coordSource": "https://en.wikipedia.org/wiki/Al-Qarah"
+    },
+    {
+      "nameAr": "مسجد جواثا",
+      "lat": 25.4697,
+      "lon": 49.6786,
+      "category": "religious",
+      "descAr": "مسجد تاريخي في الأحساء.",
+      "url": null,
+      "coordSource": "https://en.wikipedia.org/wiki/Jawatha_Mosque"
+    },
+    {
+      "nameAr": "ميناء العقير التاريخي",
+      "lat": 25.6442,
+      "lon": 50.215,
+      "category": "heritage",
+      "descAr": "ميناء تاريخي على ساحل الأحساء.",
+      "url": null,
+      "coordSource": "https://en.wikipedia.org/wiki/Uqair"
+    },
+    {
+      "nameAr": "مدينة ثاج الأثرية",
+      "lat": 26.8692,
+      "lon": 48.7744,
+      "category": "heritage",
+      "descAr": "أكبر موقع أثري في شرق المملكة.",
+      "url": null,
+      "coordSource": "https://ar.wikipedia.org/wiki/ثاج"
+    },
+    {
+      "nameAr": "شاطئ نصف القمر",
+      "lat": 26.167,
+      "lon": 50.033,
+      "category": "leisure",
+      "descAr": "خليج رملي بين الخبر والظهران، من أشهر وجهات السباحة والتخييم في الشرقية.",
+      "url": "https://en.wikipedia.org/wiki/Half_Moon_Bay,_Saudi_Arabia",
+      "coordSource": "https://en.wikipedia.org/wiki/Half_Moon_Bay,_Saudi_Arabia"
+    },
+    {
+      "nameAr": "بحيرة الأصفر",
+      "lat": 25.529,
+      "lon": 49.8,
+      "category": "nature",
+      "descAr": "بحيرة ضحلة وسط الرمال شرق الأحساء، يقصدها هواة الطيور والتنزه البري.",
+      "url": "https://saudipedia.com/en/al-asfar-lake",
+      "coordSource": "https://en.wikipedia.org/wiki/Al-Asfar_Lake"
+    }
+  ],
+  "qassim": [
+    {
+      "nameAr": "قصر الملك عبدالعزيز في قبة",
+      "lat": 27.4029,
+      "lon": 44.3277,
+      "category": "heritage",
+      "descAr": "من أكبر القصور التاريخية في المنطقة، وكان مقرًّا خاصًّا للمؤسس.",
+      "url": "https://saudipedia.com/en/king-abdulaziz-historical-palace-in-qibah",
+      "coordSource": "https://geocoding-api.open-meteo.com/v1/search?name=Qibah&count=10&countryCode=SA"
+    },
+    {
+      "nameAr": "وادي الرمة",
+      "lat": 25.8061,
+      "lon": 42.8731,
+      "category": "nature",
+      "descAr": "أطول مجرى مائي موسمي في المملكة بطول 510 كم.",
+      "url": null,
+      "coordSource": "https://en.wikipedia.org/wiki/Wadi_Al-Rummah"
+    }
+  ],
+  "asir": [
+    {
+      "nameAr": "جبل السودة",
+      "lat": 18.2667,
+      "lon": 42.3683,
+      "category": "nature",
+      "descAr": "أعلى قمة في المنطقة بارتفاع 3,015 م غرب أبها.",
+      "url": "https://saudipedia.com/en/al-soudah-mountain",
+      "coordSource": "https://en.wikipedia.org/wiki/Jabal_Soudah"
+    },
+    {
+      "nameAr": "قرية رجال ألمع التراثية",
+      "lat": 18.2125,
+      "lon": 42.2736,
+      "category": "heritage",
+      "descAr": "قرية تاريخية غرب أبها تشتهر بقصورها الحجرية المزخرفة.",
+      "url": "https://www.visitsaudi.com/en/aseer/attractions/rijal-almaa-of-aseer",
+      "coordSource": "https://en.wikipedia.org/wiki/Rijal_Almaa"
+    },
+    {
+      "nameAr": "حي البسطة",
+      "lat": 18.2203,
+      "lon": 42.498,
+      "category": "heritage",
+      "descAr": "حي تاريخي في أبها.",
+      "url": "https://www.visitsaudi.com/en/destinations/aseer/attractions/al-basta-district",
+      "coordSource": "https://discoveraseer.com/en/attractions/al-basta-district"
+    },
+    {
+      "nameAr": "منتزه الحبلة",
+      "lat": 18.0302,
+      "lon": 42.8548,
+      "category": "nature",
+      "descAr": "منتزه جبلي في عسير.",
+      "url": "https://www.visitsaudi.com/en/aseer/attractions/al-habala-park",
+      "coordSource": "https://discoveraseer.com/en/attractions/al-habala"
+    },
+    {
+      "nameAr": "منتزه عسير الوطني",
+      "lat": 17.9222,
+      "lon": 42.2278,
+      "category": "nature",
+      "descAr": "منتزه وطني في منطقة عسير.",
+      "url": "https://saudipedia.com/en/article/1073/geography/environment/aseer-national-park",
+      "coordSource": "https://en.wikipedia.org/wiki/Asir_National_Park"
+    },
+    {
+      "nameAr": "ممشى الضباب",
+      "lat": 18.198,
+      "lon": 42.5081,
+      "category": "leisure",
+      "descAr": "ممشى جبلي في أبها يطل على الضباب والمرتفعات.",
+      "url": "https://discoveraseer.com/en/attractions/al-dabab-walkway",
+      "coordSource": "https://discoveraseer.com/en/attractions/al-dabab-walkway"
+    },
+    {
+      "nameAr": "بحيرة سد أبها",
+      "lat": 18.2127,
+      "lon": 42.4867,
+      "category": "leisure",
+      "descAr": "بحيرة ومتنزه حول سد أبها غرب وسط المدينة.",
+      "url": "https://discoveraseer.com/en/attractions/abha-dam-lake",
+      "coordSource": "https://discoveraseer.com/en/attractions/abha-dam-lake"
+    }
+  ],
+  "tabuk": [
+    {
+      "nameAr": "جبل اللوز",
+      "lat": 28.654,
+      "lon": 35.304,
+      "category": "nature",
+      "descAr": "جبل تتساقط عليه الثلوج شتاءً ويقصده المتنزهون.",
+      "url": "https://saudipedia.com/en/jabal-al-lawz",
+      "coordSource": "https://en.wikipedia.org/wiki/Jabal_al-Lawz"
+    },
+    {
+      "nameAr": "تيماء الأثرية",
+      "lat": 27.6297,
+      "lon": 38.5439,
+      "category": "heritage",
+      "descAr": "موقع أثري فيه نقوش قديمة وآثار لنشاط الإنسان المبكر.",
+      "url": "https://saudipedia.com/en/archaeological-findings-in-tayma",
+      "coordSource": "https://en.wikipedia.org/wiki/Tayma"
+    },
+    {
+      "nameAr": "قلعة تبوك الأثرية",
+      "lat": 28.3828,
+      "lon": 36.5567,
+      "category": "heritage",
+      "descAr": "قلعة تاريخية في مدينة تبوك.",
+      "url": "https://www.visitsaudi.com/en/tabuk/attractions/islamic-archaeological-tabuk-castle",
+      "coordSource": "https://en.wikipedia.org/wiki/Tabuk_Castle"
+    },
+    {
+      "nameAr": "مسجد التوبة",
+      "lat": 28.3889,
+      "lon": 36.5575,
+      "category": "religious",
+      "descAr": "مسجد تاريخي في مدينة تبوك.",
+      "url": "https://www.visitsaudi.com/en/tabuk/attractions/masjid-altawbah-in-tabuk",
+      "coordSource": "https://ar.wikipedia.org/wiki/مسجد_التوبة_(تبوك)"
+    }
+  ],
+  "hail": [
+    {
+      "nameAr": "الرسوم الصخرية في جبة والشويمس",
+      "lat": 28.0106,
+      "lon": 40.9131,
+      "category": "heritage",
+      "descAr": "نقوش صخرية مسجّلة في التراث العالمي لليونسكو عام 2015.",
+      "url": "https://whc.unesco.org/en/list/1472/",
+      "coordSource": "https://en.wikipedia.org/wiki/Rock_Art_of_Hail_Province"
+    },
+    {
+      "nameAr": "أطلال قصر حاتم الطائي",
+      "lat": 27.586,
+      "lon": 41.445,
+      "category": "heritage",
+      "descAr": "أطلال على جبل أجا، من أهم معالم المنطقة.",
+      "url": "https://www.visitsaudi.com/en/destinations/hail/attractions/hatim-al-tai-hearth",
+      "coordSource": "https://geocoding-api.open-meteo.com/v1/search?name=Tuwarin&count=10&countryCode=SA"
+    },
+    {
+      "nameAr": "قصر القشلة",
+      "lat": 27.5191,
+      "lon": 41.6944,
+      "category": "heritage",
+      "descAr": "قصر تاريخي في مدينة حائل.",
+      "url": "https://www.visitsaudi.com/en/hail/attractions/al-qishla-castle",
+      "coordSource": "https://ar.wikipedia.org/wiki/قصر_القشلة"
+    },
+    {
+      "nameAr": "جبال سلمى",
+      "lat": 27.0977,
+      "lon": 42.1238,
+      "category": "nature",
+      "descAr": "سلسلة جبلية تُعد مع جبل أجا من أبرز تضاريس المنطقة.",
+      "url": "https://saudipedia.com/en/jibal-salma",
+      "coordSource": "https://geocoding-api.open-meteo.com/v1/search?name=Salma&count=20&countryCode=SA"
+    }
+  ],
+  "northern-borders": [
+    {
+      "nameAr": "قصر الملك عبدالعزيز التاريخي في لينة",
+      "lat": 28.7613,
+      "lon": 43.7382,
+      "category": "heritage",
+      "descAr": "قصر من الطين والحجر بأربعة أبراج ركنية.",
+      "url": null,
+      "coordSource": "https://ar.wikipedia.org/wiki/لينة"
+    },
+    {
+      "nameAr": "سوق لينة التاريخي",
+      "lat": 28.7613,
+      "lon": 43.7382,
+      "category": "heritage",
+      "descAr": "أطلال مركز تجاري قديم بدكاكين طينية جنوب رفحاء.",
+      "url": null,
+      "coordSource": "https://ar.wikipedia.org/wiki/لينة"
+    }
+  ],
+  "jawf": [
+    {
+      "nameAr": "قلعة مارد",
+      "lat": 29.8113,
+      "lon": 39.8673,
+      "category": "heritage",
+      "descAr": "قلعة أثرية في دومة الجندل.",
+      "url": "https://saudipedia.com/en/marid-castle",
+      "coordSource": "https://ar.wikipedia.org/wiki/قلعة_مارد"
+    },
+    {
+      "nameAr": "بحيرة دومة الجندل",
+      "lat": 29.8144,
+      "lon": 39.9119,
+      "category": "nature",
+      "descAr": "أكبر بحيرة في المملكة، وتُقام على ضفافها مهرجانات.",
+      "url": null,
+      "coordSource": "https://en.wikipedia.org/wiki/Lake_Dumat_al-Jandal"
+    },
+    {
+      "nameAr": "قلعة زعبل",
+      "lat": 29.9905,
+      "lon": 40.198,
+      "category": "heritage",
+      "descAr": "قلعة تاريخية في سكاكا.",
+      "url": null,
+      "coordSource": "https://en.wikipedia.org/wiki/Zabal_Castle"
+    },
+    {
+      "nameAr": "مسجد عمر بن الخطاب",
+      "lat": 29.812,
+      "lon": 39.8676,
+      "category": "religious",
+      "descAr": "مسجد تاريخي في دومة الجندل.",
+      "url": null,
+      "coordSource": "https://en.wikipedia.org/wiki/Umar_ibn_al-Khattab_Mosque"
+    }
+  ],
+  "jazan": [
+    {
+      "nameAr": "جزر فرسان",
+      "lat": 16.7058,
+      "lon": 41.9833,
+      "category": "nature",
+      "descAr": "أكبر أرخبيل في البحر الأحمر، ومنطقة محمية.",
+      "url": "https://www.visitsaudi.com/en/jazan/attraction/farasan-islands-protected-area",
+      "coordSource": "https://en.wikipedia.org/wiki/Farasan_Island"
+    },
+    {
+      "nameAr": "جبال فيفاء",
+      "lat": 17.2806,
+      "lon": 43.1374,
+      "category": "nature",
+      "descAr": "مرتفعات جبلية معتدلة المناخ.",
+      "url": "https://www.visitsaudi.com/en/jazan/attraction/nature-charm-at-fifa-mountains",
+      "coordSource": "https://geocoding-api.open-meteo.com/v1/search?name=فيفاء&count=10&language=ar"
+    },
+    {
+      "nameAr": "قلعة الدوسرية",
+      "lat": 16.89,
+      "lon": 42.55,
+      "category": "heritage",
+      "descAr": "قلعة تاريخية في مدينة جازان.",
+      "url": "https://saudipedia.com/en/article/2521/history/landmarks-and-monuments/al-dosariyah-castle",
+      "coordSource": "https://ar.wikipedia.org/wiki/قلعة_الدوسرية"
+    }
+  ],
+  "najran": [
+    {
+      "nameAr": "منطقة حمى الثقافية",
+      "lat": 18.2507,
+      "lon": 44.451,
+      "category": "heritage",
+      "descAr": "موقع تراث عالمي فيه نقوش صخرية تمتد ثقافتها نحو سبعة آلاف سنة.",
+      "url": "https://whc.unesco.org/en/list/1619/",
+      "coordSource": "https://whc.unesco.org/en/list/1619/maps"
+    },
+    {
+      "nameAr": "موقع الأخدود الأثري",
+      "lat": 17.4773,
+      "lon": 44.1793,
+      "category": "heritage",
+      "descAr": "قلاع ومبانٍ حجرية ونقوش من الألف الأول قبل الميلاد إلى القرن الرابع الميلادي.",
+      "url": "https://www.visitsaudi.com/en/najran/attractions/alukhdud-archaeological-site-in-najran",
+      "coordSource": "https://en.wikipedia.org/wiki/Al-Okhdood"
+    },
+    {
+      "nameAr": "متحف نجران الإقليمي",
+      "lat": 17.4786,
+      "lon": 44.176,
+      "category": "museum",
+      "descAr": "متحف للآثار والتراث في مدينة نجران.",
+      "url": "https://www.visitsaudi.com/en/destinations/najran/attractions/najran-museum",
+      "coordSource": "https://ar.wikipedia.org/wiki/متحف_نجران"
+    },
+    {
+      "nameAr": "سد وادي نجران",
+      "lat": 17.4081,
+      "lon": 44.014,
+      "category": "leisure",
+      "descAr": "سد وبحيرة غرب مدينة نجران يقصدها الزوار للتنزه.",
+      "url": "https://en.wikipedia.org/wiki/Najran_Valley_Dam",
+      "coordSource": "https://en.wikipedia.org/wiki/Najran_Valley_Dam"
+    }
+  ],
+  "bahah": [
+    {
+      "nameAr": "قرية ذي عين الأثرية",
+      "lat": 19.7674,
+      "lon": 41.4342,
+      "category": "heritage",
+      "descAr": "قرية حجرية تعود إلى القرن السادس عشر، تضم 31 منزلًا ومسجدًا صغيرًا.",
+      "url": "https://www.visitsaudi.com/en/al-baha/attractions/thee-ain-heritage-village-in-albaha",
+      "coordSource": "https://en.wikipedia.org/wiki/Thee_Ain"
+    },
+    {
+      "nameAr": "قرية الأطاولة",
+      "lat": 20.5236,
+      "lon": 41.5955,
+      "category": "heritage",
+      "descAr": "قرية تراثية في الباحة.",
+      "url": "https://saudipedia.com/en/article/2527/history/landmarks-and-monuments/al-atawilah-village",
+      "coordSource": "https://ar.wikipedia.org/wiki/الأطاولة"
+    }
+  ]
+}

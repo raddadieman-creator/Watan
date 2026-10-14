@@ -172,3 +172,44 @@ export function getRegionPlate(id: string, size = 400, pad = 0.08): RegionPlate 
 export function getMapShapes(): MapRegionShape[] {
   return getAtlas().regions;
 }
+
+/** خريطة المنطقة التفاعلية: المنطقة وجيرانها والسياق، ونقاط الأماكن مُسقطة على اللوحة */
+export interface RegionMapData {
+  id: string;
+  width: number;
+  height: number;
+  region: string;
+  neighbors: Array<{ id: string; d: string }>;
+  land: string;
+  physical: Array<{ id: string; kind: PhysProps["kind"]; d: string }>;
+  seat: [number, number] | null;
+  markers: Array<{ nameAr: string; x: number; y: number; category: string; descAr: string; url: string | null }>;
+}
+
+export function getRegionMap(id: string, markers: Array<{ nameAr: string; lat: number; lon: number; category: string; descAr: string; url: string | null }>): RegionMapData {
+  const W = 1000, H = 720;
+  const f = fc.features.find((x) => x.properties.id === id)!;
+  const projection = geoMercator()
+    .fitExtent([[70, 60], [W - 70, H - 60]], f)
+    .clipExtent([[-60, -60], [W + 60, H + 60]]);
+  const path = geoPath(projection).digits(1);
+  const region = regions.find((r) => r.id === id);
+  const seat = region?.seat ? projection(region.seat) : null;
+  return {
+    id,
+    width: W,
+    height: H,
+    region: path(f) ?? "",
+    neighbors: fc.features
+      .filter((x) => x.properties.id !== id)
+      .map((x) => ({ id: x.properties.id, d: path(x) ?? "" }))
+      .filter((x) => x.d.length > 0),
+    land: path(land) ?? "",
+    physical: physical.features.map((p) => ({ id: p.properties.id, kind: p.properties.kind, d: path(p) ?? "" })).filter((p) => p.d.length > 0),
+    seat: seat ? [r1(seat[0]), r1(seat[1])] : null,
+    markers: markers.map((m) => {
+      const p = projection([m.lon, m.lat])!;
+      return { nameAr: m.nameAr, x: r1(p[0]), y: r1(p[1]), category: m.category, descAr: m.descAr, url: m.url };
+    }),
+  };
+}

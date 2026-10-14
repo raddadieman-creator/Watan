@@ -5,6 +5,8 @@ import universitiesJson from "@/data/universities.json";
 import folkArtsJson from "@/data/folk-arts.json";
 import guideJson from "@/data/region-guide.json";
 import religiousJson from "@/data/religious.json";
+import videosJson from "@/data/videos.json";
+import markersJson from "@/data/region-markers.json";
 import type { FolkArt, GovUniversity, Indicator, IntangibleElement, Region, RegionGuide, ReligiousCity, Source, WorldHeritageSite } from "./types";
 import { formatNumber } from "./format";
 
@@ -18,6 +20,10 @@ export const UNIVERSITY_COUNT = universitiesJson.count;
 export const folkArts = folkArtsJson as FolkArt[];
 export const regionGuide = guideJson as unknown as Record<string, RegionGuide>;
 export const religious = religiousJson as unknown as { makkah: ReligiousCity; madinah: ReligiousCity; services: Array<{ nameAr: string; url: string; descAr: string }> };
+
+export const videos = videosJson as { ich: Record<string, string>; whs: Record<string, string>; arts: Record<string, string>; channels: Record<string, string> };
+export const regionMarkers = markersJson as unknown as Record<string, Array<{ nameAr: string; lat: number; lon: number; category: MarkerCategory; descAr: string; url: string | null; coordSource: string }>>;
+export type MarkerCategory = "religious" | "heritage" | "nature" | "leisure" | "museum";
 
 export const universitiesInRegion = (id: string) => universities.filter((u) => u.region === id);
 export const folkArtsInRegion = (id: string) => folkArts.filter((a) => a.regions.includes(id));

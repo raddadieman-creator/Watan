@@ -3,59 +3,231 @@
     "article": "https://saudipedia.com/en/riyadh-province",
     "visitSaudi": "https://www.visitsaudi.com/ar/riyadh",
     "places": [
-      {"nameAr":"حي الطريف في الدرعية","descAr":"موقع مسجّل في قائمة التراث العالمي لليونسكو، ويوصف بأنه أكبر مدينة طينية في العالم.","url":"https://whc.unesco.org/en/list/1329/"},
-      {"nameAr":"قصر المصمك","descAr":"من أقدم الحصون التاريخية في المملكة، ويعمل اليوم متحفًا.","url":"https://www.visitsaudi.com/en/riyadh/attractions/al-masmak-palace-in-riyadh"},
-      {"nameAr":"المتحف الوطني السعودي","descAr":"المتحف الوطني للمملكة في مدينة الرياض.","url":"https://www.visitsaudi.com/en/riyadh/attractions/the-national-museum-of-saudi-arabia"},
-      {"nameAr":"حافة العالم","descAr":"إطلالة طبيعية شهيرة على منحدرات طويق قرب الرياض.","url":"https://www.visitsaudi.com/en/riyadh/attractions/edge-of-the-world"},
-      {"nameAr":"منطقة الفاو الأثرية","descAr":"عاصمة مملكة كندة القديمة في محافظة وادي الدواسر، ومسجّلة لدى اليونسكو عام 2024.","url":"https://whc.unesco.org/en/list/1712/"},
-      {"nameAr":"حديقة الملك سلمان","descAr":"مشروع في مدينة الرياض يوصف بأنه أكبر حديقة في العالم.","url":null}
+      {
+        "nameAr": "حي الطريف في الدرعية",
+        "descAr": "موقع مسجّل في قائمة التراث العالمي لليونسكو، ويوصف بأنه أكبر مدينة طينية في العالم.",
+        "url": "https://whc.unesco.org/en/list/1329/"
+      },
+      {
+        "nameAr": "قصر المصمك",
+        "descAr": "من أقدم الحصون التاريخية في المملكة، ويعمل اليوم متحفًا.",
+        "url": "https://www.visitsaudi.com/en/riyadh/attractions/al-masmak-palace-in-riyadh"
+      },
+      {
+        "nameAr": "المتحف الوطني السعودي",
+        "descAr": "المتحف الوطني للمملكة في مدينة الرياض.",
+        "url": "https://www.visitsaudi.com/en/riyadh/attractions/the-national-museum-of-saudi-arabia"
+      },
+      {
+        "nameAr": "حافة العالم",
+        "descAr": "إطلالة طبيعية شهيرة على منحدرات طويق قرب الرياض.",
+        "url": "https://www.visitsaudi.com/en/riyadh/attractions/edge-of-the-world"
+      },
+      {
+        "nameAr": "منطقة الفاو الأثرية",
+        "descAr": "عاصمة مملكة كندة القديمة في محافظة وادي الدواسر، ومسجّلة لدى اليونسكو عام 2024.",
+        "url": "https://whc.unesco.org/en/list/1712/"
+      },
+      {
+        "nameAr": "حديقة الملك سلمان",
+        "descAr": "مشروع في مدينة الرياض يوصف بأنه أكبر حديقة في العالم.",
+        "url": null
+      },
+      {
+        "nameAr": "بوليفارد سيتي",
+        "descAr": "منطقة ترفيهية في حي حطين شمال الرياض تضم مسارح ومطاعم وفعاليات موسم الرياض.",
+        "url": "https://saudipedia.com/en/boulevard-city-blvd-city"
+      },
+      {
+        "nameAr": "بوليفارد وورلد",
+        "descAr": "منطقة ترفيهية تجمع ثقافات دول العالم، افتُتحت ضمن موسم الرياض 2022.",
+        "url": "https://saudipedia.com/en/article/635/society/entertainment/boulevard-world-blvd-world"
+      },
+      {
+        "nameAr": "وادي حنيفة",
+        "descAr": "وادٍ يمتد نحو 160 كم ويخترق الرياض، أُهّل ليكون متنفسًا للتنزه والمشي.",
+        "url": "https://saudipedia.com/en/wadi-hanifa"
+      }
     ]
   },
   "makkah": {
     "article": "https://saudipedia.com/en/makkah-al-mukarramah-province",
     "visitSaudi": "https://www.visitsaudi.com/ar/makkah",
-    "extraLinks": [{"label":"جدة على روح السعودية","url":"https://www.visitsaudi.com/ar/jeddah"},{"label":"الطائف على روح السعودية","url":"https://www.visitsaudi.com/ar/taif"}],
+    "extraLinks": [
+      {
+        "label": "جدة على روح السعودية",
+        "url": "https://www.visitsaudi.com/ar/jeddah"
+      },
+      {
+        "label": "الطائف على روح السعودية",
+        "url": "https://www.visitsaudi.com/ar/taif"
+      }
+    ],
     "location": "تقع غرب المملكة على ساحل البحر الأحمر، تحدها منطقة الرياض شرقًا، والمدينة المنورة شمالًا، وعسير والباحة جنوبًا.",
     "terrain": "تقع ضمن تكوين الدرع العربي النوبي، وتشكّل الحرّات 16% من مساحتها، ويمتد ساحلها 610 كم.",
     "climate": "حارة صيفًا من يونيو إلى أغسطس، ويبلغ متوسط الحرارة السنوي نحو 31 درجة، والطائف أبرد محافظاتها وأغزرها مطرًا.",
     "economy": "تسهم بنحو 13% من الناتج المحلي الإجمالي للمملكة، وتضم مدينة الملك عبدالله الاقتصادية وميناء جدة الإسلامي.",
-    "governorates": ["جدة","الطائف","القنفذة","الليث","رابغ","خليص","الخرمة","رنية","تربة","الجموم","الكامل","ميسان","المويه","أضم","العرضيات","بحرة"],
+    "governorates": [
+      "جدة",
+      "الطائف",
+      "القنفذة",
+      "الليث",
+      "رابغ",
+      "خليص",
+      "الخرمة",
+      "رنية",
+      "تربة",
+      "الجموم",
+      "الكامل",
+      "ميسان",
+      "المويه",
+      "أضم",
+      "العرضيات",
+      "بحرة"
+    ],
     "places": [
-      {"nameAr":"جدة التاريخية","descAr":"المنطقة التاريخية في محافظة جدة، مسجّلة في قائمة التراث العالمي لليونسكو.","url":"https://whc.unesco.org/en/list/1361/"},
-      {"nameAr":"حي حراء الثقافي","descAr":"وجهة ثقافية بجوار جبل النور في مكة المكرمة.","url":"https://www.visitsaudi.com/en/destinations/makkah/attractions/hira-cultural-district-tour"},
-      {"nameAr":"جبل الهدا","descAr":"من أبرز المعالم الطبيعية في الطائف.","url":"https://www.visitsaudi.com/en/destinations/taif/attractions/alhada-mountain-in-taif"},
-      {"nameAr":"جبل الشفا","descAr":"مرتفعات جبلية في الطائف يقصدها المصطافون.","url":"https://www.visitsaudi.com/en/taif/attractions/al-shafa-mountain-in-taif"},
-      {"nameAr":"سوق عكاظ","descAr":"سوق تاريخي في الطائف، أشهر مصايف المملكة.","url":null}
+      {
+        "nameAr": "جدة التاريخية",
+        "descAr": "المنطقة التاريخية في محافظة جدة، مسجّلة في قائمة التراث العالمي لليونسكو.",
+        "url": "https://whc.unesco.org/en/list/1361/"
+      },
+      {
+        "nameAr": "حي حراء الثقافي",
+        "descAr": "وجهة ثقافية بجوار جبل النور في مكة المكرمة.",
+        "url": "https://www.visitsaudi.com/en/destinations/makkah/attractions/hira-cultural-district-tour"
+      },
+      {
+        "nameAr": "جبل الهدا",
+        "descAr": "من أبرز المعالم الطبيعية في الطائف.",
+        "url": "https://www.visitsaudi.com/en/destinations/taif/attractions/alhada-mountain-in-taif"
+      },
+      {
+        "nameAr": "جبل الشفا",
+        "descAr": "مرتفعات جبلية في الطائف يقصدها المصطافون.",
+        "url": "https://www.visitsaudi.com/en/taif/attractions/al-shafa-mountain-in-taif"
+      },
+      {
+        "nameAr": "سوق عكاظ",
+        "descAr": "سوق تاريخي في الطائف، أشهر مصايف المملكة.",
+        "url": null
+      },
+      {
+        "nameAr": "نافورة الملك فهد",
+        "descAr": "من أعلى النوافير في العالم، ويُرى عمودها المائي من أنحاء واسعة من جدة.",
+        "url": "https://en.wikipedia.org/wiki/King_Fahd%27s_Fountain"
+      },
+      {
+        "nameAr": "كورنيش جدة",
+        "descAr": "واجهة بحرية ممتدة على ساحل البحر الأحمر، فيها ممشى وحدائق ومجسمات فنية.",
+        "url": "https://en.wikipedia.org/wiki/Jeddah_Corniche"
+      }
     ]
   },
   "madinah": {
     "article": "https://saudipedia.com/en/al-madinah-al-munawwarah-province",
     "visitSaudi": "https://www.visitsaudi.com/ar/madinah",
-    "extraLinks": [{"label":"العلا على روح السعودية","url":"https://www.visitsaudi.com/ar/alula"}],
+    "extraLinks": [
+      {
+        "label": "العلا على روح السعودية",
+        "url": "https://www.visitsaudi.com/ar/alula"
+      }
+    ],
     "places": [
-      {"nameAr":"الحِجر (مدائن صالح)","descAr":"موقع أثري في العلا، وأول موقع سعودي يُسجَّل في قائمة التراث العالمي لليونسكو.","url":"https://whc.unesco.org/en/list/1293/"},
-      {"nameAr":"جبل الفيل","descAr":"تكوين صخري طبيعي في العلا.","url":"https://www.visitsaudi.com/en/alula/attractions/jabal-alfil-in-alula"},
-      {"nameAr":"موقع غزوة بدر","descAr":"موقع أول انتصار في الإسلام، بمحافظة بدر.","url":"https://www.visitsaudi.com/en/destinations/madinah/attractions/badr-battle-site"},
-      {"nameAr":"متحف سكة الحديد","descAr":"متحف في محطة سكة حديد الحجاز التاريخية قرب المسجد النبوي، يضم 14 قاعة.","url":"https://saudipedia.com/متحف-سكة-الحديد"},
-      {"nameAr":"متحف دار المدينة المنورة","descAr":"متحف لتاريخ المدينة المنورة وتراثها العمراني، افتُتح عام 1432هـ.","url":"https://saudipedia.com/متحف-دار-المدينة-المنورة"}
+      {
+        "nameAr": "الحِجر (مدائن صالح)",
+        "descAr": "موقع أثري في العلا، وأول موقع سعودي يُسجَّل في قائمة التراث العالمي لليونسكو.",
+        "url": "https://whc.unesco.org/en/list/1293/"
+      },
+      {
+        "nameAr": "جبل الفيل",
+        "descAr": "تكوين صخري طبيعي في العلا.",
+        "url": "https://www.visitsaudi.com/en/alula/attractions/jabal-alfil-in-alula"
+      },
+      {
+        "nameAr": "موقع غزوة بدر",
+        "descAr": "موقع أول انتصار في الإسلام، بمحافظة بدر.",
+        "url": "https://www.visitsaudi.com/en/destinations/madinah/attractions/badr-battle-site"
+      },
+      {
+        "nameAr": "متحف سكة الحديد",
+        "descAr": "متحف في محطة سكة حديد الحجاز التاريخية قرب المسجد النبوي، يضم 14 قاعة.",
+        "url": "https://saudipedia.com/متحف-سكة-الحديد"
+      },
+      {
+        "nameAr": "متحف دار المدينة المنورة",
+        "descAr": "متحف لتاريخ المدينة المنورة وتراثها العمراني، افتُتح عام 1432هـ.",
+        "url": "https://saudipedia.com/متحف-دار-المدينة-المنورة"
+      }
     ]
   },
   "eastern": {
     "article": "https://saudipedia.com/en/eastern-province",
     "visitSaudi": "https://www.visitsaudi.com/ar/eastern-province",
-    "extraLinks": [{"label":"الأحساء على روح السعودية","url":"https://www.visitsaudi.com/ar/al-ahsa"}],
+    "extraLinks": [
+      {
+        "label": "الأحساء على روح السعودية",
+        "url": "https://www.visitsaudi.com/ar/al-ahsa"
+      }
+    ],
     "location": "تقع شرق المملكة، تحدها الكويت والعراق شمالًا، وقطر والبحرين شرقًا.",
     "terrain": "سهل صحراوي يمتد من الخليج العربي إلى صحراء الدهناء، ويضم مناطق ساحلية ومجاري أودية وجزرًا مثل تاروت وأبو علي.",
     "climate": "صيفها حار رطب تبلغ الحرارة فيه نحو 46 درجة من مايو إلى أغسطس، وشتاؤها معتدل تهطل فيه أمطار خفيفة أحيانًا.",
     "economy": "تضم 11 حقلًا لإنتاج النفط الخام، ويمر عبر ميناء رأس تنورة نحو 90% من صادرات المملكة الهيدروكربونية.",
-    "governorates": ["الأحساء","حفر الباطن","الجبيل","القطيف","الخبر","الخفجي","العديد","رأس تنورة","أبقيق","النعيرية","قرية العليا","البيضاء"],
+    "governorates": [
+      "الأحساء",
+      "حفر الباطن",
+      "الجبيل",
+      "القطيف",
+      "الخبر",
+      "الخفجي",
+      "العديد",
+      "رأس تنورة",
+      "أبقيق",
+      "النعيرية",
+      "قرية العليا",
+      "البيضاء"
+    ],
     "places": [
-      {"nameAr":"واحة الأحساء","descAr":"من أكبر واحات النخيل في العالم، ومسجّلة في التراث العالمي لليونسكو.","url":"https://whc.unesco.org/en/list/1563/"},
-      {"nameAr":"جبل القارة","descAr":"معلم طبيعي وتاريخي في الأحساء.","url":"https://www.visitsaudi.com/ar/al-ahsa/attractions/al-qarah-mountain"},
-      {"nameAr":"مركز الملك عبدالعزيز الثقافي العالمي (إثراء)","descAr":"مركز ثقافي في الظهران.","url":"https://www.visitsaudi.com/en/eastern-province/attractions/ithra"},
-      {"nameAr":"مسجد جواثا","descAr":"مسجد تاريخي في الأحساء.","url":null},
-      {"nameAr":"ميناء العقير التاريخي","descAr":"ميناء تاريخي على ساحل الأحساء.","url":null},
-      {"nameAr":"مدينة ثاج الأثرية","descAr":"أكبر موقع أثري في شرق المملكة.","url":null}
+      {
+        "nameAr": "واحة الأحساء",
+        "descAr": "من أكبر واحات النخيل في العالم، ومسجّلة في التراث العالمي لليونسكو.",
+        "url": "https://whc.unesco.org/en/list/1563/"
+      },
+      {
+        "nameAr": "جبل القارة",
+        "descAr": "معلم طبيعي وتاريخي في الأحساء.",
+        "url": "https://www.visitsaudi.com/ar/al-ahsa/attractions/al-qarah-mountain"
+      },
+      {
+        "nameAr": "مركز الملك عبدالعزيز الثقافي العالمي (إثراء)",
+        "descAr": "مركز ثقافي في الظهران.",
+        "url": "https://www.visitsaudi.com/en/eastern-province/attractions/ithra"
+      },
+      {
+        "nameAr": "مسجد جواثا",
+        "descAr": "مسجد تاريخي في الأحساء.",
+        "url": null
+      },
+      {
+        "nameAr": "ميناء العقير التاريخي",
+        "descAr": "ميناء تاريخي على ساحل الأحساء.",
+        "url": null
+      },
+      {
+        "nameAr": "مدينة ثاج الأثرية",
+        "descAr": "أكبر موقع أثري في شرق المملكة.",
+        "url": null
+      },
+      {
+        "nameAr": "شاطئ نصف القمر",
+        "descAr": "خليج رملي بين الخبر والظهران، من أشهر وجهات السباحة والتخييم في الشرقية.",
+        "url": "https://en.wikipedia.org/wiki/Half_Moon_Bay,_Saudi_Arabia"
+      },
+      {
+        "nameAr": "بحيرة الأصفر",
+        "descAr": "بحيرة ضحلة وسط الرمال شرق الأحساء، يقصدها هواة الطيور والتنزه البري.",
+        "url": "https://saudipedia.com/en/al-asfar-lake"
+      }
     ]
   },
   "qassim": {
@@ -65,27 +237,118 @@
     "terrain": "يعبرها وادي الرمة من الغرب إلى الشرق بطول 510 كم، وهو أطول أودية الجزيرة العربية.",
     "climate": "حارة سبعة أشهر في السنة، وتبلغ الحرارة ذروتها في أغسطس وسبتمبر، وتنخفض شتاءً إلى نحو 5 درجات في بعض المحافظات.",
     "economy": "اقتصادها زراعي في الأساس، وفيها من أكبر مزارع النخيل وأسواق التمور في العالم.",
-    "governorates": ["عنيزة","الرس","المذنب","البكيرية","البدائع","الأسياح","النبهانية","عيون الجواء","رياض الخبراء","الشماسية","عقلة الصقور","ضرية","أبانات"],
+    "governorates": [
+      "عنيزة",
+      "الرس",
+      "المذنب",
+      "البكيرية",
+      "البدائع",
+      "الأسياح",
+      "النبهانية",
+      "عيون الجواء",
+      "رياض الخبراء",
+      "الشماسية",
+      "عقلة الصقور",
+      "ضرية",
+      "أبانات"
+    ],
     "places": [
-      {"nameAr":"قصر الملك عبدالعزيز في قبة","descAr":"من أكبر القصور التاريخية في المنطقة، وكان مقرًّا خاصًّا للمؤسس.","url":"https://saudipedia.com/en/king-abdulaziz-historical-palace-in-qibah"},
-      {"nameAr":"متحف العقيلات","descAr":"متحف تاريخي في بريدة.","url":"https://www.visitsaudi.com/en/qassim/attractions/al-oqilat-historical-museum-buraidah"},
-      {"nameAr":"سوق المسوكف","descAr":"سوق شعبي تراثي في عنيزة.","url":"https://www.visitsaudi.com/en/qassim/attractions/al-musawkaf-traditional-market-in-unaizah"},
-      {"nameAr":"كرنفال بريدة للتمور","descAr":"مهرجان سنوي للتمور في بريدة.","url":"https://www.visitsaudi.com/en/qassim/events/buraydah-dates-carnival"},
-      {"nameAr":"وادي الرمة","descAr":"أطول مجرى مائي موسمي في المملكة بطول 510 كم.","url":null},
-      {"nameAr":"صخرة عنترة","descAr":"صخرة وقصر يُنسبان إلى الشاعر عنترة بن شداد قرب عيون الجواء، وفيهما نقوش ثمودية.","url":null}
+      {
+        "nameAr": "قصر الملك عبدالعزيز في قبة",
+        "descAr": "من أكبر القصور التاريخية في المنطقة، وكان مقرًّا خاصًّا للمؤسس.",
+        "url": "https://saudipedia.com/en/king-abdulaziz-historical-palace-in-qibah"
+      },
+      {
+        "nameAr": "متحف العقيلات",
+        "descAr": "متحف تاريخي في بريدة.",
+        "url": "https://www.visitsaudi.com/en/qassim/attractions/al-oqilat-historical-museum-buraidah"
+      },
+      {
+        "nameAr": "سوق المسوكف",
+        "descAr": "سوق شعبي تراثي في عنيزة.",
+        "url": "https://www.visitsaudi.com/en/qassim/attractions/al-musawkaf-traditional-market-in-unaizah"
+      },
+      {
+        "nameAr": "كرنفال بريدة للتمور",
+        "descAr": "مهرجان سنوي للتمور في بريدة.",
+        "url": "https://www.visitsaudi.com/en/qassim/events/buraydah-dates-carnival"
+      },
+      {
+        "nameAr": "وادي الرمة",
+        "descAr": "أطول مجرى مائي موسمي في المملكة بطول 510 كم.",
+        "url": null
+      },
+      {
+        "nameAr": "صخرة عنترة",
+        "descAr": "صخرة وقصر يُنسبان إلى الشاعر عنترة بن شداد قرب عيون الجواء، وفيهما نقوش ثمودية.",
+        "url": null
+      }
     ]
   },
   "asir": {
     "article": "https://saudipedia.com/en/aseer-province",
     "visitSaudi": "https://www.visitsaudi.com/ar/aseer",
-    "governorates": ["خميس مشيط","بيشة","النماص","محايل","تثليث","رجال ألمع","ظهران الجنوب","سراة عبيدة","أحد رفيدة","بلقرن","المجاردة","تنومة","طريب","بارق","البرك","الحرجة","الأمواه","الفرشة"],
+    "governorates": [
+      "خميس مشيط",
+      "بيشة",
+      "النماص",
+      "محايل",
+      "تثليث",
+      "رجال ألمع",
+      "ظهران الجنوب",
+      "سراة عبيدة",
+      "أحد رفيدة",
+      "بلقرن",
+      "المجاردة",
+      "تنومة",
+      "طريب",
+      "بارق",
+      "البرك",
+      "الحرجة",
+      "الأمواه",
+      "الفرشة"
+    ],
     "places": [
-      {"nameAr":"جبل السودة","descAr":"أعلى قمة في المنطقة بارتفاع 3,015 م غرب أبها.","url":"https://saudipedia.com/en/al-soudah-mountain"},
-      {"nameAr":"قرية المفتاحة","descAr":"قرية غرب أبها توصف بأنها أيقونة التراث الثقافي للمنطقة.","url":"https://www.visitsaudi.com/en/aseer/attractions/almuftaha-village"},
-      {"nameAr":"قرية رجال ألمع التراثية","descAr":"قرية تاريخية غرب أبها تشتهر بقصورها الحجرية المزخرفة.","url":"https://www.visitsaudi.com/en/aseer/attractions/rijal-almaa-of-aseer"},
-      {"nameAr":"حي البسطة","descAr":"حي تاريخي في أبها.","url":"https://www.visitsaudi.com/en/destinations/aseer/attractions/al-basta-district"},
-      {"nameAr":"منتزه الحبلة","descAr":"منتزه جبلي في عسير.","url":"https://www.visitsaudi.com/en/aseer/attractions/al-habala-park"},
-      {"nameAr":"منتزه عسير الوطني","descAr":"منتزه وطني في منطقة عسير.","url":"https://saudipedia.com/en/article/1073/geography/environment/aseer-national-park"}
+      {
+        "nameAr": "جبل السودة",
+        "descAr": "أعلى قمة في المنطقة بارتفاع 3,015 م غرب أبها.",
+        "url": "https://saudipedia.com/en/al-soudah-mountain"
+      },
+      {
+        "nameAr": "قرية المفتاحة",
+        "descAr": "قرية غرب أبها توصف بأنها أيقونة التراث الثقافي للمنطقة.",
+        "url": "https://www.visitsaudi.com/en/aseer/attractions/almuftaha-village"
+      },
+      {
+        "nameAr": "قرية رجال ألمع التراثية",
+        "descAr": "قرية تاريخية غرب أبها تشتهر بقصورها الحجرية المزخرفة.",
+        "url": "https://www.visitsaudi.com/en/aseer/attractions/rijal-almaa-of-aseer"
+      },
+      {
+        "nameAr": "حي البسطة",
+        "descAr": "حي تاريخي في أبها.",
+        "url": "https://www.visitsaudi.com/en/destinations/aseer/attractions/al-basta-district"
+      },
+      {
+        "nameAr": "منتزه الحبلة",
+        "descAr": "منتزه جبلي في عسير.",
+        "url": "https://www.visitsaudi.com/en/aseer/attractions/al-habala-park"
+      },
+      {
+        "nameAr": "منتزه عسير الوطني",
+        "descAr": "منتزه وطني في منطقة عسير.",
+        "url": "https://saudipedia.com/en/article/1073/geography/environment/aseer-national-park"
+      },
+      {
+        "nameAr": "ممشى الضباب",
+        "descAr": "ممشى جبلي في أبها يطل على الضباب والمرتفعات.",
+        "url": "https://discoveraseer.com/en/attractions/al-dabab-walkway"
+      },
+      {
+        "nameAr": "بحيرة سد أبها",
+        "descAr": "بحيرة ومتنزه حول سد أبها غرب وسط المدينة.",
+        "url": "https://discoveraseer.com/en/attractions/abha-dam-lake"
+      }
     ]
   },
   "tabuk": {
@@ -95,13 +358,40 @@
     "terrain": "المنطقة الوحيدة المطلة على البحر الأحمر وخليج العقبة معًا، وتضم نحو مئة جزيرة مرجانية ورملية وبركانية، وتغطي المحميات الطبيعية 23% من مساحتها.",
     "climate": "تنخفض الحرارة شتاءً إلى الصفر، وتتجاوز 40 درجة صيفًا، وأمطارها شتوية.",
     "economy": "الزراعة وصيد الأسماك في مقدمة أنشطتها الاقتصادية، وتضم مشروعات نيوم وأمالا والبحر الأحمر.",
-    "governorates": ["الوجه","ضباء","تيماء","أملج","حقل","البدع"],
+    "governorates": [
+      "الوجه",
+      "ضباء",
+      "تيماء",
+      "أملج",
+      "حقل",
+      "البدع"
+    ],
     "places": [
-      {"nameAr":"جبل اللوز","descAr":"جبل تتساقط عليه الثلوج شتاءً ويقصده المتنزهون.","url":"https://saudipedia.com/en/jabal-al-lawz"},
-      {"nameAr":"تيماء الأثرية","descAr":"موقع أثري فيه نقوش قديمة وآثار لنشاط الإنسان المبكر.","url":"https://saudipedia.com/en/archaeological-findings-in-tayma"},
-      {"nameAr":"قلعة تبوك الأثرية","descAr":"قلعة تاريخية في مدينة تبوك.","url":"https://www.visitsaudi.com/en/tabuk/attractions/islamic-archaeological-tabuk-castle"},
-      {"nameAr":"محطة سكة حديد الحجاز بتبوك","descAr":"محطة تاريخية على خط سكة حديد الحجاز.","url":"https://www.visitsaudi.com/en/tabuk/attractions/tabuk-station-in-hejaz-railway"},
-      {"nameAr":"مسجد التوبة","descAr":"مسجد تاريخي في مدينة تبوك.","url":"https://www.visitsaudi.com/en/tabuk/attractions/masjid-altawbah-in-tabuk"}
+      {
+        "nameAr": "جبل اللوز",
+        "descAr": "جبل تتساقط عليه الثلوج شتاءً ويقصده المتنزهون.",
+        "url": "https://saudipedia.com/en/jabal-al-lawz"
+      },
+      {
+        "nameAr": "تيماء الأثرية",
+        "descAr": "موقع أثري فيه نقوش قديمة وآثار لنشاط الإنسان المبكر.",
+        "url": "https://saudipedia.com/en/archaeological-findings-in-tayma"
+      },
+      {
+        "nameAr": "قلعة تبوك الأثرية",
+        "descAr": "قلعة تاريخية في مدينة تبوك.",
+        "url": "https://www.visitsaudi.com/en/tabuk/attractions/islamic-archaeological-tabuk-castle"
+      },
+      {
+        "nameAr": "محطة سكة حديد الحجاز بتبوك",
+        "descAr": "محطة تاريخية على خط سكة حديد الحجاز.",
+        "url": "https://www.visitsaudi.com/en/tabuk/attractions/tabuk-station-in-hejaz-railway"
+      },
+      {
+        "nameAr": "مسجد التوبة",
+        "descAr": "مسجد تاريخي في مدينة تبوك.",
+        "url": "https://www.visitsaudi.com/en/tabuk/attractions/masjid-altawbah-in-tabuk"
+      }
     ]
   },
   "hail": {
@@ -111,13 +401,42 @@
     "terrain": "تغطي صحراء النفود شمالها، وتتوسطها جبال شمّر، ويمتد جبل أجا نحو 100 كم وترتفع قمته إلى 1,350 م.",
     "climate": "مناخها قاري، تتراوح حرارة النهار صيفًا بين 30 و40 درجة، وشتاؤها بارد قد تنخفض فيه الحرارة دون الصفر.",
     "economy": "يتصدر قطاع البناء نشاطها الاقتصادي، وفيها مدينة صناعية تضم نحو 115 مصنعًا.",
-    "governorates": ["بقعاء","الحائط","الغزالة","الشنان","السليمي","سميراء","الشملي","موقق"],
+    "governorates": [
+      "بقعاء",
+      "الحائط",
+      "الغزالة",
+      "الشنان",
+      "السليمي",
+      "سميراء",
+      "الشملي",
+      "موقق"
+    ],
     "places": [
-      {"nameAr":"الرسوم الصخرية في جبة والشويمس","descAr":"نقوش صخرية مسجّلة في التراث العالمي لليونسكو عام 2015.","url":"https://whc.unesco.org/en/list/1472/"},
-      {"nameAr":"أطلال قصر حاتم الطائي","descAr":"أطلال على جبل أجا، من أهم معالم المنطقة.","url":"https://www.visitsaudi.com/en/destinations/hail/attractions/hatim-al-tai-hearth"},
-      {"nameAr":"قصر القشلة","descAr":"قصر تاريخي في مدينة حائل.","url":"https://www.visitsaudi.com/en/hail/attractions/al-qishla-castle"},
-      {"nameAr":"قلعة أعيرف","descAr":"قلعة تاريخية في مدينة حائل.","url":"https://www.visitsaudi.com/en/hail/attractions/historical-aarif-fort-in-hail"},
-      {"nameAr":"جبال سلمى","descAr":"سلسلة جبلية تُعد مع جبل أجا من أبرز تضاريس المنطقة.","url":"https://saudipedia.com/en/jibal-salma"}
+      {
+        "nameAr": "الرسوم الصخرية في جبة والشويمس",
+        "descAr": "نقوش صخرية مسجّلة في التراث العالمي لليونسكو عام 2015.",
+        "url": "https://whc.unesco.org/en/list/1472/"
+      },
+      {
+        "nameAr": "أطلال قصر حاتم الطائي",
+        "descAr": "أطلال على جبل أجا، من أهم معالم المنطقة.",
+        "url": "https://www.visitsaudi.com/en/destinations/hail/attractions/hatim-al-tai-hearth"
+      },
+      {
+        "nameAr": "قصر القشلة",
+        "descAr": "قصر تاريخي في مدينة حائل.",
+        "url": "https://www.visitsaudi.com/en/hail/attractions/al-qishla-castle"
+      },
+      {
+        "nameAr": "قلعة أعيرف",
+        "descAr": "قلعة تاريخية في مدينة حائل.",
+        "url": "https://www.visitsaudi.com/en/hail/attractions/historical-aarif-fort-in-hail"
+      },
+      {
+        "nameAr": "جبال سلمى",
+        "descAr": "سلسلة جبلية تُعد مع جبل أجا من أبرز تضاريس المنطقة.",
+        "url": "https://saudipedia.com/en/jibal-salma"
+      }
     ]
   },
   "northern-borders": {
@@ -127,12 +446,32 @@
     "terrain": "يقع معظم أراضيها ضمن الرف العربي، وفيها مراعٍ للإبل والأغنام، ومرتفعات يتساقط عليها الثلج أحيانًا.",
     "climate": "مناخها قاري حار صيفًا شديد البرودة شتاءً، تنخفض الحرارة دون الصفر في يناير وفبراير.",
     "economy": "التعدين قطاعها الرئيس، وفيها ثالث أكبر احتياطي للفوسفات في العالم، ومدينة وعد الشمال.",
-    "governorates": ["رفحاء","طريف","العويقيلة"],
+    "governorates": [
+      "رفحاء",
+      "طريف",
+      "العويقيلة"
+    ],
     "places": [
-      {"nameAr":"قرية زبالة الأثرية","descAr":"محطة بارزة على درب زبيدة في محافظة رفحاء، فيها قلعة مربعة وأساسات مسجد.","url":"https://saudipedia.com/en/article/2346/history/landmarks-and-monuments/zubala-archaeological-village"},
-      {"nameAr":"درب زبيدة","descAr":"طريق الحج التاريخي بين الكوفة ومكة المكرمة، ويمر بالمنطقة.","url":"https://saudipedia.com/en/zubaidah-trail"},
-      {"nameAr":"سوق لينة التاريخي","descAr":"أطلال مركز تجاري قديم بدكاكين طينية جنوب رفحاء.","url":null},
-      {"nameAr":"قصر الملك عبدالعزيز التاريخي في لينة","descAr":"قصر من الطين والحجر بأربعة أبراج ركنية.","url":null}
+      {
+        "nameAr": "قرية زبالة الأثرية",
+        "descAr": "محطة بارزة على درب زبيدة في محافظة رفحاء، فيها قلعة مربعة وأساسات مسجد.",
+        "url": "https://saudipedia.com/en/article/2346/history/landmarks-and-monuments/zubala-archaeological-village"
+      },
+      {
+        "nameAr": "درب زبيدة",
+        "descAr": "طريق الحج التاريخي بين الكوفة ومكة المكرمة، ويمر بالمنطقة.",
+        "url": "https://saudipedia.com/en/zubaidah-trail"
+      },
+      {
+        "nameAr": "سوق لينة التاريخي",
+        "descAr": "أطلال مركز تجاري قديم بدكاكين طينية جنوب رفحاء.",
+        "url": null
+      },
+      {
+        "nameAr": "قصر الملك عبدالعزيز التاريخي في لينة",
+        "descAr": "قصر من الطين والحجر بأربعة أبراج ركنية.",
+        "url": null
+      }
     ]
   },
   "jawf": {
@@ -142,12 +481,33 @@
     "terrain": "تقع على أرض منخفضة مقارنة ببقية مناطق المملكة، ومن ذلك جاءت تسميتها، وفيها بحيرة دومة الجندل.",
     "climate": "مناخها قاري صحراوي، شتاؤها من أبرد شتاءات المملكة، وصيفها حار جاف تصل حرارته إلى نحو 42 درجة.",
     "economy": "مركز للطاقة المتجددة في المملكة، وفيها محطة سكاكا للطاقة الشمسية بقدرة 300 ميغاواط.",
-    "governorates": ["القريات","دومة الجندل","طبرجل","صوير"],
+    "governorates": [
+      "القريات",
+      "دومة الجندل",
+      "طبرجل",
+      "صوير"
+    ],
     "places": [
-      {"nameAr":"قلعة مارد","descAr":"قلعة أثرية في دومة الجندل.","url":"https://saudipedia.com/en/marid-castle"},
-      {"nameAr":"بحيرة دومة الجندل","descAr":"أكبر بحيرة في المملكة، وتُقام على ضفافها مهرجانات.","url":null},
-      {"nameAr":"قلعة زعبل","descAr":"قلعة تاريخية في سكاكا.","url":null},
-      {"nameAr":"مسجد عمر بن الخطاب","descAr":"مسجد تاريخي في دومة الجندل.","url":null}
+      {
+        "nameAr": "قلعة مارد",
+        "descAr": "قلعة أثرية في دومة الجندل.",
+        "url": "https://saudipedia.com/en/marid-castle"
+      },
+      {
+        "nameAr": "بحيرة دومة الجندل",
+        "descAr": "أكبر بحيرة في المملكة، وتُقام على ضفافها مهرجانات.",
+        "url": null
+      },
+      {
+        "nameAr": "قلعة زعبل",
+        "descAr": "قلعة تاريخية في سكاكا.",
+        "url": null
+      },
+      {
+        "nameAr": "مسجد عمر بن الخطاب",
+        "descAr": "مسجد تاريخي في دومة الجندل.",
+        "url": null
+      }
     ]
   },
   "jazan": {
@@ -157,12 +517,45 @@
     "terrain": "تتنوع تضاريسها بين الجبال والسهول والجزر، وأعلى قممها جبل العريف بارتفاع 2,632 م، وجزر فرسان أكبر أرخبيل في البحر الأحمر.",
     "climate": "شديدة الحرارة صيفًا معتدلة شتاءً، عدا المرتفعات الجبلية التي يعتدل فيها الجو وتهطل الأمطار طوال العام.",
     "economy": "الزراعة وصيد الأسماك ركيزتا اقتصادها، وفيها مصفاة جازان وميناء صناعي.",
-    "governorates": ["صبيا","أبو عريش","صامطة","بيش","جزر فرسان","الدرب","الحرث","ضمد","الريث","الدائر","أحد المسارحة","العيدابي","العارضة","هروب","فيفاء","الطوال"],
+    "governorates": [
+      "صبيا",
+      "أبو عريش",
+      "صامطة",
+      "بيش",
+      "جزر فرسان",
+      "الدرب",
+      "الحرث",
+      "ضمد",
+      "الريث",
+      "الدائر",
+      "أحد المسارحة",
+      "العيدابي",
+      "العارضة",
+      "هروب",
+      "فيفاء",
+      "الطوال"
+    ],
     "places": [
-      {"nameAr":"جزر فرسان","descAr":"أكبر أرخبيل في البحر الأحمر، ومنطقة محمية.","url":"https://www.visitsaudi.com/en/jazan/attraction/farasan-islands-protected-area"},
-      {"nameAr":"جبال فيفاء","descAr":"مرتفعات جبلية معتدلة المناخ.","url":"https://www.visitsaudi.com/en/jazan/attraction/nature-charm-at-fifa-mountains"},
-      {"nameAr":"القرية التراثية بجازان","descAr":"قرية تعرض تراث المنطقة.","url":"https://www.visitsaudi.com/en/jazan/attraction/the-heritage-village-in-jazan"},
-      {"nameAr":"قلعة الدوسرية","descAr":"قلعة تاريخية في مدينة جازان.","url":"https://saudipedia.com/en/article/2521/history/landmarks-and-monuments/al-dosariyah-castle"}
+      {
+        "nameAr": "جزر فرسان",
+        "descAr": "أكبر أرخبيل في البحر الأحمر، ومنطقة محمية.",
+        "url": "https://www.visitsaudi.com/en/jazan/attraction/farasan-islands-protected-area"
+      },
+      {
+        "nameAr": "جبال فيفاء",
+        "descAr": "مرتفعات جبلية معتدلة المناخ.",
+        "url": "https://www.visitsaudi.com/en/jazan/attraction/nature-charm-at-fifa-mountains"
+      },
+      {
+        "nameAr": "القرية التراثية بجازان",
+        "descAr": "قرية تعرض تراث المنطقة.",
+        "url": "https://www.visitsaudi.com/en/jazan/attraction/the-heritage-village-in-jazan"
+      },
+      {
+        "nameAr": "قلعة الدوسرية",
+        "descAr": "قلعة تاريخية في مدينة جازان.",
+        "url": "https://saudipedia.com/en/article/2521/history/landmarks-and-monuments/al-dosariyah-castle"
+      }
     ]
   },
   "najran": {
@@ -172,14 +565,50 @@
     "terrain": "تتداخل صحراء الربع الخالي مع وسطها وشرقها، ويشقها وادي نجران بطول نحو 150 كم، وأقصى ارتفاع فيها 2,224 م.",
     "climate": "حارة صيفًا باردة شتاءً بوجه عام، وتتراوح الحرارة بين 14 و37 درجة، وتهطل الأمطار في المرتفعات.",
     "economy": "يقوم اقتصادها على التجارة والتعدين والصناعة، وهي مصدر رئيس للحمضيات.",
-    "governorates": ["شرورة","حبونا","بدر الجنوب","يدمة","ثار","خباش"],
+    "governorates": [
+      "شرورة",
+      "حبونا",
+      "بدر الجنوب",
+      "يدمة",
+      "ثار",
+      "خباش"
+    ],
     "places": [
-      {"nameAr":"منطقة حمى الثقافية","descAr":"موقع تراث عالمي فيه نقوش صخرية تمتد ثقافتها نحو سبعة آلاف سنة.","url":"https://whc.unesco.org/en/list/1619/"},
-      {"nameAr":"موقع الأخدود الأثري","descAr":"قلاع ومبانٍ حجرية ونقوش من الألف الأول قبل الميلاد إلى القرن الرابع الميلادي.","url":"https://www.visitsaudi.com/en/najran/attractions/alukhdud-archaeological-site-in-najran"},
-      {"nameAr":"قصر الإمارة التاريخي","descAr":"قصر تاريخي يعود إلى عام 1944.","url":"https://www.visitsaudi.com/en/najran/attractions/historical-amarah-palace-in-najran"},
-      {"nameAr":"متحف نجران الإقليمي","descAr":"متحف للآثار والتراث في مدينة نجران.","url":"https://www.visitsaudi.com/en/destinations/najran/attractions/najran-museum"},
-      {"nameAr":"قصر العان","descAr":"قصر تاريخي في نجران.","url":"https://www.visitsaudi.com/en/destinations/najran/attractions/aan-palace-in-najran"},
-      {"nameAr":"محمية عروق بني معارض","descAr":"موقع تراث عالمي طبيعي على الطرف الغربي للربع الخالي، يقع جزء منه في المنطقة.","url":"https://whc.unesco.org/en/list/1699/"}
+      {
+        "nameAr": "منطقة حمى الثقافية",
+        "descAr": "موقع تراث عالمي فيه نقوش صخرية تمتد ثقافتها نحو سبعة آلاف سنة.",
+        "url": "https://whc.unesco.org/en/list/1619/"
+      },
+      {
+        "nameAr": "موقع الأخدود الأثري",
+        "descAr": "قلاع ومبانٍ حجرية ونقوش من الألف الأول قبل الميلاد إلى القرن الرابع الميلادي.",
+        "url": "https://www.visitsaudi.com/en/najran/attractions/alukhdud-archaeological-site-in-najran"
+      },
+      {
+        "nameAr": "قصر الإمارة التاريخي",
+        "descAr": "قصر تاريخي يعود إلى عام 1944.",
+        "url": "https://www.visitsaudi.com/en/najran/attractions/historical-amarah-palace-in-najran"
+      },
+      {
+        "nameAr": "متحف نجران الإقليمي",
+        "descAr": "متحف للآثار والتراث في مدينة نجران.",
+        "url": "https://www.visitsaudi.com/en/destinations/najran/attractions/najran-museum"
+      },
+      {
+        "nameAr": "قصر العان",
+        "descAr": "قصر تاريخي في نجران.",
+        "url": "https://www.visitsaudi.com/en/destinations/najran/attractions/aan-palace-in-najran"
+      },
+      {
+        "nameAr": "محمية عروق بني معارض",
+        "descAr": "موقع تراث عالمي طبيعي على الطرف الغربي للربع الخالي، يقع جزء منه في المنطقة.",
+        "url": "https://whc.unesco.org/en/list/1699/"
+      },
+      {
+        "nameAr": "سد وادي نجران",
+        "descAr": "سد وبحيرة غرب مدينة نجران يقصدها الزوار للتنزه.",
+        "url": "https://en.wikipedia.org/wiki/Najran_Valley_Dam"
+      }
     ]
   },
   "bahah": {
@@ -189,13 +618,43 @@
     "terrain": "تنقسم إلى سهول تهامة وجبال السراة، وأعلى نقطة فيها جبل ثربان بارتفاع 2,447 م جنوب شرقي بلجرشي.",
     "climate": "معتدلة في الربيع والصيف باردة شتاءً، وتهطل الأمطار على مدار العام.",
     "economy": "الزراعة عماد اقتصادها، وتنتشر المدرجات الزراعية في المرتفعات وتربية الماشية في السهول.",
-    "governorates": ["بلجرشي","المندق","المخواة","قلوة","العقيق","القرى","بني حسن","غامد الزناد","الحجرة"],
+    "governorates": [
+      "بلجرشي",
+      "المندق",
+      "المخواة",
+      "قلوة",
+      "العقيق",
+      "القرى",
+      "بني حسن",
+      "غامد الزناد",
+      "الحجرة"
+    ],
     "places": [
-      {"nameAr":"قرية ذي عين الأثرية","descAr":"قرية حجرية تعود إلى القرن السادس عشر، تضم 31 منزلًا ومسجدًا صغيرًا.","url":"https://www.visitsaudi.com/en/al-baha/attractions/thee-ain-heritage-village-in-albaha"},
-      {"nameAr":"غابة رغدان","descAr":"منتزه غابي في الباحة.","url":"https://www.visitsaudi.com/en/al-baha/attractions/raghadan-forest-in-al-baha"},
-      {"nameAr":"متحف الباحة الإقليمي","descAr":"متحف إقليمي للآثار والتراث.","url":"https://www.visitsaudi.com/en/al-baha/attractions/al-baha-museum"},
-      {"nameAr":"قرية الأطاولة","descAr":"قرية تراثية في الباحة.","url":"https://saudipedia.com/en/article/2527/history/landmarks-and-monuments/al-atawilah-village"},
-      {"nameAr":"الخلف والخليف","descAr":"بلدتان تاريخيتان متجاورتان فيهما نقوش كوفية بمحافظة قلوة.","url":null}
+      {
+        "nameAr": "قرية ذي عين الأثرية",
+        "descAr": "قرية حجرية تعود إلى القرن السادس عشر، تضم 31 منزلًا ومسجدًا صغيرًا.",
+        "url": "https://www.visitsaudi.com/en/al-baha/attractions/thee-ain-heritage-village-in-albaha"
+      },
+      {
+        "nameAr": "غابة رغدان",
+        "descAr": "منتزه غابي في الباحة.",
+        "url": "https://www.visitsaudi.com/en/al-baha/attractions/raghadan-forest-in-al-baha"
+      },
+      {
+        "nameAr": "متحف الباحة الإقليمي",
+        "descAr": "متحف إقليمي للآثار والتراث.",
+        "url": "https://www.visitsaudi.com/en/al-baha/attractions/al-baha-museum"
+      },
+      {
+        "nameAr": "قرية الأطاولة",
+        "descAr": "قرية تراثية في الباحة.",
+        "url": "https://saudipedia.com/en/article/2527/history/landmarks-and-monuments/al-atawilah-village"
+      },
+      {
+        "nameAr": "الخلف والخليف",
+        "descAr": "بلدتان تاريخيتان متجاورتان فيهما نقوش كوفية بمحافظة قلوة.",
+        "url": null
+      }
     ]
   }
 }

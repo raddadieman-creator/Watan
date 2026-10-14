@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SourcesFooter } from "@/components/SourcesFooter";
 import { PageHero } from "@/components/PageHero";
-import { folkArts, intangible, intangibleNotes, regions, worldHeritage } from "@/lib/data";
+import { folkArts, intangible, intangibleNotes, regions, videos, worldHeritage } from "@/lib/data";
+import { VideoEmbed } from "@/components/VideoEmbed";
 import { ExternalLink } from "@/components/ExternalLink";
 
 export const metadata: Metadata = {
@@ -57,6 +58,7 @@ export default function HeritagePage() {
                   ) : null}
                   {s.regionNote && <span className="text-ink-muted"> — {s.regionNote}</span>}
                 </p>
+                {videos.whs[s.id] && <div className="mt-4"><VideoEmbed id={videos.whs[s.id]} title={s.nameAr} channel={videos.channels[videos.whs[s.id]]} /></div>}
                 <a href={s.url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm text-emerald underline decoration-line underline-offset-4">
                   صفحة الموقع لدى اليونسكو
                 </a>
@@ -82,6 +84,7 @@ export default function HeritagePage() {
                   <li key={e.id} id={e.id} className="museum scroll-mt-24 p-5">
                     <h3 className="font-display text-[1.3rem] leading-[1.6] text-ink">{e.nameAr}</h3>
                     <p className="mt-1 text-xs text-ink-muted" lang="en" dir="ltr">{e.nameEn}</p>
+                    {videos.ich[e.id] && <div className="mt-3"><VideoEmbed id={videos.ich[e.id]} title={e.nameAr} channel={videos.channels[videos.ich[e.id]]} /></div>}
                     {e.areaNote && (
                       <p className="mt-2 text-sm">
                         {e.regions.length > 0 ? (
@@ -116,6 +119,7 @@ export default function HeritagePage() {
                   {a.unesco && <span className="rounded-full bg-sea px-2 py-0.5 text-[0.7rem] font-bold text-white">في قائمة اليونسكو</span>}
                 </div>
                 <p className="mt-1 flex-1 text-[0.95rem] leading-8 text-ink/75">{a.descAr}</p>
+                {videos.arts[a.id] && <div className="mt-3"><VideoEmbed id={videos.arts[a.id]} title={a.nameAr} channel={videos.channels[videos.arts[a.id]]} /></div>}
                 <div className="mt-3 flex flex-wrap items-center gap-1.5">
                   {a.regions.map((rid) => {
                     const r = regions.find((x) => x.id === rid)!;

@@ -8,10 +8,13 @@ import { SourceRef } from "@/components/SourceRef";
 import { ExternalLink } from "@/components/ExternalLink";
 import { ReligiousSection } from "@/components/ReligiousSection";
 import { RegionWeather } from "@/components/RegionWeather";
+import { RegionMap } from "@/components/RegionMap";
+import { VideoEmbed } from "@/components/VideoEmbed";
+import { getRegionMap } from "@/lib/geo";
 import { SourcesFooter } from "@/components/SourcesFooter";
 import {
   folkArtsInRegion, getRegion, intangibleInRegion, journeyNeighbors, NATIONAL_POPULATION_2022,
-  regionGuide, regions, sitesInRegion, sourcesForRegion, universitiesInRegion,
+  regionGuide, regionMarkers, regions, sitesInRegion, sourcesForRegion, universitiesInRegion, videos,
 } from "@/lib/data";
 import { formatNumber } from "@/lib/format";
 
@@ -43,6 +46,8 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
   const guide = regionGuide[r.id];
   const arts = folkArtsInRegion(r.id);
   const unis = universitiesInRegion(r.id);
+  const markers = regionMarkers[r.id] ?? [];
+  const mapData = getRegionMap(r.id, markers);
 
   return (
     <article>
@@ -92,6 +97,14 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
 
       <div className="mx-auto grid max-w-[1400px] gap-12 px-5 pt-14 sm:px-8 lg:grid-cols-[minmax(0,1fr)_20rem]">
         <div className="min-w-0">
+          {markers.length > 0 && (
+            <section id="map" className="mb-14 scroll-mt-24" aria-labelledby="map-h">
+              <h2 id="map-h" className="font-display text-[2rem] text-ink">خريطة {r.shortAr} التفاعلية</h2>
+              <p className="mb-4 mt-1 text-[0.95rem] text-ink-muted">اضغط أي علامة لتعرف المكان وتفتح رابطه، أو اختر نوع الأماكن من الأزرار.</p>
+              <RegionMap data={mapData} accent={r.accent} regionName={r.nameAr} markers={mapData.markers.map((m, i) => ({ ...m, lat: markers[i].lat, lon: markers[i].lon }))} />
+            </section>
+          )}
+
           {r.sections.map((sec) => (
             <section key={sec.key} id={sec.key} className="mb-12 scroll-mt-24" aria-labelledby={`${sec.key}-h`}>
               <h2 id={`${sec.key}-h`} className="font-display text-[2rem] text-ink">{sec.title}</h2>
@@ -145,6 +158,7 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
                     </div>
                     {a.areaAr && <p className="text-xs font-bold" style={{ color: r.accent }}>{a.areaAr}</p>}
                     <p className="mt-1 flex-1 text-[0.95rem] leading-8 text-ink/75">{a.descAr}</p>
+                    {videos.arts[a.id] && <div className="mt-3"><VideoEmbed id={videos.arts[a.id]} title={a.nameAr} channel={videos.channels[videos.arts[a.id]]} /></div>}
                     <ExternalLink href={a.sourceUrl} className="mt-3 self-start text-sm font-bold text-sea underline decoration-turq/40 underline-offset-4 hover:decoration-turq">
                       اقرأ عن {a.nameAr.replace(/^رقصة |^فن /, "")}
                     </ExternalLink>
@@ -170,6 +184,7 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
                       <ExternalLink href={s.url} className="hover:text-coral">{s.nameAr}</ExternalLink>
                     </p>
                     {s.regionNote && <p className="text-sm text-ink-muted">{s.regionNote}</p>}
+                    {videos.whs[s.id] && <div className="mt-3"><VideoEmbed id={videos.whs[s.id]} title={s.nameAr} channel={videos.channels[videos.whs[s.id]]} /></div>}
                   </li>
                 ))}
                 {ich.map((e) => (
@@ -178,6 +193,7 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
                     <p className="mt-1 font-display text-xl leading-9">
                       <Link href={`/heritage#${e.id}`} className="hover:text-coral">{e.nameAr}</Link>
                     </p>
+                    {videos.ich[e.id] && <div className="mt-3"><VideoEmbed id={videos.ich[e.id]} title={e.nameAr} channel={videos.channels[videos.ich[e.id]]} /></div>}
                   </li>
                 ))}
               </ul>
@@ -232,7 +248,7 @@ export default async function RegionPage({ params }: { params: Promise<{ id: str
               <li><ExternalLink href={guide.article} className="flex items-center justify-between rounded-xl bg-cream px-3 py-2.5 font-bold text-ink hover:bg-sun hover:text-white">{r.nameAr} في سعوديبيديا<span aria-hidden>↖</span></ExternalLink></li>
             </ul>
             <ul className="mt-4 grid gap-1 border-t border-ink/10 pt-3 text-sm">
-              {[["places","أماكن تستحق الزيارة"],["folk-arts","الفنون الشعبية"],["universities","الجامعات"],["governorates","المحافظات"]].map(([k,l]) => (
+              {[["map","الخريطة التفاعلية"],["places","أماكن تستحق الزيارة"],["folk-arts","الفنون الشعبية"],["universities","الجامعات"],["governorates","المحافظات"]].map(([k,l]) => (
                 <li key={k}><a href={`#${k}`} className="text-ink-muted hover:text-coral">{l}</a></li>
               ))}
             </ul>
