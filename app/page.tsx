@@ -5,6 +5,7 @@ import { RegionPlate } from "@/components/RegionPlate";
 import { SourceRef } from "@/components/SourceRef";
 import { SourcesFooter } from "@/components/SourcesFooter";
 import { LiveNow } from "@/components/LiveNow";
+import { PartnerLogos } from "@/components/PartnerLogos";
 import { getAtlas } from "@/lib/geo";
 import { getRegion, indicators, journeyOrder, NATIONAL_POPULATION_2022, regions, religious, worldHeritage } from "@/lib/data";
 import { formatCompact, formatNumber } from "@/lib/format";
@@ -30,6 +31,9 @@ export default function HomePage() {
 
   const intro = (
     <div>
+      <div className="mb-6">
+        <PartnerLogos />
+      </div>
       <p className="flex items-center gap-3 text-sm font-bold text-sun-deep">
         <span className="inline-block h-[3px] w-10 rounded-full bg-gradient-to-l from-coral to-sun" aria-hidden />
         منصة معرفية تفاعلية عن المملكة العربية السعودية
