@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
+import { PartnerLogos } from "./PartnerLogos";
 import { SearchBox } from "./SearchBox";
 import { NAV } from "@/lib/site";
 
@@ -20,6 +21,9 @@ export function SiteHeader() {
         <Link href="/" aria-label="وطن — الصفحة الرئيسية" className="shrink-0 rounded">
           <Logo />
         </Link>
+        <div className="hidden shrink-0 min-[1400px]:block">
+          <PartnerLogos size="sm" />
+        </div>
 
         <nav aria-label="التنقل الرئيسي" className="hidden flex-1 lg:block">
           <ul className="flex items-center gap-1">

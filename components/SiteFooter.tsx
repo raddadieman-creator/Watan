@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { PartnerLogos } from "./PartnerLogos";
 import { Parapet } from "./Parapet";
 import { CONTENT_LAST_REVIEW, NAV, PROJECT_CREDIT, SITE_TAGLINE } from "@/lib/site";
 import { formatDate } from "@/lib/format";
@@ -17,9 +18,12 @@ export function SiteFooter() {
               منصة معرفية تفاعلية عن المملكة العربية السعودية.
             </p>
             <div className="mt-6 max-w-sm rounded-2xl bg-white/10 px-4 py-3 ring-1 ring-white/15">
-              <p className="text-xs text-white/65">المشروع من تقديم</p>
-              <p className="mt-0.5 font-display text-xl leading-9 text-white">{PROJECT_CREDIT.presenter}</p>
+              <p className="text-xs text-white/65">{PROJECT_CREDIT.label}</p>
+              <p className="mt-0.5 font-display text-xl leading-9 text-white">{PROJECT_CREDIT.team.join("، ")}</p>
               <p className="text-sm text-[#FFD08A]">{PROJECT_CREDIT.school}</p>
+            </div>
+            <div className="mt-4">
+              <PartnerLogos />
             </div>
           </div>
           <nav aria-label="روابط التذييل">

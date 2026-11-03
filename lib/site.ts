@@ -23,8 +23,9 @@ export const NAV = [
 
 export const CONTENT_LAST_REVIEW = "2026-10-14";
 
-/** بيانات تقديم المشروع */
+/** بيانات تنفيذ المشروع */
 export const PROJECT_CREDIT = {
-  presenter: "ديما فهد الردادي",
-  school: "مدرسة الموهوبين التقنية — بنات",
+  label: "تنفيذ",
+  team: ["إيمان الردادي", "مرام الرحيلي", "سعاد الأحمدي"],
+  school: "المتوسطة الثامنة والعشرون بالمدينة المنورة",
 } as const;

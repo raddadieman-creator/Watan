@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { PROJECT_CREDIT } from "@/lib/site";
+import { PartnerLogos } from "@/components/PartnerLogos";
 
 export const metadata: Metadata = { title: "عن وطن", description: "فكرة منصة وطن وأهدافها وما أُنجز منها وما يجري العمل عليه." };
 
@@ -47,17 +48,20 @@ export default function AboutPage() {
       </div>
 
       <section className="museum mt-12 p-7" aria-labelledby="team-h">
-        <h2 id="team-h" className="font-display text-[1.9rem] text-ink">تقديم المشروع</h2>
+        <h2 id="team-h" className="font-display text-[1.9rem] text-ink">تنفيذ المشروع</h2>
         <dl className="mt-4 grid gap-4 sm:grid-cols-2">
           <div>
-            <dt className="text-sm text-ink-muted">مقدِّمة المشروع</dt>
-            <dd className="mt-1 font-display text-2xl leading-10 text-ink">{PROJECT_CREDIT.presenter}</dd>
+            <dt className="text-sm text-ink-muted">{PROJECT_CREDIT.label}</dt>
+            <dd className="mt-1 font-display text-2xl leading-10 text-ink">{PROJECT_CREDIT.team.join("، ")}</dd>
           </div>
           <div>
             <dt className="text-sm text-ink-muted">المدرسة</dt>
             <dd className="mt-1 font-display text-2xl leading-10 text-ink">{PROJECT_CREDIT.school}</dd>
           </div>
         </dl>
+        <div className="mt-6">
+          <PartnerLogos />
+        </div>
       </section>
 
       <section className="mt-14" aria-labelledby="built-h">
