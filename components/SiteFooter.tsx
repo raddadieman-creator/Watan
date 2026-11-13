@@ -22,6 +22,9 @@ export function SiteFooter() {
               <p className="mt-0.5 font-display text-xl leading-9 text-white">{PROJECT_CREDIT.team.join("، ")}</p>
               <p className="text-sm text-[#FFD08A]">{PROJECT_CREDIT.school}</p>
             </div>
+            <p className="mt-3 text-xs text-white/65">
+              تصميم: <b dir="ltr" className="font-bold text-white/90">Research by Eman</b>
+            </p>
             <div className="mt-4">
               <PartnerLogos />
             </div>
